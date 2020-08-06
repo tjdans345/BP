@@ -36,7 +36,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-1.png" alt="">
+                                <img src="${contextPath}/resources/img/icon/f-icon-1.png" alt="">
                             </div>
                             <h4>Brand Identity</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
@@ -46,7 +46,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-2.png" alt="">
+                                <img src="${contextPath}/resources/img/icon/f-icon-2.png" alt="">
                             </div>
                             <h4>Online Marketing</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
@@ -56,7 +56,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-3.png" alt="">
+                                <img src="${contextPath}/resources/img/icon/f-icon-3.png" alt="">
                             </div>
                             <h4>Social Media</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
@@ -66,7 +66,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-4.png" alt="">
+                                <img src="${contextPath}/resources/img/icon/f-icon-4.png" alt="">
                             </div>
                             <h4>Video Support</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
@@ -76,7 +76,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-5.png" alt="">
+                                <img src="${contextPath}/resources/img/icon/f-icon-5.png" alt="">
                             </div>
                             <h4>Fast Support</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
@@ -86,7 +86,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-6.png" alt="">
+                                <img src="${contextPath}/resources/img/icon/f-icon-6.png" alt="">
                             </div>
                             <h4>Download test</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
@@ -150,7 +150,7 @@
                     <div class="col-lg-6">
                         <div class="s_solution_item">
                             <div class="l_title">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/title-icon.png" alt="">
+                                <img src="${contextPath}/resources/img/icon/title-icon.png" alt="">
                                 <h6>Discover the features</h6>
                                 <h2>Simple solutions for complicated times</h2>
                             </div>
