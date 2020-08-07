@@ -28,6 +28,7 @@ public class MyController {
 		
 		
 		return "mypage/test";
+	
 	}
 	
 }
