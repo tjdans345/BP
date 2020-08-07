@@ -7,15 +7,12 @@
         <div class="nk-sidebar">           
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
-                    <li class="nav-label">Dashboard</li>
+                    
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Home</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="${contextPath}/resources/singer/index.html">Home 1</a></li>
-                            <!-- <li><a href="${contextPath}/resources/singer/index-2.html">Home 2</a></li> -->
-                        </ul>
+                       
                     </li>
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
