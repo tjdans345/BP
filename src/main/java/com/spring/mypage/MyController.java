@@ -27,7 +27,7 @@ public class MyController {
 		
 		
 		
-		return "mypage/test";
+		return "mypage/mypageIndex";
 	}
 	
 }
