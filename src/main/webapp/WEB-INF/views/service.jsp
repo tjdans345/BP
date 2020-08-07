@@ -36,7 +36,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/main/${contextPath}/resources/main/img/icon/f-icon-1.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/f-icon-1.png" alt="">
                             </div>
                             <h4>Brand Identity</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>

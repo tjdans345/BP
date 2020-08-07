@@ -93,5 +93,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="${contextPath}/resources/main/vendors/owl-carousel/owl.carousel.min.js"></script>
         <script src="${contextPath}/resources/main/vendors/magnify-popup/jquery.magnific-popup.min.js"></script>
         <script src="${contextPath}/resources/main/js/smoothscroll.js"></script>
+        <script src="${contextPath}/resources/main/vendors/circle-bar/circle-progress.min.js"></script>
+        <script src="${contextPath}/resources/main/vendors/circle-bar/plugins.js"></script>
+        <script src="${contextPath}/resources/main/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="${contextPath}/resources/main/vendors/isotope/isotope.pkgd.min.js"></script>
         
+        <script src="${contextPath}/resources/main/js/circle-active.js"></script>
         <script src="${contextPath}/resources/main/js/theme.js"></script>
