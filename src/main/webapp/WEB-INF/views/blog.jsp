@@ -36,7 +36,7 @@
                         <div class="blog_main_inner">
                             <div class="blog_main_item">
                                 <div class="blog_img">
-                                    <img class="img-fluid" src="${contextPath}/resources/img/blog/blog-1.jpg" alt="">
+                                    <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-1.jpg" alt="">
                                     <div class="blog_date">
                                         <h4>29</h4>
                                         <h5>October, 2017</h5>
@@ -54,7 +54,7 @@
                             </div>
                             <div class="blog_main_item">
                                 <div class="blog_img">
-                                    <img class="img-fluid" src="${contextPath}/resources/img/blog/blog-2.jpg" alt="">
+                                    <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-2.jpg" alt="">
                                     <div class="blog_date">
                                         <h4>29</h4>
                                         <h5>October, 2017</h5>
@@ -72,7 +72,7 @@
                             </div>
                             <div class="blog_main_item">
                                 <div class="blog_img">
-                                    <img class="img-fluid" src="${contextPath}/resources/img/blog/blog-3.jpg" alt="">
+                                    <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-3.jpg" alt="">
                                     <div class="blog_date">
                                         <h4>29</h4>
                                         <h5>October, 2017</h5>
@@ -119,22 +119,22 @@
                                 </div>
                                 <ul>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-1.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-1.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-2.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-2.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-3.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-3.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-4.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-4.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-5.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-5.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-6.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-6.jpg" alt="">
                                     </a></li>
                                 </ul>
                             </aside>
@@ -156,14 +156,14 @@
                                 <div class="r_w_title">
                                     <h3>Quote</h3>
                                 </div>
-                                <img src="${contextPath}/resources/img/icon/quote-icon.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/quote-icon.png" alt="">
                                 <p>Vivamus in urna eu enim porttitor consequat. Proin vitae pulvinar libero. Proin ut hendrerit metus. Aliquam erat volut pat. Donec fermen tum convallis.</p>
                             </aside>
                             <aside class="r_widget add_widget">
                                 <div class="r_w_title">
                                     <h3>Add</h3>
                                 </div>
-                                <img class="img-fluid" src="${contextPath}/resources/img/add.jpg" alt="">
+                                <img class="img-fluid" src="${contextPath}/resources/main/img/add.jpg" alt="">
                             </aside>
                         </div>
                     </div>

@@ -51,7 +51,7 @@
                     <div class="col-lg-6">
                         <div class="touch_details">
                             <div class="l_title">
-                                <img src="${contextPath}/resources/img/icon/title-icon.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/title-icon.png" alt="">
                                 <h6>Say hello</h6>
                                 <h2>Get in touch, send us an e-mail or call us</h2>
                             </div>
