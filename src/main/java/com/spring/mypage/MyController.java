@@ -26,9 +26,9 @@ public class MyController {
 	public String index(Locale locale, Model model) {
 		
 		
-		
-		return "mypage/test";
-	
+
+		return "mypage/mypageIndex";
+
 	}
 	
 }
