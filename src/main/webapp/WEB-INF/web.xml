@@ -60,5 +60,21 @@
 		<url-pattern>*.my</url-pattern>
 	</servlet-mapping>
 	<!-- 마이 페이지 -->
+	
+	<!-- 회원 -->
+	<servlet>
+		<servlet-name>MemberServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/member-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberServlet</servlet-name>
+		<url-pattern>*.mem</url-pattern>
+	</servlet-mapping>
+	<!-- 회원 -->	
 
 </web-app>
