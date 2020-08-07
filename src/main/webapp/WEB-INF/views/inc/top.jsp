@@ -45,6 +45,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item active"><a class="nav-link" href="${contextPath}/index.do">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="${contextPath}/about.do">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="${contextPath}/singerMain.sin">Singer</a></li>
                         <li class="nav-item"><a class="nav-link" href="${contextPath}/service.do">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="${contextPath}/portfolio.do">Portfolio</a></li>
                         <li class="nav-item dropdown submenu">
