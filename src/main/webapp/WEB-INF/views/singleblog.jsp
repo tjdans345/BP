@@ -36,7 +36,7 @@
                         <div class="single_blog_inner">
                             <div class="s_blog_main">
                                 <div class="blog_img">
-                                    <img class="img-fluid" src="${contextPath}/resources/img/blog/blog-1.jpg" alt="">
+                                    <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-1.jpg" alt="">
                                     <div class="blog_date">
                                         <h4>29</h4>
                                         <h5>October, 2017</h5>
@@ -67,7 +67,7 @@
                             <div class="blog_author">
                                 <div class="media">
                                     <div class="d-flex">
-                                        <img class="rounded-circle" src="${contextPath}/resources/img/blog/blog-author.png" alt="">
+                                        <img class="rounded-circle" src="${contextPath}/resources/main/img/blog/blog-author.png" alt="">
                                     </div>
                                     <div class="media-body">
                                         <h4>Michael Smith, <span>Author</span></h4>
@@ -78,7 +78,7 @@
                             <div class="blog_comment">
                                 <h3>Comments (2)</h3>
                                 <div class="media">
-                                    <img src="${contextPath}/resources/img/comment/comment-1.png" alt="">
+                                    <img src="${contextPath}/resources/main/img/comment/comment-1.png" alt="">
                                     <div class="d-flex">
                                         <h4>Sophia Willams</h4>
                                         <h5>Oct 29, 2017</h5>
@@ -89,7 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="media">
-                                    <img src="${contextPath}/resources/img/comment/comment-2.png" alt="">
+                                    <img src="${contextPath}/resources/main/img/comment/comment-2.png" alt="">
                                     <div class="d-flex">
                                         <h4>Gabriel Smith</h4>
                                         <h5>Oct 29, 2017</h5>
@@ -151,22 +151,22 @@
                                 </div>
                                 <ul>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-1.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-1.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-2.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-2.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-3.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-3.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-4.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-4.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-5.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-5.jpg" alt="">
                                     </a></li>
                                     <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="${contextPath}/resources/img/instagram/right-instagram/r-in-6.jpg" alt="">
+                                        <img class="img-fluid" src="${contextPath}/resources/main/img/instagram/right-instagram/r-in-6.jpg" alt="">
                                     </a></li>
                                 </ul>
                             </aside>
@@ -188,14 +188,14 @@
                                 <div class="r_w_title">
                                     <h3>Quote</h3>
                                 </div>
-                                <img src="${contextPath}/resources/img/icon/quote-icon.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/quote-icon.png" alt="">
                                 <p>Vivamus in urna eu enim porttitor consequat. Proin vitae pulvinar libero. Proin ut hendrerit metus. Aliquam erat volut pat. Donec fermen tum convallis.</p>
                             </aside>
                             <aside class="r_widget add_widget">
                                 <div class="r_w_title">
                                     <h3>Add</h3>
                                 </div>
-                                <img class="img-fluid" src="${contextPath}/resources/img/add.jpg" alt="">
+                                <img class="img-fluid" src="${contextPath}/resources/main/img/add.jpg" alt="">
                             </aside>
                         </div>
                     </div>

@@ -35,19 +35,19 @@
                     <div class="col-lg-6">
                         <div class="challange_text_inner">
                             <div class="l_title">
-                                <img src="${contextPath}/resources/img/icon/title-icon.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/title-icon.png" alt="">
                                 <h6>Discover the features</h6>
                                 <h2>We don¡¯t hide, we stand tall in front of chalenge</h2>
                             </div>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
                             <div class="c_video">
-                                <a class="popup-youtube" href="${contextPath}/resources/https://www.youtube.com/watch?v=62QYQE6k7tg"><img src="${contextPath}/resources/img/icon/video-icon.png" alt="">See how we work </a>
+                                <a class="popup-youtube" href="${contextPath}/resources/main/https://www.youtube.com/watch?v=62QYQE6k7tg"><img src="${contextPath}/resources/main/img/icon/video-icon.png" alt="">See how we work </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 challange_img">
                         <div class="challange_img_inner">
-                            <img class="img-fluid" src="${contextPath}/resources/img/popup-photo.jpg" alt="">
+                            <img class="img-fluid" src="${contextPath}/resources/main/img/popup-photo.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
                             <div class="media">
                                 <div class="d-flex">
-                                    <img class="rounded-circle" src="${contextPath}/resources/img/testimonials/testi-1.jpg" alt="">
+                                    <img class="rounded-circle" src="${contextPath}/resources/main/img/testimonials/testi-1.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <h4>Maria Smith</h4>
@@ -80,7 +80,7 @@
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
                             <div class="media">
                                 <div class="d-flex">
-                                    <img class="rounded-circle" src="${contextPath}/resources/img/testimonials/testi-2.jpg" alt="">
+                                    <img class="rounded-circle" src="${contextPath}/resources/main/img/testimonials/testi-2.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <h4>Chriss Turner</h4>
@@ -95,7 +95,7 @@
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
                             <div class="media">
                                 <div class="d-flex">
-                                    <img class="rounded-circle" src="${contextPath}/resources/img/testimonials/testi-3.jpg" alt="">
+                                    <img class="rounded-circle" src="${contextPath}/resources/main/img/testimonials/testi-3.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <h4>Julie Smart</h4>
@@ -110,7 +110,7 @@
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
                             <div class="media">
                                 <div class="d-flex">
-                                    <img class="rounded-circle" src="${contextPath}/resources/img/testimonials/testi-1.jpg" alt="">
+                                    <img class="rounded-circle" src="${contextPath}/resources/main/img/testimonials/testi-1.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <h4>Maria Smith</h4>
@@ -131,7 +131,7 @@
                     <div class="col-lg-6">
                         <div class="left_company_text">
                             <div class="l_title">
-                                <img src="${contextPath}/resources/img/icon/title-icon.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/title-icon.png" alt="">
                                 <h6>Discover the features</h6>
                                 <h2>We are a <span>Gibraltar</span> based Company</h2>
                             </div>
@@ -195,7 +195,7 @@
             <div class="container">
                 <div class="talk_text">
                     <h4>Are you ready to talk?</h4>
-                    <a href="${contextPath}/resources/mailto:contact@sierracompany.com">contact@sierracompany.com</a>
+                    <a href="${contextPath}/resources/main/mailto:contact@sierracompany.com">contact@sierracompany.com</a>
                 </div>
             </div>
         </section>

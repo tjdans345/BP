@@ -69,7 +69,7 @@
                                 data-type="text" 
                                 data-responsive_offset="on" 
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="${contextPath}/resources/#">Discover</a>
+                                <a class="more_btn" href="${contextPath}/resources/main/#">Discover</a>
                             </div>
                             <div class="tp-caption tp-resizeme single_img" 
                             data-x="['right','right','right','right','right','right']" 
@@ -85,7 +85,7 @@
                             data-responsive_offset="on" 
                             data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                             data-textAlign="['left','left','left','left','left','center']">
-                                <img src="${contextPath}/resources/img/home-slider/slider-m-1.png" alt="">
+                                <img src="${contextPath}/resources/main/img/home-slider/slider-m-1.png" alt="">
                             </div>
                         </div>
                     </li>
@@ -139,7 +139,7 @@
                                 data-type="text" 
                                 data-responsive_offset="on" 
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="${contextPath}/resources/#">Discover</a>
+                                <a class="more_btn" href="${contextPath}/resources/main/#">Discover</a>
                             </div>
                             <div class="tp-caption tp-resizeme single_img" 
                             data-x="['right','right','right','right','right','right']" 
@@ -155,7 +155,7 @@
                             data-responsive_offset="on" 
                             data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                             data-textAlign="['left','left','left','left','left','center']">
-                                <img src="${contextPath}/resources/img/home-slider/slider-m-1.png" alt="">
+                                <img src="${contextPath}/resources/main/img/home-slider/slider-m-1.png" alt="">
                             </div>
                         </div>
                     </li>
@@ -209,7 +209,7 @@
                                 data-type="text" 
                                 data-responsive_offset="on" 
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="${contextPath}/resources/#">Discover</a>
+                                <a class="more_btn" href="${contextPath}/resources/main/#">Discover</a>
                             </div>
                             <div class="tp-caption tp-resizeme single_img" 
                             data-x="['right','right','right','right','right','right']" 
@@ -225,7 +225,7 @@
                             data-responsive_offset="on" 
                             data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                             data-textAlign="['left','left','left','left','left','center']">
-                                <img src="${contextPath}/resources/img/home-slider/slider-m-1.png" alt="">
+                                <img src="${contextPath}/resources/main/img/home-slider/slider-m-1.png" alt="">
                             </div>
                         </div>
                     </li>
@@ -238,7 +238,7 @@
         <section class="feature_area">
             <div class="container">
                 <div class="c_title">
-                    <img src="${contextPath}/resources/img/icon/title-icon.png" alt="">
+                    <img src="${contextPath}/resources/main/img/icon/title-icon.png" alt="">
                     <h6>Discover the features</h6>
                     <h2>We are young but bold</h2>
                 </div>
@@ -246,31 +246,31 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/img/icon/f-icon-1.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/f-icon-1.png" alt="">
                             </div>
                             <h4>Brand Identity</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="${contextPath}/resources/#">Read More</a>
+                            <a class="more_btn" href="${contextPath}/resources/main/#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/img/icon/f-icon-2.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/f-icon-2.png" alt="">
                             </div>
                             <h4>Online Marketing</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="${contextPath}/resources/#">Read More</a>
+                            <a class="more_btn" href="${contextPath}/resources/main/#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/img/icon/f-icon-3.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/f-icon-3.png" alt="">
                             </div>
                             <h4>Social Media</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="${contextPath}/resources/#">Read More</a>
+                            <a class="more_btn" href="${contextPath}/resources/main/#">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -286,7 +286,7 @@
                         <h4>¡°They are the best¡±</h4>
                         <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
                         <div class="media">
-                            <img src="${contextPath}/resources/img/team/people/people-5.jpg" alt="">
+                            <img src="${contextPath}/resources/main/img/team/people/people-5.jpg" alt="">
                             <div class="media-body">
                                 <h5>Chriss Turner</h5>
                                 <h6>CEO Enterprise</h6>
@@ -297,7 +297,7 @@
                         <h4>¡°They are the best¡±</h4>
                         <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
                         <div class="media">
-                            <img src="${contextPath}/resources/img/team/people/people-5.jpg" alt="">
+                            <img src="${contextPath}/resources/main/img/team/people/people-5.jpg" alt="">
                             <div class="media-body">
                                 <h5>Chriss Turner</h5>
                                 <h6>CEO Enterprise</h6>
@@ -308,7 +308,7 @@
                         <h4>¡°They are the best¡±</h4>
                         <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
                         <div class="media">
-                            <img src="${contextPath}/resources/img/team/people/people-5.jpg" alt="">
+                            <img src="${contextPath}/resources/main/img/team/people/people-5.jpg" alt="">
                             <div class="media-body">
                                 <h5>Chriss Turner</h5>
                                 <h6>CEO Enterprise</h6>
@@ -321,14 +321,14 @@
                 <div class="right_text_inner">
                     <div class="text_3d">
                         <div class="l_title">
-                            <img src="${contextPath}/resources/img/icon/title-icon.png" alt="">
+                            <img src="${contextPath}/resources/main/img/icon/title-icon.png" alt="">
                             <h6>Discover the features</h6>
                             <h2>We don¡¯t hide, we stand tall in front of chalenge</h2>
                         </div>
                         <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
                     </div>
                     <div class="shap_mobile">
-                        <img src="${contextPath}/resources/img/iphone4.png" alt="">
+                        <img src="${contextPath}/resources/main/img/iphone4.png" alt="">
                     </div>
                 </div>
             </div>
@@ -342,17 +342,17 @@
                     <div class="col-lg-6">
                         <div class="team_people_text">
                             <div class="l_title">
-                                <img src="${contextPath}/resources/img/icon/title-icon.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/title-icon.png" alt="">
                                 <h6>Discover the features</h6>
                                 <h2>We build a strong team of great people</h2>
                             </div>
                             <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra.</p>
                             <ul>
-                                <li><a href="${contextPath}/resources/#">Nunc nec maximus dui, </a></li>
-                                <li><a href="${contextPath}/resources/#">Aenean pellentesque elit vitae</a></li>
-                                <li><a href="${contextPath}/resources/#">Aenean pellentesque elit vitae</a></li>
-                                <li><a href="${contextPath}/resources/#">Ex mauris, ornare eget pretium </a></li>
-                                <li><a href="${contextPath}/resources/#">Cras ex mauris, ornare eget preti</a></li>
+                                <li><a href="${contextPath}/resources/main/#">Nunc nec maximus dui, </a></li>
+                                <li><a href="${contextPath}/resources/main/#">Aenean pellentesque elit vitae</a></li>
+                                <li><a href="${contextPath}/resources/main/#">Aenean pellentesque elit vitae</a></li>
+                                <li><a href="${contextPath}/resources/main/#">Ex mauris, ornare eget pretium </a></li>
+                                <li><a href="${contextPath}/resources/main/#">Cras ex mauris, ornare eget preti</a></li>
                             </ul>
                         </div>
                     </div>
@@ -361,22 +361,22 @@
                             <div class="row">
                                 <div class="col-lg-6 col-6">
                                     <div class="team_img_item">
-                                        <img src="${contextPath}/resources/img/team/people/people-1.jpg" alt="">
+                                        <img src="${contextPath}/resources/main/img/team/people/people-1.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-6">
                                     <div class="team_img_item">
-                                        <img src="${contextPath}/resources/img/team/people/people-2.jpg" alt="">
+                                        <img src="${contextPath}/resources/main/img/team/people/people-2.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-6">
                                     <div class="team_img_item">
-                                        <img src="${contextPath}/resources/img/team/people/people-3.jpg" alt="">
+                                        <img src="${contextPath}/resources/main/img/team/people/people-3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-6">
                                     <div class="team_img_item">
-                                        <img src="${contextPath}/resources/img/team/people/people-4.jpg" alt="">
+                                        <img src="${contextPath}/resources/main/img/team/people/people-4.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -413,13 +413,13 @@
                     <div class="col-lg-6">
                         <div class="touch_details">
                             <div class="l_title">
-                                <img src="${contextPath}/resources/img/icon/title-icon.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/title-icon.png" alt="">
                                 <h6>Say hello</h6>
                                 <h2>Get in touch, send us an e-mail or call us</h2>
                             </div>
                             <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
-                            <a href="${contextPath}/resources/#"><h5>Call us now</h5></a>
-                            <a href="${contextPath}/resources/#"><h4>+452373 95593 232</h4></a>
+                            <a href="${contextPath}/resources/main/#"><h5>Call us now</h5></a>
+                            <a href="${contextPath}/resources/main/#"><h4>+452373 95593 232</h4></a>
                         </div>
                     </div>
                 </div>
@@ -431,11 +431,11 @@
         <section class="world_map_area p_100">
             <div class="container">
                 <div class="world_map_inner">
-                    <img class="img-fluid" src="${contextPath}/resources/img/world-map.png" alt="">
+                    <img class="img-fluid" src="${contextPath}/resources/main/img/world-map.png" alt="">
                     <div class="bd-callout">
                         <h3>Gibraltar Office</h3>
                         <p>Casemates Square, no253 <br /> United kingdom</p>
-                        <h4><a href="${contextPath}/resources/#">+453678 9283 559</a> <a href="${contextPath}/resources/#">contact@template.com</a></h4>
+                        <h4><a href="${contextPath}/resources/main/#">+453678 9283 559</a> <a href="${contextPath}/resources/main/#">contact@template.com</a></h4>
                     </div>
                 </div>
             </div>
