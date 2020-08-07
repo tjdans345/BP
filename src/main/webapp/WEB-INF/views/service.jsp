@@ -36,61 +36,61 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-1.png" alt="">
+                                <img src="${contextPath}/resources/main/${contextPath}/resources/main/img/icon/f-icon-1.png" alt="">
                             </div>
                             <h4>Brand Identity</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="${contextPath}/resources/#">Read More</a>
+                            <a class="more_btn" href="${contextPath}/resources/main/#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-2.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/f-icon-2.png" alt="">
                             </div>
                             <h4>Online Marketing</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="${contextPath}/resources/#">Read More</a>
+                            <a class="more_btn" href="${contextPath}/resources/main/#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-3.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/f-icon-3.png" alt="">
                             </div>
                             <h4>Social Media</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="${contextPath}/resources/#">Read More</a>
+                            <a class="more_btn" href="${contextPath}/resources/main/#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-4.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/f-icon-4.png" alt="">
                             </div>
                             <h4>Video Support</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="${contextPath}/resources/#">Read More</a>
+                            <a class="more_btn" href="${contextPath}/resources/main/#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-5.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/f-icon-5.png" alt="">
                             </div>
                             <h4>Fast Support</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="${contextPath}/resources/#">Read More</a>
+                            <a class="more_btn" href="${contextPath}/resources/main/#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/f-icon-6.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/f-icon-6.png" alt="">
                             </div>
                             <h4>Download test</h4>
                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="${contextPath}/resources/#">Read More</a>
+                            <a class="more_btn" href="${contextPath}/resources/main/#">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                     <div class="col-lg-6">
                         <div class="s_solution_item">
                             <div class="l_title">
-                                <img src="${contextPath}/resources/${contextPath}/resources/img/icon/title-icon.png" alt="">
+                                <img src="${contextPath}/resources/main/img/icon/title-icon.png" alt="">
                                 <h6>Discover the features</h6>
                                 <h2>Simple solutions for complicated times</h2>
                             </div>
@@ -159,7 +159,7 @@
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingOne">
                                         <h5 class="mb-0">
-                                            <a data-toggle="collapse" href="${contextPath}/resources/#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <a data-toggle="collapse" href="${contextPath}/resources/main/#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                             Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis
                                             <i class="minus">-</i>
                                             <i class="plus">+</i>
@@ -176,7 +176,7 @@
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingTwo">
                                         <h5 class="mb-0">
-                                            <a class="collapsed" data-toggle="collapse" href="${contextPath}/resources/#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <a class="collapsed" data-toggle="collapse" href="${contextPath}/resources/main/#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                             Sed dapibus nunc vulputate mi fringilla, eu consequat
                                             <i class="minus">-</i>
                                             <i class="plus">+</i>
@@ -192,7 +192,7 @@
                                 <div class="card">
                                     <div class="card-header" role="tab" id="headingThree">
                                         <h5 class="mb-0">
-                                            <a class="collapsed" data-toggle="collapse" href="${contextPath}/resources/#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <a class="collapsed" data-toggle="collapse" href="${contextPath}/resources/main/#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                             Curabitur eu libero sed erat viverra gravida at id ex
                                             <i class="minus">-</i>
                                             <i class="plus">+</i>

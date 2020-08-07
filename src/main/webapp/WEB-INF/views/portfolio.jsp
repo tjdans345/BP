@@ -45,34 +45,34 @@
             </div>
             <div class="ms_portfolio_inner">
                 <div class="ms_p_item wd_25 brand arc photo">
-                    <img src="${contextPath}/resources/${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-1.jpg" alt="">
+                    <img src="${contextPath}/resources/main/${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-1.jpg" alt="">
                 </div>
                 <div class="ms_p_item wd_25 brand arc photo">
-                    <img src="${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-2.jpg" alt="">
+                    <img src="${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-2.jpg" alt="">
                 </div>
                 <div class="ms_p_item wd_50 brand">
-                    <img src="${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-3.jpg" alt="">
+                    <img src="${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-3.jpg" alt="">
                 </div>
                 <div class="ms_p_item wd_25 brand arc photo">
-                    <img src="${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-4.jpg" alt="">
+                    <img src="${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-4.jpg" alt="">
                 </div>
                 <div class="ms_p_item wd_25 brand arc photo">
-                    <img src="${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-5.jpg" alt="">
+                    <img src="${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-5.jpg" alt="">
                 </div>
                 <div class="ms_p_item wd_50">
-                    <img src="${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-6.jpg" alt="">
+                    <img src="${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-6.jpg" alt="">
                 </div>
                 <div class="ms_p_item wd_25 design arc">
-                    <img src="${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-7.jpg" alt="">
+                    <img src="${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-7.jpg" alt="">
                 </div>
                 <div class="ms_p_item wd_25 design arc">
-                    <img src="${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-8.jpg" alt="">
+                    <img src="${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-8.jpg" alt="">
                 </div>
                 <div class="ms_p_item wd_25 design arc">
-                    <img src="${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-9.jpg" alt="">
+                    <img src="${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-9.jpg" alt="">
                 </div>
                 <div class="ms_p_item wd_25 design arc">
-                    <img src="${contextPath}/resources/img/portfolio/ms-portfolio/ms-p-10.jpg" alt="">
+                    <img src="${contextPath}/resources/main/img/portfolio/ms-portfolio/ms-p-10.jpg" alt="">
                 </div>
             </div>
         </section>
