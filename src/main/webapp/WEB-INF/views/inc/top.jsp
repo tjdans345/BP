@@ -4,37 +4,37 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />    
     
- <link rel="icon" href="${contextPath}/resources/img/fav-icon.png" type="image/x-icon" />
+ <link rel="icon" href="${contextPath}/resources/main/img/fav-icon.png" type="image/x-icon" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Sierra</title>
 
         <!-- Icon css link -->
-        <link href="${contextPath}/resources/css/font-awesome.min.css" rel="stylesheet">
+        <link href="${contextPath}/resources/main/css/font-awesome.min.css" rel="stylesheet">
         <!-- Bootstrap -->
-        <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${contextPath}/resources/main/css/bootstrap.min.css" rel="stylesheet">
         
         <!-- Rev slider css -->
-        <link href="${contextPath}/resources/vendors/revolution/css/settings.css" rel="stylesheet">
-        <link href="${contextPath}/resources/vendors/revolution/css/layers.css" rel="stylesheet">
-        <link href="${contextPath}/resources/vendors/revolution/css/navigation.css" rel="stylesheet">
+        <link href="${contextPath}/resources/main/vendors/revolution/css/settings.css" rel="stylesheet">
+        <link href="${contextPath}/resources/main/vendors/revolution/css/layers.css" rel="stylesheet">
+        <link href="${contextPath}/resources/main/vendors/revolution/css/navigation.css" rel="stylesheet">
         
         <!-- Extra plugin css -->
-        <link href="${contextPath}/resources/vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+        <link href="${contextPath}/resources/main/vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
         
-        <link href="${contextPath}/resources/css/style.css" rel="stylesheet">
-        <link href="${contextPath}/resources/css/responsive.css" rel="stylesheet">
+        <link href="${contextPath}/resources/main/css/style.css" rel="stylesheet">
+        <link href="${contextPath}/resources/main/css/responsive.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-        <script src="${contextPath}/resources/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="${contextPath}/resources/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="${contextPath}/resources/main/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="${contextPath}/resources/main/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         
            <!--================Header Menu Area =================-->
         <header class="main_menu_area">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="${contextPath}/resources/#"><img src="${contextPath}/resources/img/logo.png" alt=""></a>
+                <a class="navbar-brand" href="${contextPath}/resources/main/#"><img src="${contextPath}/resources/main/img/logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -48,7 +48,7 @@
                         <li class="nav-item"><a class="nav-link" href="${contextPath}/service.do">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="${contextPath}/portfolio.do">Portfolio</a></li>
                         <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="${contextPath}/resources/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="${contextPath}/resources/main/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Blog
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
