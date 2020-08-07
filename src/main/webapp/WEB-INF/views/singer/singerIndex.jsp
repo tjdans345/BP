@@ -35,16 +35,21 @@
 	
 	}
 	
-	.rounded-circle{
+	#profile{
 		width: 150px;
 	}
 	
+	#fnbox{
+		background-color: green;
+	}
+	
+
 	</style>
 
 </head>
 
 <body class="bd">
-
+	
     <!--*******************
         Preloader start
     ********************-->
@@ -299,27 +304,29 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="text-center">
-                                    <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/singer/images/users/5.jpg">
+                                    <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/singer/images/users/5.jpg" id="profile">
                                     <h4 class="card-widget__title text-dark mt-3">Deangelo Sena</h4>
                                     <p class="text-muted">Senior Manager</p>
-                                    <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()">Folllow</a>
+                                    <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()" id="fbtn">Folllow</a>
                                 </div>
                             </div>
-                            <div class="card-footer border-0 bg-transparent">
+                            <div class="card-footer border-0 bg-transparent" id="fnbox">
                                 <div class="row">
                                     <div class="col-4 border-right-1 pt-3">
                                         <a class="text-center d-block text-muted" href="javascript:void()">
-                                            <i class="fa fa-star gradient-1-text" aria-hidden="true"></i>
+                                            <i class="fa fa-star gradient-1-text" aria-hidden="true" style="color:#ffec08; font-size:30px;"></i>
                                             <p class="">Star</p>
                                         </a>
                                     </div>
-                                    <div class="col-4 border-right-1 pt-3"><a class="text-center d-block text-muted" href="javascript:void()">
-                                        <i class="fa fa-heart gradient-3-text"></i>
+                                    <div class="col-4 border-right-1 pt-3">
+                                    <a class="text-center d-block text-muted" href="javascript:void()">
+                                        <i class="fa fa-heart gradient-3-text" style="color:pink; font-size:30px;"></i>
                                             <p class="">Like</p>
                                         </a>
                                     </div>
-                                    <div class="col-4 pt-3"><a class="text-center d-block text-muted" href="javascript:void()">
-                                        <i class="fa fa-envelope gradient-4-text"></i>
+                                    <div class="col-4 pt-3">
+                                    <a class="text-center d-block text-muted" href="javascript:void()">
+                                        <i class="fa fa-envelope gradient-4-text" style="color:lightblue; font-size:30px;"></i>
                                             <p class="">Email</p>
                                         </a>
                                     </div>

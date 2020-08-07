@@ -11017,9 +11017,31 @@ table.dataTable thead .sorting::after {
   margin-right: 5px; }
 
 .btn {
-  padding: 7px 18px; }
-  .btn:active, .btn:focus, .btn:hover {
-    box-shadow: none !important; }
+	padding: 0px 46px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6fbcfe), color-stop(51%, #998dff), to(#6fbcfe));
+  background-image: -webkit-linear-gradient(left, #6fbcfe 0%, #998dff 51%, #6fbcfe 100%);
+  background-image: -o-linear-gradient(left, #6fbcfe 0%, #998dff 51%, #6fbcfe 100%);
+  background-image: linear-gradient(to right, #6fbcfe 0%, #998dff 51%, #6fbcfe 100%);
+  background-size: 200% auto;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 55px;
+  border: 6px solid rgba(204, 241, 255, 0.5);
+  border-radius: 33px;
+  }
+  
+.btn:active, .btn:focus, .btn:hover {
+  background-position: right center;
+  color: #fff;
+}
+  
 
 .btn-xs {
   font-size: 10px;
