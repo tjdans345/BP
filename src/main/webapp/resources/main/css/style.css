@@ -2430,4 +2430,33 @@ i:before {
 ============================================================================================ */
 /*---------------------------------------------------- */
 
+
+
+
+
+.banner_area2 {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.banner_area2:before {
+  content: "";
+  background: url(../img/banner/banner-bg.png) no-repeat scroll center right;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  max-width: 1233px;
+  width: 100%;
+}
+
+.banner_inner_text2 {
+  padding-top: 200px;
+  position: relative;
+  padding-bottom: 95px;
+}
+
+
+
 /*# sourceMappingURL=style.css.map */
