@@ -1,6 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+<style type="text/css">
+
+.nk-sidebar .metismenu .has-arrow:after {
+
+    width: 0em;
+    height: 0em;
+    border-width: 0px;
+
+
+}
+
+</style>
+
+
+
    <!--**********************************
             Sidebar start
         ***********************************-->
@@ -12,27 +27,13 @@
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Home</span>
                         </a>
-                       
                     </li>
-                    <li class="mega-menu mega-menu-sm">
+                    <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Layouts</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="${contextPath}/resources/singer/layout-blank.html">Blank</a></li>
-                            <li><a href="${contextPath}/resources/singer/layout-one-column.html">One Column</a></li>
-                            <li><a href="${contextPath}/resources/singer/layout-two-column.html">Two column</a></li>
-                            <li><a href="${contextPath}/resources/singer/layout-compact-nav.html">Compact Nav</a></li>
-                            <li><a href="${contextPath}/resources/singer/layout-vertical.html">Vertical</a></li>
-                            <li><a href="${contextPath}/resources/singer/layout-horizontal.html">Horizontal</a></li>
-                            <li><a href="${contextPath}/resources/singer/layout-boxed.html">Boxed</a></li>
-                            <li><a href="${contextPath}/resources/singer/layout-wide.html">Wide</a></li>
-                            
-                            
-                            <li><a href="${contextPath}/resources/singer/layout-fixed-header.html">Fixed Header</a></li>
-                            <li><a href="${contextPath}/resources/singer/layout-fixed-sidebar.html">Fixed Sidebar</a></li>
-                        </ul>
-                    </li>
+                    </li>    
+                    
                     <li class="nav-label">Apps</li>
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
