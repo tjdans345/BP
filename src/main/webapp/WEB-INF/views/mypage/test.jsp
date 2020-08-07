@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+안녕하세요 test페이지 입니다. 
 </body>
 </html>
