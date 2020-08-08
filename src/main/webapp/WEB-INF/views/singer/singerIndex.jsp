@@ -43,6 +43,7 @@
 		background-color: green;
 	}
 	
+	
 
 	</style>
 
@@ -273,13 +274,9 @@
             Header end ti-comment-alt
         ***********************************-->
 
-        <!--**********************************
-           	 사이드바 start
-        ***********************************-->
+        <!-- 사이드바 start -->
         <jsp:include page="./sidebar/sidebar.jsp" />
-        <!--**********************************
-            	사이드바 end
-        ***********************************-->
+       <!-- 사이드바 start -->
 
         <!--**********************************
             Content body start
@@ -307,7 +304,7 @@
                                     <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/singer/images/users/5.jpg" id="profile">
                                     <h4 class="card-widget__title text-dark mt-3">Deangelo Sena</h4>
                                     <p class="text-muted">Senior Manager</p>
-                                    <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()" id="fbtn">Folllow</a>
+                                    <a class="btn2 gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()" id="fbtn">Folllow</a>
                                 </div>
                             </div>
                             <div class="card-footer border-0 bg-transparent" id="fnbox">
@@ -502,113 +499,6 @@
                                 </div>
                             </div>
                         </div>                        
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-6">
-
-                        <div class="card">
-                            <div class="chart-wrapper mb-4">
-                                <div class="px-4 pt-4 d-flex justify-content-between">
-                                    <div>
-                                        <h4>Sales Activities</h4>
-                                        <p>Last 6 Month</p>
-                                    </div>
-                                    <div>
-                                        <span><i class="fa fa-caret-up text-success"></i></span>
-                                        <h4 class="d-inline-block text-success">720</h4>
-                                        <p class=" text-danger">+120.5(5.0%)</p>
-                                    </div>
-                                </div>
-                                <div>
-                                        <canvas id="chart_widget_3"></canvas>
-                                </div>
-                            </div>
-                            <div class="card-body border-top pt-4">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <ul>
-                                            <li>5% Negative Feedback</li>
-                                            <li>95% Positive Feedback</li>
-                                        </ul>
-                                        <div>
-                                            <h5>Customer Feedback</h5>
-                                            <h3>385749</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div id="chart_widget_3_1"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Activity</h4>
-                                <div id="activity">
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="${contextPath}/resources/singer/images/avatar/1.jpg" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>Received New Order</h5>
-                                            <p class="mb-0">I shared this on my fb wall a few months back,</p>
-                                        </div><span class="text-muted ">April 24, 2018</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="${contextPath}/resources/singer/images/avatar/2.jpg" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>iPhone develered</h5>
-                                            <p class="mb-0">I shared this on my fb wall a few months back,</p>
-                                        </div><span class="text-muted ">April 24, 2018</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="${contextPath}/resources/singer/images/avatar/2.jpg" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>3 Order Pending</h5>
-                                            <p class="mb-0">I shared this on my fb wall a few months back,</p>
-                                        </div><span class="text-muted ">April 24, 2018</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="${contextPath}/resources/singer/images/avatar/2.jpg" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>Join new Manager</h5>
-                                            <p class="mb-0">I shared this on my fb wall a few months back,</p>
-                                        </div><span class="text-muted ">April 24, 2018</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="${contextPath}/resources/singer/images/avatar/2.jpg" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>Branch open 5 min Late</h5>
-                                            <p class="mb-0">I shared this on my fb wall a few months back,</p>
-                                        </div><span class="text-muted ">April 24, 2018</span>
-                                    </div>
-                                    <div class="media border-bottom-1 pt-3 pb-3">
-                                        <img width="35" src="${contextPath}/resources/singer/images/avatar/2.jpg" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>New support ticket received</h5>
-                                            <p class="mb-0">I shared this on my fb wall a few months back,</p>
-                                        </div><span class="text-muted ">April 24, 2018</span>
-                                    </div>
-                                    <div class="media pt-3 pb-3">
-                                        <img width="35" src="${contextPath}/resources/singer/images/avatar/3.jpg" class="mr-3 rounded-circle">
-                                        <div class="media-body">
-                                            <h5>Facebook Post 30 Comments</h5>
-                                            <p class="mb-0">I shared this on my fb wall a few months back,</p>
-                                        </div><span class="text-muted ">April 24, 2018</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-12 col-sm-12 col-xxl-12">
-                        <div class="card">
-                            <div class="card-body">
-                                    <h4 class="card-title mb-0">Store Location</h4>
-                                <div id="world-map" style="height: 470px;"></div>
-                            </div>        
-                        </div>
                     </div>
                 </div>
 
