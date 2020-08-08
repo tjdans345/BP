@@ -31,7 +31,7 @@ public class BuskingController {
 	@RequestMapping(value = "/resbusking.b", method = RequestMethod.GET)
 	public String signup(Locale locale, Model model) {
 		
-		return "busking/resbusking";
+		return "singer/resbusking";
 	}
 	
 }

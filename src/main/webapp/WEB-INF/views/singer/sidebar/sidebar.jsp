@@ -24,83 +24,39 @@
                 <ul class="metismenu" id="menu">
                     
                     <li>
-                        <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Home</span>
+                        <a class="has-arrow" href="${contextPath}/BP/singerMain.sin" aria-expanded="false">
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">메인페이지</span>
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Layouts</span>
+                        <a class="has-arrow" href="" aria-expanded="false">
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">공연일정</span>
                         </a>
                     </li>    
                     
-                    <li class="nav-label">Apps</li>
                     <li>
-                        <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Email</span>
+                        <a class="has-arrow" href="${contextPath}/BP/resbusking.b" aria-expanded="false">
+                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">버스킹 예약(only Singer)</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="${contextPath}/resources/singer/email-inbox.html">Inbox</a></li>
-                            <li><a href="${contextPath}/resources/singer/email-read.html">Read</a></li>
-                            <li><a href="${contextPath}/resources/singer/email-compose.html">Compose</a></li>
-                        </ul>
                     </li>
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
                             <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Apps</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="${contextPath}/resources/singer/app-profile.html">Profile</a></li>
-                            <li><a href="${contextPath}/resources/singer/app-calender.html">Calender</a></li>
-                        </ul>
+                      
                     </li>
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
                             <i class="icon-graph menu-icon"></i> <span class="nav-text">Charts</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="${contextPath}/resources/singer/chart-flot.html">Flot</a></li>
-                            <li><a href="${contextPath}/resources/singer/chart-morris.html">Morris</a></li>
-                            <li><a href="${contextPath}/resources/singer/chart-chartjs.html">Chartjs</a></li>
-                            <li><a href="${contextPath}/resources/singer/chart-chartist.html">Chartist</a></li>
-                            <li><a href="${contextPath}/resources/singer/chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="${contextPath}/resources/singer/chart-peity.html">Peity</a></li>
-                        </ul>
+                     
                     </li>
                     <li class="nav-label">UI Components</li>
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
                             <i class="icon-grid menu-icon"></i><span class="nav-text">UI Components</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="${contextPath}/resources/singer/ui-accordion.html">Accordion</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-alert.html">Alert</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-badge.html">Badge</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-button.html">Button</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-button-group.html">Button Group</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-cards.html">Cards</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-carousel.html">Carousel</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-dropdown.html">Dropdown</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-list-group.html">List Group</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-media-object.html">Media Object</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-modal.html">Modal</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-pagination.html">Pagination</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-popover.html">Popover</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-progressbar.html">Progressbar</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-tab.html">Tab</a></li>
-                            <li><a href="${contextPath}/resources/singer/ui-typography.html">Typography</a></li>
-                        <!-- </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
-                        </a>
-                        <ul aria-expanded="false"> -->
-                            <li><a href="${contextPath}/resources/singer/uc-nestedable.html">Nestedable</a></li>
-                            <li><a href="${contextPath}/resources/singer/uc-noui-slider.html">Noui Slider</a></li>
-                            <li><a href="${contextPath}/resources/singer/uc-sweetalert.html">Sweet Alert</a></li>
-                            <li><a href="${contextPath}/resources/singer/uc-toastr.html">Toastr</a></li>
-                        </ul>
+                       
                     </li>
                     <li>
                         <a href="${contextPath}/resources/singer/widgets.html" aria-expanded="false">
@@ -112,23 +68,14 @@
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
                             <i class="icon-note menu-icon"></i><span class="nav-text">Forms</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="${contextPath}/resources/singer/form-basic.html">Basic Form</a></li>
-                            <li><a href="${contextPath}/resources/singer/form-validation.html">Form Validation</a></li>
-                            <li><a href="${contextPath}/resources/singer/form-step.html">Step Form</a></li>
-                            <li><a href="${contextPath}/resources/singer/form-editor.html">Editor</a></li>
-                            <li><a href="${contextPath}/resources/singer/form-picker.html">Picker</a></li>
-                        </ul>
+                       
                     </li>
                     <li class="nav-label">Table</li>
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
                             <i class="icon-menu menu-icon"></i><span class="nav-text">Table</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="${contextPath}/resources/singer/table-basic.html" aria-expanded="false">Basic Table</a></li>
-                            <li><a href="${contextPath}/resources/singer/table-datatable.html" aria-expanded="false">Data Table</a></li>
-                        </ul>
+                       
                     </li>
                     <li class="nav-label">Pages</li>
                     <li>

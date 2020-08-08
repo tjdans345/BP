@@ -8211,6 +8211,9 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       .nk-sidebar .metismenu a:hover, .nk-sidebar .metismenu a:active, .nk-sidebar .metismenu a.active {
         text-decoration: none;
         background-color: #F3F1FA; }
+        
+        
+        
     .nk-sidebar .metismenu .has-arrow:after {
       position: absolute;
       content: "";
@@ -11020,6 +11023,33 @@ table.dataTable thead .sorting::after {
   padding: 7px 18px; }
   .btn:active, .btn:focus, .btn:hover {
     box-shadow: none !important; }
+
+.btn2 {
+	padding: 0px 46px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6fbcfe), color-stop(51%, #998dff), to(#6fbcfe));
+  background-image: -webkit-linear-gradient(left, #6fbcfe 0%, #998dff 51%, #6fbcfe 100%);
+  background-image: -o-linear-gradient(left, #6fbcfe 0%, #998dff 51%, #6fbcfe 100%);
+  background-image: linear-gradient(to right, #6fbcfe 0%, #998dff 51%, #6fbcfe 100%);
+  background-size: 200% auto;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 55px;
+  border: 6px solid rgba(204, 241, 255, 0.5);
+  border-radius: 33px;
+  }
+  
+.btn2:active, .btn2:focus, .btn2:hover {
+  background-position: right center;
+  color: #fff;
+}
+
 
 .btn-xs {
   font-size: 10px;
