@@ -77,4 +77,22 @@
 	</servlet-mapping>
 	<!-- 회원 -->	
 
+
+	<!-- 버스킹 -->
+	<servlet>
+		<servlet-name>BuskingServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/busking-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BuskingServlet</servlet-name>
+		<url-pattern>*.b</url-pattern>
+	</servlet-mapping>
+	<!-- 버스킹 -->	
+
+
 </web-app>
