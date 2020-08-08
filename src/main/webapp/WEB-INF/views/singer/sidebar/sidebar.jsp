@@ -15,7 +15,6 @@
 </style>
 
 
-
    <!--**********************************
             Sidebar start
         ***********************************-->
@@ -29,7 +28,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="" aria-expanded="false">
+                        <a class="has-arrow" href="#" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">공연일정</span>
                         </a>
                     </li>    
@@ -41,13 +40,12 @@
                     </li>
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Apps</span>
+                            <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">공지 사항</span>
                         </a>
-                      
                     </li>
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-graph menu-icon"></i> <span class="nav-text">Charts</span>
+                            <i class="icon-graph menu-icon"></i> <span class="nav-text">팬 관리</span>
                         </a>
                      
                     </li>
