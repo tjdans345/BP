@@ -59,7 +59,7 @@
                                 <a class="text-center" href="index.html"> <h4>LOGIN</h4></a>
                                 <form class="mt-5 mb-5 login-input">
                                     <div class="form-group">
-                                        <input type="ID" class="form-control" placeholder="ID">
+                                        <input type="ID" class="form-control" placeholder="ID" value="${name}">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Password">
