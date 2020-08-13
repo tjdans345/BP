@@ -3,6 +3,11 @@
     "http://mybatis.org/dtd/mybatis-3-config.dtd ">
     
 <configuration>
-
+	<typeAliases>
+		<typeAlias type="com.spring.member.MemberVO" alias="memberVO"/>
+		<typeAlias type="com.spring.busking.BuskingVO" alias="buskingVO"/>		
+	</typeAliases>
+	
+	
 
 </configuration>
