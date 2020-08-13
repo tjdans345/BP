@@ -81,8 +81,16 @@
                                         <input type="text" class="form-control" name="email" placeholder="이메일" required>
                                     </div> 
 									
-									<div>
-										
+									<div class="form-group">
+										<h4 class="card-title">성별</h4>
+										<div class="basic-form">
+											<form>
+												<div class="form-group">
+													<label class="radio-inline mr-3"><input type="radio" name="gender" value="남성">남성</label>
+													<label class="radio-inline mr-3"><input type="radio" name="gender" value="여성">여성</label>															
+												</div>
+											</form>
+										</div>
 									</div>
 									
 									<div class="form-row align-items-center">
