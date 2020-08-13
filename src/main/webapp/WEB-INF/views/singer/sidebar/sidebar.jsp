@@ -14,7 +14,25 @@
 
 </style>
 
-
+	<!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="${contextPath}/BP/index.do">
+                    <b class="logo-abbr"><img src="${contextPath}/resources/singer/images/logo.png" alt=""> </b>
+                    <span class="logo-compact"><img src="${contextPath}/resources/singer/images/logo-compact.png" alt=""></span>
+                    <span class="brand-title">
+                        <img src="${contextPath}/resources/singer/images/logo-text.png" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->	
+		
+		
    <!--**********************************
             Sidebar start
         ***********************************-->
@@ -49,10 +67,10 @@
                         </a>
                      
                     </li>
-                    <li class="nav-label">UI Components</li>
+                   
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-grid menu-icon"></i><span class="nav-text">UI Components</span>
+                            <i class="icon-grid menu-icon"></i><span class="nav-text">방명록</span>
                         </a>
                        
                     </li>
