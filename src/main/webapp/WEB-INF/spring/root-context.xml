@@ -22,7 +22,7 @@
         <property name="configLocation"
             value="classpath:model/modelConfig.xml" />
         <property name="mapperLocations"
-            value="classpath:db/*.xml" />
+            value="classpath:mapper/*.xml" />
     </bean>
 
     <bean id="sqlSession"

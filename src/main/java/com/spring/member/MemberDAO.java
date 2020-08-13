@@ -9,7 +9,7 @@ public class MemberDAO {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	public String aa() {
-		return sqlSession.selectOne("aa.bb.member");
+	public String selectname() {
+		return sqlSession.selectOne("mapper.member.selectname");
 	}
 }

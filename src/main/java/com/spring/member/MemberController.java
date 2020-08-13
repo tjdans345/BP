@@ -31,7 +31,7 @@ public class MemberController {
 		ModelAndView mav = new ModelAndView();
 		
 		mav.setViewName("member/login");
-		mav.addObject("name", ms.dd());
+		mav.addObject("name", ms.name());
 		
 		
 		return mav;
