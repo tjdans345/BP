@@ -4,12 +4,19 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
 
 /**
  * Handles requests for the application home page.
@@ -17,21 +24,34 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class BuskingController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(BuskingController.class);
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
+	@Autowired
+	private BuskingService buskingService;
+	private ModelAndView mav = new ModelAndView();
+	
+	@RequestMapping(value = "/resbusking.b", method = RequestMethod.GET)
+	public ModelAndView login() {
+		mav.setViewName("singer/resbusking");
+		return mav;
+	}
+	
+	
+	@RequestMapping(value = "/insertbusking.b", method = RequestMethod.POST)
+	public ModelAndView addMember(@ModelAttribute BuskingVO buskingVO,
+									HttpServletRequest request,
+									HttpServletResponse response) {
+		buskingService.insertBusking(buskingVO);
+		mav.setViewName("redirect:/resbusking.b"); 
+		request.getSession().setAttribute("id",buskingVO.getSid());
+
+		return mav;
+	}
+	
+	
 	@RequestMapping(value = "/busking.b", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
-		
 		return "busking/busking";
 	}
 	
-	@RequestMapping(value = "/resbusking.b", method = RequestMethod.GET)
-	public String signup(Locale locale, Model model) {
-		
-		return "singer/resbusking";
-	}
-	
+
 }

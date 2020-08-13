@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <mapper namespace="mapper.busking">
+  	<insert id="insertBusking" parameterType="buskingVO">
+  		<![CDATA[
+  		insert into busking (sid,loc2,loc2,loc3,sdate,edate)
+    		values(#{sid},#{loc1},#{loc2},#{loc3},sdate,edate) 
+  		]]>
+  	</insert>
+	</mapper>

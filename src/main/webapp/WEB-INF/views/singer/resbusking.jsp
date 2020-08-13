@@ -29,8 +29,11 @@
     <link href="${contextPath}/resources/singer/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
-
 </head>
+
+<script> $(document).ready(function() { $('#summernote').summernote(); }); </script>
+
+
 
 <body>
 	
@@ -74,6 +77,7 @@
             <div class="container-fluid">
            				<h4 class="card-title">Reservation Busking</h4>
                         <label class="m-t-20">공연 예약</label>
+                        <form action="${contextPath}/insertbusking.b" method="post">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
@@ -81,11 +85,11 @@
                                 <h4 class="card-title">Location</h4>
                                 
                                 <div class="basic-form">
-                                    <form>
+                                    
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <label>도시</label>
-                                            <select class="form-control" id="sel1">
+                                            <select class="form-control" name="sel1" id = "loc1">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -94,7 +98,16 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <label>동</label>
-                                            <select class="form-control" id="sel1">
+                                            <select class="form-control" name="sel1" id = "loc2">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label>버스킹 존</label>
+                                            <select class="form-control" name = "loc3">
                                                 <option>1</option>
                                                 <option>2</option>
                                                 <option>3</option>
@@ -102,7 +115,7 @@
                                             </select>
                                         </div>
                                         </div>
-                                    </form>
+                                    
                                 
                                 </div>
                             </div>
@@ -114,41 +127,43 @@
 	                            
                                 <div class = "row">
                                 
-                                <div class="col-4">
+                                <div class="col-12">
 	                                <h5 class="box-title m-t-30">DATE</h5>
-	                                <p class="text-muted m-b-20">공연 일자</p>
-	                                <div class="input-group">
-	                                    <input type="text" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy">
-	                                    <span class="input-group-append"><span class="input-group-text"><i class="mdi mdi-calendar-check"></i></span></span>
-                               		</div>
-                               	</div>
-                            	<div class="col-8">
-                            		<h5 class="box-title m-t-30">TIME</h5>
+	                                
 	                                <div class = "row">
-	                            		<div class="col-6">
+	                            		<div class="col-4">
 			                                <p class="text-muted m-b-20">공연 시작 시간</p>
-		                                    <div class="input-group">
-		                                        <input class="form-control" id="single-input" placeholder="hh:mm"> <span class="input-group-append"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
+		                                    <div class="form-group">
+		                                        <input type="datetime-local" class="form-control" name = "sdate">
 		                                    </div>
 			                            </div>
-	                            		<div class="col-6">
+			                            
+			                            
+	                            		<div class="col-4">
 			                                <p class="text-muted m-b-20">종료 시간</p>
-		                                    <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-		                                            <input type="text" class="form-control"  placeholder="hh:mm"> <span class="input-group-append"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
+		                                    <div class="form-group">
+		                                        <input type="datetime-local" class="form-control" name = "edate" >
 		                                    </div>
 		                                </div>
 	                                </div>    
-	                            </div>
+	                                
+
 	                            </div>
                             </div>
                         </div>
                         
                 	</div>
+                	</div>
                 	<div class="col-12">
                         <div class="card">
+                        	
                             <div class="card-body">
-                                <div class="summernote">
-                                    <h3>곡소개</h3>
+                            
+                           		<input type="text" class="form-control" placeholder="제목" name = "subject"><br>
+                                <textarea id="summernote" class="summernote"> 곡 소개 </textarea><br>
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-info">Submit</button>
+<!--                                     <button type="reset" class="btn btn-dark">Reset</button> -->
                                 </div>
                             </div>
                         </div>
@@ -156,6 +171,8 @@
                 
                     
                 </div>
+                
+                </form>
             </div>
             <!-- #/ container -->
         </div>
