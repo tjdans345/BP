@@ -80,7 +80,11 @@
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="email" placeholder="이메일" required>
                                     </div> 
-
+									
+									<div>
+										
+									</div>
+									
 									<div class="form-row align-items-center">
                                             <div class="col-auto my-1">
                                                 <label class="mr-sm-2">지역</label>
