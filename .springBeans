@@ -7,10 +7,14 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
+		<config>src/main/webapp/WEB-INF/spring/mybatis-context.xml</config>
 	</configs>
 	<autoconfigs>
+		<config>src/main/webapp/WEB-INF/spring/appServlet/busking-context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/appServlet/My-context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/appServlet/member-context.xml</config>
+		<config>src/main/webapp/WEB-INF/spring/appServlet/singer-context.xml</config>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
-		<config>src/main/webapp/WEB-INF/spring/root-context.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>
