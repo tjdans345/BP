@@ -10,4 +10,9 @@ public class MemberService {
 	public String name() {
 		return mdao.selectname();
 	}
+	
+	public void addMember(MemberVO memberVO) {
+		mdao.insertMember(memberVO);
+	}
+		
 }

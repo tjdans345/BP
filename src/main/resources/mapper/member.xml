@@ -25,4 +25,22 @@
   		]]>
   	</select>
   	
+  	<insert id="insertMember" parameterType="MemberVO">
+  		<![CDATA[
+  			insert into member(name, id, password, email, 
+  				phone, location, profile_img, status, joinDate)
+  			values(#{name}, #{id}, #{password}, #{email}, 
+  				#{phone}, #{location}, #{profile_img}, #{status}, #{joinDate})
+  		]]>
+  	</insert>
+  	
+  	<delete id="deleteMember" parameterType="String">
+  		<![CDATA[
+  			delete from member
+  			where
+  			id=#{id}
+  		]]>
+  	</delete>
+  	
+  	
   </mapper>
