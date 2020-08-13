@@ -4,5 +4,16 @@
     
 <configuration>
 
+<typeAliases>
+<!-- 
+
+<typeAlias type="com.main.spring.member.MemberVO"  alias="memberVO" />
+<typeAlias type="com.main.spring.member.MemberVO"  alias="boardVO" />
+ <typeAlias type="com.main.spring.member.MemberVO"  alias="boardVO" />
+ -->
+
+</typeAliases>
+
+
 
 </configuration>
