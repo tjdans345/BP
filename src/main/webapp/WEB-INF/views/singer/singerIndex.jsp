@@ -43,6 +43,9 @@
 		background-color: green;
 	}
 	
+	#buskingcomment{
+		padding: 0rem 1.81rem; 
+	}
 	
 
 	</style>
@@ -71,23 +74,7 @@
     ***********************************-->
     <div id="main-wrapper">
 
-        <!--**********************************
-            Nav header start
-        ***********************************-->
-        <div class="nav-header">
-            <div class="brand-logo">
-                <a href="${contextPath}/resources/singer/index.html">
-                    <b class="logo-abbr"><img src="${contextPath}/resources/singer/images/logo.png" alt=""> </b>
-                    <span class="logo-compact"><img src="${contextPath}/resources/singer/images/logo-compact.png" alt=""></span>
-                    <span class="brand-title">
-                        <img src="${contextPath}/resources/singer/images/logo-text.png" alt="">
-                    </span>
-                </a>
-            </div>
-        </div>
-        <!--**********************************
-            Nav header end
-        ***********************************-->
+        
 
         <!--**********************************
             Header start
@@ -301,8 +288,8 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="text-center">
-                                    <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/singer/images/users/5.jpg" id="profile">
-                                    <h4 class="card-widget__title text-dark mt-3">Deangelo Sena</h4>
+                                    <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/singer/images/users/10.GIF" id="profile">
+                                    <h4 class="card-widget__title text-dark mt-3">창모</h4>
                                     <p class="text-muted">Senior Manager</p>
                                     <a class="btn2 gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()" id="fbtn">Folllow</a>
                                 </div>
@@ -370,22 +357,60 @@
                 
                 <!-- 메인 프로필 -->
                 
+                <!-- 댓글작성 칸 -->
+				 <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">댓글 작성</h4>
+                                <div class="basic-form">
+                            <form action="${contextPath}/singerInsert.sin" method="get">
+                                        <div class="form-group">
+                                            <textarea class="form-control h-150px" rows="6" id="content"></textarea>
+                                        </div>
+                             <!-- 모달 버튼 -->            
+								<div class="bootstrap-modal">
+                                    <!-- Button trigger modal (모달 버튼)-->
+                                    <button type="button" class="btn mb-1 btn-outline-primary" data-toggle="modal" data-target="#basicModal" style="float: right;">글 작성</button>
+                                    <!-- Modal (모달 기능)-->
+                                    <div class="modal fade" id="basicModal">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Busking</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">글을 작성하시겠습니까?</div>
+                                                <div class="modal-footer">
+                                                 	<button type="submit" class="btn btn-primary">예</button>
+                                                    <button type="reset" class="btn btn-secondary" data-dismiss="modal">아니오</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             <!-- 모달 버튼 -->
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+				  <!-- 댓글작성 칸 -->
 
+				<!-- 댓글 -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" id="buskingcomment">
                                 <div class="active-member">
                                     <div class="table-responsive">
                                         <table class="table table-xs mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th>Customers</th>
-                                                    <th>Product</th>
-                                                    <th>Country</th>
-                                                    <th>Status</th>
-                                                    <th>Payment Method</th>
-                                                    <th>Activity</th>
+                                                    <th>ID</th>
+                                                    <th colspan="4">CONTENT</th>
+                                                    <th>DATE</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -394,18 +419,6 @@
                                                     <td>iPhone X</td>
                                                     <td>
                                                         <span>United States</span>
-                                                    </td>
-                                                    <td>
-                                                        <div>
-                                                            <div class="progress" style="height: 6px">
-                                                                <div class="progress-bar bg-success" style="width: 50%"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Paid</td>
-                                                    <td>
-                                                        <span>Last Login</span>
-                                                        <span class="m-0 pl-3">10 sec ago</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -501,7 +514,7 @@
                         </div>                        
                     </div>
                 </div>
-
+			<!-- 댓글 -->
                 
 
                 <div class="row">

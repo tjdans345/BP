@@ -14,8 +14,25 @@
 
 </style>
 
-
-
+	<!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="${contextPath}/BP/index.do">
+                    <b class="logo-abbr"><img src="${contextPath}/resources/singer/images/logo.png" alt=""> </b>
+                    <span class="logo-compact"><img src="${contextPath}/resources/singer/images/logo-compact.png" alt=""></span>
+                    <span class="brand-title">
+                        <img src="${contextPath}/resources/singer/images/logo-text.png" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->	
+		
+		
    <!--**********************************
             Sidebar start
         ***********************************-->
@@ -29,7 +46,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="" aria-expanded="false">
+                        <a class="has-arrow" href="#" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">공연일정</span>
                         </a>
                     </li>    
@@ -41,20 +58,19 @@
                     </li>
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Apps</span>
+                            <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">공지 사항</span>
                         </a>
-                      
                     </li>
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-graph menu-icon"></i> <span class="nav-text">Charts</span>
+                            <i class="icon-graph menu-icon"></i> <span class="nav-text">팬 관리</span>
                         </a>
                      
                     </li>
-                    <li class="nav-label">UI Components</li>
+                   
                     <li>
                         <a class="has-arrow" href="${contextPath}/resources/singer/javascript:void()" aria-expanded="false">
-                            <i class="icon-grid menu-icon"></i><span class="nav-text">UI Components</span>
+                            <i class="icon-grid menu-icon"></i><span class="nav-text">방명록</span>
                         </a>
                        
                     </li>
