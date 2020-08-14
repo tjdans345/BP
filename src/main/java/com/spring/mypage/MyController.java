@@ -1,34 +1,82 @@
 package com.spring.mypage;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class MyController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(MyController.class);
-	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-	@RequestMapping(value = "/mypage.my", method = RequestMethod.GET)
-	public String index(Locale locale, Model model) {
-		
-		
+	@Autowired
+	private MyService mys = new MyService();
+	private ModelAndView mav = new ModelAndView();
 
-		return "mypage/mypageIndex";
+	@RequestMapping(value = "/mypage.my", method = RequestMethod.GET)
+	public ModelAndView index(String id) {
+		
+		mav.addObject("meminfo", mys.meminfo(id));
+		mav.setViewName("mypage/mypageIndex");
+		return mav;
 
 	}
 	
+	@RequestMapping(value = "/info.my", method = RequestMethod.GET)
+	public ModelAndView info(String id) {
+		
+		mav.addObject("meminfo", mys.meminfo(id));
+		mav.setViewName("mypage/info");
+
+		return mav;
+
+	}
+	
+	@RequestMapping(value = "/edit.my", method = RequestMethod.GET)
+	public ModelAndView edit(String id) {
+		
+		mav.addObject("meminfo", mys.meminfo(id));
+		mav.setViewName("mypage/edit");
+		return mav;
+
+	}
+	
+	@RequestMapping(value = "/del.my", method = RequestMethod.GET)
+	public ModelAndView del() {
+		
+		mav.setViewName("mypage/delete");
+		return mav;
+
+	}
+	
+	@RequestMapping(value = "/likesin.my", method = RequestMethod.GET)
+	public ModelAndView likesin() {
+		
+		mav.setViewName("mypage/likesin");
+		return mav;
+
+	}
+	
+	@RequestMapping(value = "/likecon.my", method = RequestMethod.GET)
+	public ModelAndView likecon() {
+		
+		mav.setViewName("mypage/likecon");
+		return mav;
+
+	}
+	
+	@RequestMapping(value = "/chat.my", method = RequestMethod.GET)
+	public ModelAndView chat() {
+		
+		mav.setViewName("mypage/chat");
+		return mav;
+
+	}
+	
+	@RequestMapping(value = "/sup.my", method = RequestMethod.GET)
+	public ModelAndView sup() {
+		
+		mav.setViewName("mypage/sup");
+		return mav;
+
+	}
 }
