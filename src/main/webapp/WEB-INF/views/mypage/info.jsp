@@ -84,6 +84,13 @@ width:200px;}
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">연락처
+                                            </label>
+                                            ${meminfo.phone}
+                                            <div class="col-lg-6">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-skill">지역
                                             </label>
                                             ${meminfo.location}

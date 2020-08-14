@@ -70,17 +70,15 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="media align-items-center mb-4">
-                                    <img class="mr-3" src="${contextPath}/resources/mypage/images/avatar/11.png" width="200" height="200" alt="" style="margin-left:90px;">
+                                    <img class="mr-3" src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}" width="200" height="200" alt="" style="margin-left:90px;">
                                     <div class="media-body">
-                                        <h3 class="mb-0">Pikamy Cha</h3>
-                                        <p class="text-muted mb-0">Canada</p>
+                                        <h3 class="mb-0">${meminfo.name}</h3>
                                     </div>
                                 </div>
                                 <h4>About Me</h4>
-                                <p class="text-muted">Hi, I'm Pikamy, has been the industry standard dummy text ever since the 1500s.</p>
                                 <ul class="card-profile__info">
-                                    <li class="mb-1"><strong class="text-dark mr-4">Mobile</strong> <span>01793931609</span></li>
-                                    <li><strong class="text-dark mr-4">Email</strong> <span>name@domain.com</span></li>
+                                    <li class="mb-1"><strong class="text-dark mr-4">Mobile</strong> <span>${meminfo.phone}</span></li>
+                                    <li><strong class="text-dark mr-4">Email</strong> <span>${meminfo.email}</span></li>
                                 </ul>
                             </div> 
                     </div>

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="${contextPath}/resources/mypage/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/mypage/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <style type="text/css">
 .rounded-circle{
 width:200px;}
@@ -66,14 +67,14 @@ width:200px;}
                                		   <input type="hidden" name = "userimage" value="">
 								   	   <input type="file" id="img_file" name="userimage_new" onclick="click" accept=""/><br><br>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-username">아이디<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-id">아이디<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-username" name="val-username" placeholder="${meminfo.id}">
+                                                <input type="text" class="form-control" id="val-id" name="val-id" placeholder="${meminfo.id}" readonly>
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-email">이름<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-username">이름<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
                                                 <input type="text" class="form-control" id="val-username" name="val-username" placeholder="${meminfo.name}">
@@ -94,35 +95,49 @@ width:200px;}
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-suggestions">이메일<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-email">이메일<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
                                                  <input type="text" class="form-control" id="val-email" name="val-email" placeholder="${meminfo.email}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-skill">지역<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-number">연락처<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="val-number" name="val-number" placeholder="${meminfo.phone}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-skill">지역<span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6"> 
+                                            	<c:if test="${meminfo.location == 'seoul'}">                                         	
                                                 <select class="form-control" id="val-skill" name="val-skill">
-                                                    <option value="${meminfo.location}"></option>
-                                                    <option value="html">서울</option>
-                                                    <option value="css">대전</option>
-                                                    <option value="mysql">경기</option>
-                                                    <option value="javascript">울산</option>
-                                                    <option value="mysql">광주</option>
-                                                    <option value="angular">대구</option>
-                                                    <option value="angular">부산</option>
-                                                    <option value="mysql">인천</option>
-                                                    <option value="mysql">제주도</option>
-                                                    <option value="vuejs">경북</option>
-                                                    <option value="ruby">경남</option>
-                                                    <option value="php">충북</option>
-                                                    <option value="asp">충남</option>
-                                                    <option value="python">강원</option>
-                                                    <option value="mysql">전북</option>
-                                                    <option value="mysql">전남</option>
+                                                    <option value="seoul" selected="selected">서울</option>
+                                                    <option value="busan">부산</option>
+                                                    <option value="daegu">대구</option>
                                                 </select>
+                                                </c:if>
+                                                <c:if test="${meminfo.location == 'busan'}">                                          	
+                                                <select class="form-control" id="val-skill" name="val-skill">
+                                                    <option value="seoul">서울</option>
+                                                    <option value="busan" selected="selected">부산</option>
+                                                    <option value="daegu">대구</option>
+                                                </select>
+                                                </c:if>
+                                                <c:if test="${meminfo.location == 'daegu'}">                                          	
+                                                <select class="form-control" id="val-skill" name="val-skill">
+                                                    <option value="seoul">서울</option>
+                                                    <option value="busan">부산</option>
+                                                    <option value="daegu" selected="selected"> 대구</option>
+                                                </select>
+                                                </c:if>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-lg-8 ml-auto">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
                                             </div>
                                         </div>
                                     </form>
@@ -164,28 +179,10 @@ width:200px;}
     <script src="${contextPath}/resources/mypage/js/settings.js"></script>
     <script src="${contextPath}/resources/mypage/js/gleek.js"></script>
     <script src="${contextPath}/resources/mypage/js/styleSwitcher.js"></script>
+    
+    <script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate.min.js"></script>
+    <script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate-init.js"></script>
 
-    <!-- Chartjs -->
-    <script src="${contextPath}/resources/mypage/plugins/chart.js/Chart.bundle.min.js"></script>
-    <!-- Circle progress -->
-    <script src="${contextPath}/resources/mypage/plugins/circle-progress/circle-progress.min.js"></script>
-    <!-- Datamap -->
-    <script src="${contextPath}/resources/mypage/plugins/d3v3/index.js"></script>
-    <script src="${contextPath}/resources/mypage/plugins/topojson/topojson.min.js"></script>
-    <script src="${contextPath}/resources/mypage/plugins/datamaps/datamaps.world.min.js"></script>
-    <!-- Morrisjs -->
-    <script src="${contextPath}/resources/mypage/plugins/raphael/raphael.min.js"></script>
-    <script src="${contextPath}/resources/mypage/plugins/morris/morris.min.js"></script>
-    <!-- Pignose Calender -->
-    <script src="${contextPath}/resources/mypage/plugins/moment/moment.min.js"></script>
-    <script src="${contextPath}/resources/mypage/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
-    <!-- ChartistJS -->
-    <script src="${contextPath}/resources/mypage/plugins/chartist/js/chartist.min.js"></script>
-    <script src="${contextPath}/resources/mypage/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
-
-
-
-    <script src="${contextPath}/resources/mypage/js/dashboard/dashboard-1.js"></script>
 
 </body>
 

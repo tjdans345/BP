@@ -13,8 +13,9 @@ public class MyController {
 	private ModelAndView mav = new ModelAndView();
 
 	@RequestMapping(value = "/mypage.my", method = RequestMethod.GET)
-	public ModelAndView index() {
+	public ModelAndView index(String id) {
 		
+		mav.addObject("meminfo", mys.meminfo(id));
 		mav.setViewName("mypage/mypageIndex");
 		return mav;
 
