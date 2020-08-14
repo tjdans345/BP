@@ -8,7 +8,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MyController {
-
+	@Autowired
+	private MyService mys = new MyService();
 	private ModelAndView mav = new ModelAndView();
 
 	@RequestMapping(value = "/mypage.my", method = RequestMethod.GET)

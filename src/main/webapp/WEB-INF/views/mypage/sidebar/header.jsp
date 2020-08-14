@@ -167,11 +167,11 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="${contextPath}/resources/mypage/app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
+                                            <a href="${contextPath}/info.my"><i class="icon-user"></i> <span>회원정보</span></a>
                                         </li>
                                         <li>
-                                            <a href="${contextPath}/resources/mypage/javascript:void()">
-                                                <i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill gradient-1">3</div>
+                                            <a href="${contextPath}/chat.my">
+                                                <i class="icon-envelope-open"></i> <span>1:1채팅</span> <div class="badge gradient-3 badge-pill gradient-1">3</div>
                                             </a>
                                         </li>
                                         
