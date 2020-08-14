@@ -21,16 +21,19 @@ public class MyController {
 	}
 	
 	@RequestMapping(value = "/info.my", method = RequestMethod.GET)
-	public ModelAndView info() {
+	public ModelAndView info(String id) {
 		
+		mav.addObject("meminfo", mys.meminfo(id));
 		mav.setViewName("mypage/info");
+
 		return mav;
 
 	}
 	
 	@RequestMapping(value = "/edit.my", method = RequestMethod.GET)
-	public ModelAndView edit() {
+	public ModelAndView edit(String id) {
 		
+		mav.addObject("meminfo", mys.meminfo(id));
 		mav.setViewName("mypage/edit");
 		return mav;
 

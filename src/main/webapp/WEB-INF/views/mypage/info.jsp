@@ -3,10 +3,11 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />   
     
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,29 +60,33 @@ width:200px;}
                             <div class="card-body">
                                 <div class="form-validation">
                                   <div class="text-center">
-                                    <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/mypage/images/users/5.jpg">
+                                    <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}">
                                	 </div><br><br>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-username">아이디<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-username">아이디
                                             </label>
+                                            ${meminfo.id}
                                             <div class="col-lg-6">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-password">이름<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-password">이름
                                             </label>
+                                            ${meminfo.name}
                                             <div class="col-lg-6">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">이메일<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">이메일
                                             </label>
+                                            ${meminfo.email}
                                             <div class="col-lg-6">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-skill">지역<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-skill">지역
                                             </label>
+                                            ${meminfo.location}
                                             <div class="col-lg-6">
                                             </div>
                                         </div>

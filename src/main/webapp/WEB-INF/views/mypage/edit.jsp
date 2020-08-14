@@ -61,7 +61,7 @@ width:200px;}
                                 <div class="form-validation">
                                     <form class="form-valide" action="#" method="post">
                                        <div class="text-center">
-                                    	<img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/mypage/images/users/5.jpg">
+                                    	<img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}">
                                		   </div>
                                		   <input type="hidden" name = "userimage" value="">
 								   	   <input type="file" id="img_file" name="userimage_new" onclick="click" accept=""/><br><br>
@@ -69,35 +69,35 @@ width:200px;}
                                             <label class="col-lg-4 col-form-label" for="val-username">아이디<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-username" name="val-username" placeholder="Enter a username..">
+                                                <input type="text" class="form-control" id="val-username" name="val-username" placeholder="${meminfo.id}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-email">이름<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-username" name="val-username" placeholder="Enter a username..">
+                                                <input type="text" class="form-control" id="val-username" name="val-username" placeholder="${meminfo.name}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-password">비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="val-password" name="val-password" placeholder="Choose a safe one..">
+                                                <input type="password" class="form-control" id="val-password" name="val-password" placeholder="${meminfo.password}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-confirm-password">비밀번호 확인<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="val-confirm-password" name="val-confirm-password" placeholder="..and confirm it!">
+                                                <input type="password" class="form-control" id="val-confirm-password" name="val-confirm-password" placeholder="${meminfo.password}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-suggestions">이메일<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                 <input type="text" class="form-control" id="val-email" name="val-email" placeholder="Your valid email..">
+                                                 <input type="text" class="form-control" id="val-email" name="val-email" placeholder="${meminfo.email}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -105,18 +105,23 @@ width:200px;}
                                             </label>
                                             <div class="col-lg-6">
                                                 <select class="form-control" id="val-skill" name="val-skill">
-                                                    <option value="">Please select</option>
-                                                    <option value="html">HTML</option>
-                                                    <option value="css">CSS</option>
-                                                    <option value="javascript">JavaScript</option>
-                                                    <option value="angular">Angular</option>
-                                                    <option value="angular">React</option>
-                                                    <option value="vuejs">Vue.js</option>
-                                                    <option value="ruby">Ruby</option>
-                                                    <option value="php">PHP</option>
-                                                    <option value="asp">ASP.NET</option>
-                                                    <option value="python">Python</option>
-                                                    <option value="mysql">MySQL</option>
+                                                    <option value="${meminfo.location}"></option>
+                                                    <option value="html">서울</option>
+                                                    <option value="css">대전</option>
+                                                    <option value="mysql">경기</option>
+                                                    <option value="javascript">울산</option>
+                                                    <option value="mysql">광주</option>
+                                                    <option value="angular">대구</option>
+                                                    <option value="angular">부산</option>
+                                                    <option value="mysql">인천</option>
+                                                    <option value="mysql">제주도</option>
+                                                    <option value="vuejs">경북</option>
+                                                    <option value="ruby">경남</option>
+                                                    <option value="php">충북</option>
+                                                    <option value="asp">충남</option>
+                                                    <option value="python">강원</option>
+                                                    <option value="mysql">전북</option>
+                                                    <option value="mysql">전남</option>
                                                 </select>
                                             </div>
                                         </div>

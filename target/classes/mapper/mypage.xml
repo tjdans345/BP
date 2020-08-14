@@ -5,4 +5,11 @@
    
   <mapper namespace="mapper.my">
 
+	<select id="meminfo" resultType="memberVO">
+		<![CDATA[ 
+  			select * from member
+  			where id='농담'
+  		]]>
+	</select>
+	
   </mapper>
