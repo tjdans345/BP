@@ -41,8 +41,8 @@ public class BuskingController {
 									HttpServletRequest request,
 									HttpServletResponse response) {
 		buskingService.insertBusking(buskingVO);
-		mav.setViewName("redirect:/resbusking.b"); 
-		request.getSession().setAttribute("id",buskingVO.getSid());
+		//mav.setViewName("redirect:/resbusking.b"); 
+		mav.setViewName("index"); 
 
 		return mav;
 	}
