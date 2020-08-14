@@ -93,7 +93,7 @@ width:200px;}
                                                     </div>
                                                     <div class="form-check disabled">
                                                         <input class="form-check-input" type="radio" name="gridRadios" value="option3" disabled="disabled">
-                                                        <label class="form-check-label">카카오로 결제하기</label>
+                                                        <label class="form-check-label">카카오페이</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -107,7 +107,7 @@ width:200px;}
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>x
                     <div class="col-2"></div>
                     </div>
                  </div>
