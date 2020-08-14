@@ -1,5 +1,7 @@
 package com.spring.member;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +14,12 @@ public class MemberService {
 	}
 	
 	public void addMember(MemberVO memberVO) {
-		mdao.insertMember(memberVO);
+		mdao.addMember(memberVO);
 	}
+	
+//	public String loginMember(MemberVO memberVO) {
+//		String msg = "";
+//		List list = mdao; 
+//	}
 		
 }
