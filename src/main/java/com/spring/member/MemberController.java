@@ -34,6 +34,8 @@ public class MemberController {
 		return mav;
 	}
 	
+	
+	
 	@RequestMapping(value = "/signup.mem", method = RequestMethod.GET)
 	public String signup(Locale locale, Model model) {
 		
@@ -45,10 +47,35 @@ public class MemberController {
 									HttpServletRequest request,
 									HttpServletResponse response) {
 		ms.addMember(memberVO);
-		mav.setViewName("index");
+		mav.setViewName("redirect:/index.do");
 		request.getSession().setAttribute("id", memberVO.getId());
 
 		return mav;
 	}
 	
+   @RequestMapping(value = "/logout.mem", method = RequestMethod.GET)
+   public ModelAndView logout(HttpServletRequest request) {
+      request.getSession().removeAttribute("id");
+      mav.setViewName("redirect:/index.do");
+  
+      return mav;
+   }   
+
+   @RequestMapping(value = "/loginCheck", method = RequestMethod.POST)
+   public ModelAndView loginCheck(@ModelAttribute MemberVO memberVO,
+		   					HttpServletRequest request,
+		   					HttpServletResponse response) {
+	   
+	   String msg = ms.loginMember(memberVO);
+	   
+	   if(msg.equals("login")) {
+			request.getSession().setAttribute("id", memberVO.getId());
+			mav.setViewName("redirect:/index.do");
+	   }else {
+		   mav.addObject("msg", msg);
+		   mav.setViewName("member/login");
+	   }
+	   return mav;
+	}   
+   
 }

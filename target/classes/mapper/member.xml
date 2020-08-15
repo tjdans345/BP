@@ -23,6 +23,18 @@
   			where id = '1'
   		]]>
   	</select>
+
+   	<select id="idcheck" resultType="java.util.HashMap" parameterType="String">
+		<![CDATA[
+		select * from member where id = #{id}
+		]]>
+   	</select>
+   	
+   	<select id="loginMember" parameterType="String" resultMap="memresult">
+   		<![CDATA[
+   		select * from member where id = #{id}
+   		]]>
+   	</select>	   	  	
   	
   	<insert id="addMember" parameterType="memberVO">
   		<![CDATA[

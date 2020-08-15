@@ -53,10 +53,10 @@
                                         <input type="text" class="form-control" name="name" placeholder="이름" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="pwd" placeholder="비밀번호" required>
+                                        <input type="password" class="form-control" name="password" placeholder="비밀번호" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="pwd1" placeholder="비밀번호 확인" required>
+                                        <input type="password" class="form-control" name="password1" placeholder="비밀번호 확인" required>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="phone" placeholder="전화번호" required>

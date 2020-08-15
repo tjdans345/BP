@@ -22,6 +22,6 @@ public class MemberDAO {
 		return sqlSession.selectList("mapper.member.idcheck", id);
 	}
 	public MemberVO loginMember(String id) {
-		return sqlSession.selectOne("mapper.member.loginMember",id);
+		return sqlSession.selectOne("mapper.member.loginMember", id);
 	}	
 }
