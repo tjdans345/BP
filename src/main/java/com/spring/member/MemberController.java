@@ -21,25 +21,26 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MemberController {
-	
 	@Autowired
 	private MemberService ms;
 	private ModelAndView mav = new ModelAndView();
-	
-	@RequestMapping(value = "/login.mem", method = RequestMethod.GET)
-	public ModelAndView login() {
-		mav.setViewName("member/login");
-		mav.addObject("name", ms.name());
+
+	@RequestMapping(value = "/beforejoin.mem", method = RequestMethod.GET)
+	public String beforejoin(Locale locale, Model model) {
 		
-		return mav;
+		return "member/beforejoin";
 	}
 	
-	
-	
-	@RequestMapping(value = "/signup.mem", method = RequestMethod.GET)
-	public String signup(Locale locale, Model model) {
+	@RequestMapping(value = "/login.mem", method = RequestMethod.GET)
+	public String login(Locale locale, Model model) {
 		
-		return "member/signup";
+		return "member/login";
+	}	
+	
+	@RequestMapping(value = "/join.mem", method = RequestMethod.GET)
+	public String join(Locale locale, Model model) {
+		
+		return "member/join";
 	}
 	
 	@RequestMapping(value = "/addMember.mem", method = RequestMethod.GET)
@@ -59,7 +60,7 @@ public class MemberController {
   
       return mav;
    }   
-
+   
    @RequestMapping(value = "/loginCheck", method = RequestMethod.POST)
    public ModelAndView loginCheck(@ModelAttribute MemberVO memberVO,
 		   					HttpServletRequest request,

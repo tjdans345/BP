@@ -9,10 +9,6 @@ import org.springframework.stereotype.Service;
 public class MemberService {
 	@Autowired
 	private MemberDAO mdao;
-	public String name() {
-		return mdao.selectname();
-	}
-	
 	public void addMember(MemberVO memberVO) {
 		mdao.addMember(memberVO);
 	}

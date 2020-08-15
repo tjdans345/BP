@@ -11,10 +11,7 @@ import org.springframework.stereotype.Repository;
 public class MemberDAO {
 	@Autowired
 	private SqlSession sqlSession;
-	
-	public String selectname() {
-		return sqlSession.selectOne("mapper.member.selectname");
-	}
+
 	public int addMember(MemberVO memberVO) {
 		return sqlSession.insert("mapper.member.addMember", memberVO);
 	}

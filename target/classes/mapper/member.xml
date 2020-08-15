@@ -17,13 +17,6 @@
    		<result property="joindate" column="joindate" /> 
    	</resultMap>
    	  
-  	<select id="selectname" resultType="String">
-  		<![CDATA[ 
-  			select name from member
-  			where id = '1'
-  		]]>
-  	</select>
-
    	<select id="idcheck" resultType="java.util.HashMap" parameterType="String">
 		<![CDATA[
 		select * from member where id = #{id}
