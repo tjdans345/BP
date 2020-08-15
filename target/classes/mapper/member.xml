@@ -39,9 +39,9 @@
   	<insert id="addMember" parameterType="memberVO">
   		<![CDATA[
   			insert into member(name, id, password, email, 
-  				phone, location, profile_img, status, joinDate)
+  				phone, location, profile_img, status, joindate)
   			values(#{name}, #{id}, #{password}, #{email}, 
-  				#{phone}, #{location}, #{profile_img}, #{status}, #{joinDate})
+  				#{phone}, #{location}, #{profile_img}, #{status}, #{joindate})
   		]]>
   	</insert>
   	

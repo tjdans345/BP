@@ -48,7 +48,6 @@ public class MemberController {
 									HttpServletResponse response) {
 		ms.addMember(memberVO);
 		mav.setViewName("redirect:/index.do");
-		request.getSession().setAttribute("id", memberVO.getId());
 
 		return mav;
 	}
