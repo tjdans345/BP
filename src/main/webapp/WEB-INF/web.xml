@@ -29,6 +29,8 @@
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 	
+
+
 	<!-- 싱어 페이지 -->
 	<servlet>
 		<servlet-name>singServlet</servlet-name>
