@@ -8,31 +8,41 @@ public class MemberVO {
 	private String password;
 	private String email;
 	private String phone;
+	private String gender;
 	private String location;
 	private String profile_img;
 	private int status;
-	private Date joinDate;
+	private String joindate;
 	
 	public MemberVO() {
 		
 	}
 	
-	public MemberVO(String name, String id, String password, String email, String phone, String location,
-			String profile_img, int status, Date joinDate) {
+	public MemberVO(String name, String id, String password, String email, String phone, String gender, String location,
+			String profile_img, int status, String joindate) {
 		super();
 		this.name = name;
 		this.id = id;
 		this.password = password;
 		this.email = email;
 		this.phone = phone;
+		this.gender = gender;
 		this.location = location;
 		this.profile_img = profile_img;
 		this.status = status;
-		this.joinDate = joinDate;
+		this.joindate = joindate;
 	}
 
 	public String getName() {
 		return name;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public void setName(String name) {
@@ -95,11 +105,13 @@ public class MemberVO {
 		this.status = status;
 	}
 
-	public Date getJoinDate() {
-		return joinDate;
+	public String getjoindate() {
+		return joindate;
 	}
 
-	public void setJoinDate(Date joinDate) {
-		this.joinDate = joinDate;
+	public void setjoindate(String joindate) {
+		this.joindate = joindate;
 	}
+
+
 }

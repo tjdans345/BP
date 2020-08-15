@@ -57,7 +57,7 @@
 			                    </a>
 			                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/blog.do">My page</a></li>
-			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/elements.do">Log out</a></li>
+			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/logout.mem">Log out</a></li>
 			                    </ul>
 			                </li>
 		                </c:otherwise>

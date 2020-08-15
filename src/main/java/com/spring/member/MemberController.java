@@ -21,23 +21,26 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MemberController {
-	
 	@Autowired
 	private MemberService ms;
 	private ModelAndView mav = new ModelAndView();
-	
-	@RequestMapping(value = "/login.mem", method = RequestMethod.GET)
-	public ModelAndView login() {
-		mav.setViewName("member/login");
-		mav.addObject("name", ms.name());
+
+	@RequestMapping(value = "/beforejoin.mem", method = RequestMethod.GET)
+	public String beforejoin(Locale locale, Model model) {
 		
-		return mav;
+		return "member/beforejoin";
 	}
 	
-	@RequestMapping(value = "/signup.mem", method = RequestMethod.GET)
-	public String signup(Locale locale, Model model) {
+	@RequestMapping(value = "/login.mem", method = RequestMethod.GET)
+	public String login(Locale locale, Model model) {
 		
-		return "member/signup";
+		return "member/login";
+	}	
+	
+	@RequestMapping(value = "/join.mem", method = RequestMethod.GET)
+	public String join(Locale locale, Model model) {
+		
+		return "member/join";
 	}
 	
 	@RequestMapping(value = "/addMember.mem", method = RequestMethod.GET)
@@ -45,10 +48,34 @@ public class MemberController {
 									HttpServletRequest request,
 									HttpServletResponse response) {
 		ms.addMember(memberVO);
-		mav.setViewName("index");
-		request.getSession().setAttribute("id", memberVO.getId());
+		mav.setViewName("redirect:/index.do");
 
 		return mav;
 	}
 	
+   @RequestMapping(value = "/logout.mem", method = RequestMethod.GET)
+   public ModelAndView logout(HttpServletRequest request) {
+      request.getSession().removeAttribute("id");
+      mav.setViewName("redirect:/index.do");
+  
+      return mav;
+   }   
+   
+   @RequestMapping(value = "/loginCheck", method = RequestMethod.POST)
+   public ModelAndView loginCheck(@ModelAttribute MemberVO memberVO,
+		   					HttpServletRequest request,
+		   					HttpServletResponse response) {
+	   
+	   String msg = ms.loginMember(memberVO);
+	   
+	   if(msg.equals("login")) {
+			request.getSession().setAttribute("id", memberVO.getId());
+			mav.setViewName("redirect:/index.do");
+	   }else {
+		   mav.addObject("msg", msg);
+		   mav.setViewName("member/login");
+	   }
+	   return mav;
+	}   
+   
 }

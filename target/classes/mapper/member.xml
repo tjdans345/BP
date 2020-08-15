@@ -17,19 +17,31 @@
    		<result property="joindate" column="joindate" /> 
    	</resultMap>
    	  
-  	<select id="selectname" resultType="String">
-  		<![CDATA[ 
-  			select name from member
-  			where id = '1'
+   	<select id="idcheck" resultType="java.util.HashMap" parameterType="String">
+		<![CDATA[
+		select * from member where id = #{id}
+		]]>
+   	</select>
+   	
+   	<select id="loginMember" parameterType="String" resultMap="memresult">
+   		<![CDATA[
+   		select * from member where id = #{id}
+   		]]>
+   	</select>	   	  	
+  	
+  	<insert id="beforejoin" parameterType="memberVO">
+  		<![CDATA[
+  			insert into member(status)
+  			values(#{status})	
   		]]>
-  	</select>
+  	</insert>
   	
   	<insert id="addMember" parameterType="memberVO">
   		<![CDATA[
   			insert into member(name, id, password, email, 
-  				phone, location, profile_img, status, joinDate)
+  				phone, location, profile_img, status, joindate)
   			values(#{name}, #{id}, #{password}, #{email}, 
-  				#{phone}, #{location}, #{profile_img}, #{status}, #{joinDate})
+  				#{phone}, #{location}, #{profile_img}, #{status}, #{joindate})
   		]]>
   	</insert>
   	

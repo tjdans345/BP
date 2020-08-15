@@ -66,7 +66,7 @@
                                     </div>
                                     <button class="btn login-form__btn submit w-100">Sign In</button>
                                 </form>
-                                <p class="mt-5 login-form__footer">아직 계정이 없으신가요? <a href="${contextPath}/join.mem" class="text-primary">회원가입 하기</a></p>
+                                <p class="mt-5 login-form__footer">아직 계정이 없으신가요? <a href="${contextPath}/signup.mem" class="text-primary">회원가입 하기</a></p>
                             </div>
                         </div>
                     </div>
