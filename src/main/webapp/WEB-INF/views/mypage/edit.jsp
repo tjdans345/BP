@@ -84,14 +84,14 @@ width:200px;}
                                             <label class="col-lg-4 col-form-label" for="val-password">비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="val-password" name="val-password" placeholder="${meminfo.password}">
+                                                <input type="password" class="form-control" id="val-password" name="val-password" placeholder="변경하실비밀번호입력">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-confirm-password">비밀번호 확인<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="val-confirm-password" name="val-confirm-password" placeholder="${meminfo.password}">
+                                                <input type="password" class="form-control" id="val-confirm-password" name="val-confirm-password" placeholder="비밀번호 재확인">
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -112,25 +112,25 @@ width:200px;}
                                             <label class="col-lg-4 col-form-label" for="val-skill">지역<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6"> 
-                                            	<c:if test="${meminfo.location == 'seoul'}">                                         	
+                                            	<c:if test="${meminfo.location == '서울'}">                                         	
                                                 <select class="form-control" id="val-skill" name="val-skill">
-                                                    <option value="seoul" selected="selected">서울</option>
-                                                    <option value="busan">부산</option>
-                                                    <option value="daegu">대구</option>
+                                                    <option value="서울" selected="selected">서울</option>
+                                                    <option value="부산">부산</option>
+                                                    <option value="대구">대구</option>
                                                 </select>
                                                 </c:if>
-                                                <c:if test="${meminfo.location == 'busan'}">                                          	
+                                                <c:if test="${meminfo.location == '부산'}">                                          	
                                                 <select class="form-control" id="val-skill" name="val-skill">
-                                                    <option value="seoul">서울</option>
-                                                    <option value="busan" selected="selected">부산</option>
-                                                    <option value="daegu">대구</option>
+                                                    <option value="서울">서울</option>
+                                                    <option value="부산" selected="selected">부산</option>
+                                                    <option value="대구">대구</option>
                                                 </select>
                                                 </c:if>
-                                                <c:if test="${meminfo.location == 'daegu'}">                                          	
+                                                <c:if test="${meminfo.location == '대구'}">                                          	
                                                 <select class="form-control" id="val-skill" name="val-skill">
-                                                    <option value="seoul">서울</option>
-                                                    <option value="busan">부산</option>
-                                                    <option value="daegu" selected="selected"> 대구</option>
+                                                    <option value="서울">서울</option>
+                                                    <option value="부산">부산</option>
+                                                    <option value="대구" selected="selected"> 대구</option>
                                                 </select>
                                                 </c:if>
                                             </div>
