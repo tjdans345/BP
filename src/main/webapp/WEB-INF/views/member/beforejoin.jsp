@@ -26,7 +26,8 @@
        <!-- 헤더 -->
        <jsp:include page="../inc/top.jsp" />
        <!-- 헤더 -->
-
+    
+    
         <section class="banner_area2">
             <div class="container">
                 <div class="banner_inner_text2">
@@ -34,7 +35,6 @@
                 </div>
             </div>
         </section>
-    
     <!--*******************
         Preloader start
     ********************-->
@@ -49,66 +49,31 @@
         Preloader end
     ********************-->
 
-    
-
-
-
-    <div class="login-form-bg h-100">
+    <div class="login-form-bg h-101">
         <div class="container h-100">
             <div class="row justify-content-center h-100">
                 <div class="col-xl-6">
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                
-                                    <a class="text-center" href="index.html"> <h4>SIGN UP</h4></a>
-        
-                                <form class="mt-5 mb-5 login-input">
+                                <a class="text-center" href="index.html"> <h4>LOGIN</h4></a>
+                                <form action="${contextPath}/loginCheck.mem" class="mt-5 mb-5 login-input" method="post" novalidate="novalidate">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="id" placeholder="아이디" required>
-							            <button type="submit" class="btn btn-dark m-t-20">중복 확인</button>
-                                    </div>                                
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="이름" required>
+                                        <input type="text" class="form-control" placeholder="ID" name="id">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password1" placeholder="비밀번호" required>
+                                        <input type="password" class="form-control" placeholder="Password" name="password">
                                     </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" name="password2" placeholder="비밀번호 확인" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="email" placeholder="이메일" required>
-                                    </div> 
-									
-									<div>
-										
-									</div>
-									
-									<div class="form-row align-items-center">
-                                            <div class="col-auto my-1">
-                                                <label class="mr-sm-2">지역</label>
-                                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected="selected">지역을 선택하세요</option>
-                                                    <option value="서울">서울</option>
-                                                    <option value="부산">부산</option>
-                                                    <option value="대구">대구</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    <div class="form-group"></div>                                    
-                                    <button type="submit" class="btn login-form__btn submit w-100">Sign in</button>
+                                    <button class="btn login-form__btn submit w-100">Sign In</button>
                                 </form>
-                                    <p class="mt-5 login-form__footer">계정이 있으신가요? <a href="${contextPath}/login.mem" class="text-primary">로그인 하기 </a></p>
-                                </div>
+                                <p class="mt-5 login-form__footer">아직 계정이 없으신가요? <a href="${contextPath}/signup.mem" class="text-primary">회원가입 하기</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-   
+    </div>
     
 
     
@@ -125,6 +90,5 @@
     <!-- 푸터  -->
     <jsp:include page="../inc/footer.jsp"/>
     <!-- 푸터  -->
-
 </body>
 </html>
