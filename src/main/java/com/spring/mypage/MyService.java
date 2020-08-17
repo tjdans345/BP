@@ -13,5 +13,13 @@ public class MyService {
 	public MemberVO meminfo(String id) {
 		return mydao.meminfo(id);
 	}
+	
+	public int delmem(String id) {
+		return mydao.delmem(id);
+	}
+	
+	public boolean checkpwd(String id, String password) {
+		return mydao.checkpwd(id, password);
+	}
 
 }

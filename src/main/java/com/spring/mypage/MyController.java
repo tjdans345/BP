@@ -53,10 +53,23 @@ public class MyController {
 	}
 	
 	@RequestMapping(value = "/del.my", method = RequestMethod.GET)
-	public ModelAndView del() {
+	public ModelAndView del(String id,
+							String password,
+							HttpServletRequest request,
+							HttpServletResponse response) {
 		
-		mav.setViewName("mypage/delete");
-		return mav;
+		id = (String)request.getSession().getAttribute("id");
+		boolean result = mys.checkpwd(id,password);
+		if(result) {
+			mys.delmem(id);
+			mav.setViewName("mypage/mypageIndex");
+			return mav;
+		}else {
+			mav.addObject("msg", "비밀번호가 일치하지 않습니다.");
+			mav.addObject("delmem", mys.delmem(id));
+			mav.setViewName("mypage/delete");
+			return mav;
+		}
 
 	}
 	

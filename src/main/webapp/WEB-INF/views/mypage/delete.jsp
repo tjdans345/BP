@@ -46,20 +46,23 @@
                                 <h4 class="card-title">회원탈퇴하기</h4>
                                 <div class="bootstrap-modal">
                                     <!-- Large modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">탈퇴하기</button>
-                                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">탈퇴하기</button>
+                                    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog modal-sm">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title">비밀번호를 입력해주세요</h5>
+                                                    <h5 class="modal-title">비밀번호를 입력하세요</h5>
                                                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                                                     </button>
                                                 </div>
-                                                <div class="modal-body"><input type="password" id="pwd" name="pwd"></div>
+                                                <input type="password" class="modal-body" id="pwd">
+                                                <form action="${contextPath}/del.my">
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">탈퇴하기</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                                                    <button type="submit" class="btn btn-primary">탈퇴하기</button>
+                                                    <div style="color:red;">${msg}</div>
                                                 </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>

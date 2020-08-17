@@ -12,4 +12,17 @@
   		]]>
 	</select>
 	
+	<delete id="delmem">
+		<![CDATA[
+			delete from member
+			where id=#{id}
+		]]>
+	</delete>
+	
+	<select id="checkpwd" resultType="int">
+		<![CDATA[
+			select count(*) from member
+			where id=#{id} and password=#{password}
+		]]>
+	</select>
   </mapper>
