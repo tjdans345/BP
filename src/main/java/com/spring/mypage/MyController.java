@@ -1,5 +1,8 @@
 package com.spring.mypage;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,8 +16,11 @@ public class MyController {
 	private ModelAndView mav = new ModelAndView();
 
 	@RequestMapping(value = "/mypage.my", method = RequestMethod.GET)
-	public ModelAndView index(String id) {
+	public ModelAndView index(String id,
+							  HttpServletRequest request,
+							  HttpServletResponse response) {
 		
+		id = (String)request.getSession().getAttribute("id");
 		mav.addObject("meminfo", mys.meminfo(id));
 		mav.setViewName("mypage/mypageIndex");
 		return mav;
@@ -22,8 +28,11 @@ public class MyController {
 	}
 	
 	@RequestMapping(value = "/info.my", method = RequestMethod.GET)
-	public ModelAndView info(String id) {
+	public ModelAndView info(String id,
+							 HttpServletRequest request,
+							 HttpServletResponse response) {
 		
+		id = (String)request.getSession().getAttribute("id");
 		mav.addObject("meminfo", mys.meminfo(id));
 		mav.setViewName("mypage/info");
 
@@ -31,9 +40,12 @@ public class MyController {
 
 	}
 	
-	@RequestMapping(value = "/edit.my", method = RequestMethod.GET)
-	public ModelAndView edit(String id) {
+	@RequestMapping(value = "/edit.my", method = {RequestMethod.GET, RequestMethod.POST})
+	public ModelAndView edit(String id,
+							 HttpServletRequest request,
+							 HttpServletResponse response) {
 		
+		id = (String)request.getSession().getAttribute("id");		
 		mav.addObject("meminfo", mys.meminfo(id));
 		mav.setViewName("mypage/edit");
 		return mav;
