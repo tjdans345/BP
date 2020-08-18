@@ -77,16 +77,23 @@ width:200px;}
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">이메일
+                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">전화번호
                                             </label>
                                             ${meminfo.email}
                                             <div class="col-lg-6">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">연락처
+                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">이메일
                                             </label>
                                             ${meminfo.phone}
+                                            <div class="col-lg-6">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">성별
+                                            </label>
+                                            ${meminfo.gender}
                                             <div class="col-lg-6">
                                             </div>
                                         </div>
