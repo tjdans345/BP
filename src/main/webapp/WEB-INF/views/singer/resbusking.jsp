@@ -31,7 +31,57 @@
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
 </head>
 
-<script> $(document).ready(function() { $('#summernote').summernote(); }); </script>
+<!-- <script> $(document).ready(function() { $('#summernote').summernote(); }); </script>
+ -->
+ 
+ 
+ 
+<script type="text/javascript"	src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+  $("#loc1").change(function(){
+	  var loc1 = $("#loc1").val();
+	  $.ajax({
+	      url:"resbusking.b",
+	      type:'POST',
+	      //dataType : 'json',
+	      data: { loc1 : loc1},
+		  
+	
+	    //데이터 전송이 완료되면 출력되는 메시지
+	
+	      success:function(data){
+	    	 
+	          alert("완료!"+data);
+	          
+	          
+	          $('#loc').html("<c:forEach var = 'Loc2List' items='${Loc2List }'>
+	      +"<option value='${Loc2List.loc2}'>${Loc2List.loc2}</option>"
+            +"</c:forEach>");
+	          
+	          
+	          
+	          
+	      },
+	
+	     //에러가 발생되면 출력되는 메시지
+	
+	      error:function(date){
+	    	  alert("실패!");    	  
+	      }
+	});
+
+  });
+});
+</script>
+
+
+
+
+
+
+
 
 
 
@@ -90,28 +140,32 @@
                                         <div class="col-lg-4">
                                             <label>도시</label>
                                             <select class="form-control" name="loc1" id = "loc1">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
+                                                <option value="">선택해주세요</option>
+                                                <c:forEach var = "Loc1List" items="${Loc1List }">
+                                                <option value="${Loc1List.loc1}">${Loc1List.loc1}</option>
+                                                </c:forEach>
                                             </select>
                                         </div>
+                                        <div>
+                                        	<p class="test">아아아아아아ㅏ</p>
+                                        
+                                        </div>
+                                        
+                                        
                                         <div class="col-lg-4">
                                             <label>동</label>
                                             <select class="form-control" name="loc2" id = "loc2">
-                                              	<option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
+												<c:forEach var = "Loc2List" items="${Loc2List }">
+                                                <option value="${Loc2List.loc2}">${Loc2List.loc2}</option>
+                                                </c:forEach>
                                             </select>
                                         </div>
                                         <div class="col-lg-4">
                                             <label>버스킹 존</label>
                                             <select class="form-control" name = "loc3" id = "loc3">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
+                                                <c:forEach var = "Loc3List" items="${Loc3List }">
+                                                <option value="${Loc3List.loc3}">${Loc3List.loc3}</option>
+                                                </c:forEach>
                                             </select>
                                         </div>
                                         </div>

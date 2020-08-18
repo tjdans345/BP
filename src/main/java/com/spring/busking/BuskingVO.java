@@ -9,10 +9,7 @@ import org.springframework.stereotype.Component;
 public class BuskingVO {
 
 	private int num;
-	private String sid, loc1,loc2,loc3,content;
-	private String stime, etime;
-
-	
+	private String sid, loc1,loc2,loc3,content,stime, etime;
 
 	public int getNum() {
 		return num;
