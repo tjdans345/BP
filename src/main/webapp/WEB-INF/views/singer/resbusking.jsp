@@ -42,37 +42,67 @@ $(document).ready(function() {
 	
   $("#loc1").change(function(){
 	  var loc1 = $("#loc1").val();
-	  $.ajax({
-	      url:"resbusking.b",
-	      type:'POST',
-	      //dataType : 'json',
-	      data: { loc1 : loc1},
+	  
+	  /* 
+	  if(loc1==0){
+	  $('#loc2').attr('disabled', 'disabled');
+	  }else{
+	  $('#loc2').removeAttr('disabled');
+	  }
+	   */
+	   $('#loc2').removeAttr('disabled');
 		  
-	
-	    //데이터 전송이 완료되면 출력되는 메시지
-	
+	   
+	   
+	  $.ajax({
+	      url:"loc2.b",
+	      type:'POST',
+	      data: {loc1 : loc1},
+		  dataType : "json",
+		
 	      success:function(data){
-	    	 
-	          alert("완료!"+data);
-	          
-	          
-	          $('#loc').html("<c:forEach var = 'Loc2List' items='${Loc2List }'>
-	      +"<option value='${Loc2List.loc2}'>${Loc2List.loc2}</option>"
-            +"</c:forEach>");
-	          
-	          
-	          
-	          
+	    	  $('#loc2').html("");
+	    	  $('#loc2').append("<option value='0'>선택해주세요</option>");
+	    	  for(i=0;i<data.length;i++){
+	    		  var loc2 = decodeURIComponent(data[i].loc2); 
+		          $('#loc2').append("<option value="+loc2+">"+loc2+"</option>");
+		          }
 	      },
-	
-	     //에러가 발생되면 출력되는 메시지
-	
 	      error:function(date){
 	    	  alert("실패!");    	  
 	      }
 	});
-
   });
+  
+  $("#loc2").change(function(){
+
+	  $('#loc3').removeAttr('disabled');
+	  
+	  var loc1 = $("#loc1").val();
+	  console.log(loc1)
+	  var loc2 = $("#loc2").val();
+	  $.ajax({
+	      url:"loc3.b",
+	      type:'POST',
+	      data: {loc1 : loc1, loc2 : loc2},
+		  dataType : "json",
+		
+	      success:function(data){ 
+	    	  $('#loc3').html("");
+	    	  $('#loc3').append("<option value='0'>선택해주세요</option>");
+	    	  for(i=0;i<data.length;i++){
+	    		  var loc3 = decodeURIComponent(data[i].loc3); 
+		          $('#loc3').append("<option value="+loc3+">"+loc3+"</option>");
+		          }
+	      },
+	      error:function(date){
+	    	  alert("실패!");    	  
+	      }
+	});
+  });
+  
+  
+  
 });
 </script>
 
@@ -140,32 +170,25 @@ $(document).ready(function() {
                                         <div class="col-lg-4">
                                             <label>도시</label>
                                             <select class="form-control" name="loc1" id = "loc1">
-                                                <option value="">선택해주세요</option>
+                                                <option value="0">선택해주세요</option>
                                                 <c:forEach var = "Loc1List" items="${Loc1List }">
                                                 <option value="${Loc1List.loc1}">${Loc1List.loc1}</option>
                                                 </c:forEach>
                                             </select>
                                         </div>
-                                        <div>
-                                        	<p class="test">아아아아아아ㅏ</p>
-                                        
-                                        </div>
                                         
                                         
                                         <div class="col-lg-4">
                                             <label>동</label>
-                                            <select class="form-control" name="loc2" id = "loc2">
-												<c:forEach var = "Loc2List" items="${Loc2List }">
-                                                <option value="${Loc2List.loc2}">${Loc2List.loc2}</option>
-                                                </c:forEach>
+                                            <select class="form-control" name="loc2" id = "loc2" disabled="disabled">
+                                                <option value="0">선택해주세요</option>
+                                                
                                             </select>
                                         </div>
                                         <div class="col-lg-4">
                                             <label>버스킹 존</label>
-                                            <select class="form-control" name = "loc3" id = "loc3">
-                                                <c:forEach var = "Loc3List" items="${Loc3List }">
-                                                <option value="${Loc3List.loc3}">${Loc3List.loc3}</option>
-                                                </c:forEach>
+                                            <select class="form-control" name = "loc3" id = "loc3" disabled="disabled">
+                                                <option value="0">선택해주세요</option>
                                             </select>
                                         </div>
                                         </div>

@@ -40,7 +40,7 @@
   	
   	<select id="Loc3List" resultMap="locResult" parameterType="java.util.HashMap">
   		<![CDATA[ 
-  			select loc3 from loc where loc1 = #{loc1} && loc2=#{loc2};
+  			select loc3 from loc where loc1 = #{loc1} && loc2= #{loc2};
   		]]>
   	</select>
   	

@@ -1,5 +1,7 @@
 package com.spring.busking;
 
+import java.io.IOException;
+import java.net.URLEncoder;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -57,36 +59,64 @@ public class BuskingController {
 	@ResponseBody
 	public ModelAndView resbusking(@RequestParam(required = false,defaultValue = "서울") String loc1,
 			HttpServletRequest reqeust,
-			HttpServletResponse response){
+			HttpServletResponse response) {
 		
 		System.out.println(loc1);
 
 		List Loc1List = buskingService.Loc1List();
-		List Loc2List = buskingService.Loc2List(loc1);
-		
-		System.out.println("확인용 " + Loc1List);
-		System.out.println("확인용2 " + Loc2List);
-		
-		JSONArray jSONArray = new JSONArray();
-		for(int i=0; i<Loc2List.size(); i++) {
-			BuskingVO buskingVO = (BuskingVO)Loc2List.get(i);
-			System.out.println(i+"="+Loc2List.get(i));
-			JSONObject jSONObject = new JSONObject();
-			jSONObject.put("data", buskingVO.getLoc2());
-			jSONArray.add(jSONObject);
-		}
-		
 
-		System.out.println("확인용3 " + jSONArray);
-
-		
 		mav.addObject("Loc1List", Loc1List);
-		//mav.addObject(jSONArray);	
+
 
 		mav.setViewName("singer/resbusking");
 		return mav;
 	}
 	
+	
+
+	@RequestMapping(value = "/loc2.b", method = {RequestMethod.GET, RequestMethod.POST})
+	@ResponseBody
+	public void loc2(@RequestParam(required = false) String loc1,
+			HttpServletRequest reqeust,
+			HttpServletResponse response) throws Exception {
+		
+		List Loc2List = buskingService.Loc2List(loc1);
+		
+		
+		JSONArray jSONArray = new JSONArray();
+		for(int i=0; i<Loc2List.size(); i++) {
+			BuskingVO buskingVO = (BuskingVO)Loc2List.get(i);
+			JSONObject jSONObject = new JSONObject();			
+			String loc2 = URLEncoder.encode(buskingVO.getLoc2(), "UTF-8");			//엔코딩
+			jSONObject.put("loc2", loc2);
+			jSONArray.add(jSONObject);
+		}		
+		response.getWriter().print(jSONArray);
+	}
+	
+	@RequestMapping(value = "/loc3.b", method = {RequestMethod.GET, RequestMethod.POST})
+	@ResponseBody
+	public void loc3(@RequestParam(required = false) String loc1,
+					@RequestParam(required = false) String loc2,
+					HttpServletRequest reqeust,
+					HttpServletResponse response) throws Exception {
+	
+		List Loc3List = buskingService.Loc3List(loc1,loc2);
+		
+		System.out.println("확인용3-1 " + loc1);
+		System.out.println("확인용3-2 " + loc2);
+		System.out.println("확인용3-3 " + Loc3List);
+		
+		JSONArray jSONArray = new JSONArray();
+		for(int i=0; i<Loc3List.size(); i++) {
+			BuskingVO buskingVO = (BuskingVO)Loc3List.get(i);
+			JSONObject jSONObject = new JSONObject();			
+			String loc3 = URLEncoder.encode(buskingVO.getLoc3(), "UTF-8");			//엔코딩
+			jSONObject.put("loc3", loc3);
+			jSONArray.add(jSONObject);
+		}		
+		response.getWriter().print(jSONArray);
+	}
 	
 	
 	

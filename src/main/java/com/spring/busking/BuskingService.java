@@ -24,12 +24,6 @@ public class BuskingService {
 		hashMap.put("loc1", loc1);
 		return buskingDAO.Loc2List(hashMap);
 	}
-//	public List Loc3Licst(String loc1,String loc2) {
-//		HashMap hashMap = new HashMap();
-//		hashMap.put("loc1", loc1);
-//		hashMap.put("loc2", loc2);
-//		return buskingDAO.Loc3List(hashMap);
-//	}
 	public List Loc3List(String loc1,String loc2) {
 		HashMap hashMap = new HashMap();
 		hashMap.put("loc1", loc1);
