@@ -56,17 +56,12 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                <a class="text-center" href="index.html"> <h4>LOGIN</h4></a>
-                                <form action="${contextPath}/loginCheck.mem" class="mt-5 mb-5 login-input" method="post" novalidate="novalidate">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="ID" name="id">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" name="password">
-                                    </div>
-                                    <button class="btn login-form__btn submit w-100">Sign In</button>
-                                </form>
-                                <p class="mt-5 login-form__footer">아직 계정이 없으신가요? <a href="${contextPath}/signup.mem" class="text-primary">회원가입 하기</a></p>
+                            	<form action="${contextPath}/join.mem" method="post">
+                                	<a class="btn gradient-4 btn-lg border-0 btn-rounded px-5"><input type="button" id="status" value="1">버스커 가입</a>
+                            	</form>
+                              	<form action="${contextPath}/join.mem">
+                                  	<a class="btn gradient-9 btn-lg border-0 btn-rounded px-5"><input id="status" value="2">일반회원 가입</a>
+         						</form>
                             </div>
                         </div>
                     </div>

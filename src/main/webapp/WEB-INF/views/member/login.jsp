@@ -19,7 +19,11 @@
     <link rel="stylesheet" href="${contextPath}/resources/singer/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
-
+<c:if test="${msg != null}">
+	<script type="text/javascript">
+		window.alert('${msg}');
+	</script>
+</c:if>
 </head>
 
 <body class="h-100">

@@ -12,6 +12,9 @@ public class MemberService {
 	public void addMember(MemberVO memberVO) {
 		mdao.addMember(memberVO);
 	}
+	public void beforejoin(MemberVO memberVO) {
+		mdao.beforejoin(memberVO);
+	}
 	
 	public String loginMember(MemberVO memberVO) {
 		String msg = "";
