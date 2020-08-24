@@ -47,6 +47,18 @@ public class MyController {
 		
 		id = (String)request.getSession().getAttribute("id");		
 		mav.addObject("meminfo", mys.meminfo(id));
+		mav.setViewName("mypage/editpass");
+		return mav;
+
+	}
+	
+	@RequestMapping(value = "/edit2.my", method = {RequestMethod.GET, RequestMethod.POST})
+	public ModelAndView edit2(String id,
+							 HttpServletRequest request,
+							 HttpServletResponse response) {
+		
+		id = (String)request.getSession().getAttribute("id");		
+		mav.addObject("meminfo", mys.meminfo(id));
 		mav.setViewName("mypage/edit");
 		return mav;
 

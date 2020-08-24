@@ -45,7 +45,6 @@
 			                    </a>
 			                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/login.mem">Login</a></li>
-			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/mypage.my">My page</a></li>
 			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/elements.do">Elements</a></li>
 			                    </ul>
 			                </li>

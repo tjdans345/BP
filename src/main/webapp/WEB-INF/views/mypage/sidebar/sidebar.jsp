@@ -14,8 +14,7 @@
                         </a>
                         <ul aria-expanded="false">
                        	    <li><a href="${contextPath}/info.my">회원정보</a></li>
-                            <li><a href="${contextPath}/edit.my">회원정보 수정</a></li>
-                            <li><a href="${contextPath}/del.my">회원 탈퇴하기</a></li>
+                            <li><a href="${contextPath}/edit.my">회원정보 수정/탈퇴</a></li>
                         </ul>
                     </li>
                     <li class="mega-menu mega-menu-sm">

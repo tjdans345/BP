@@ -137,7 +137,9 @@ width:200px;}
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-lg-8 ml-auto">
-                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                <button type="submit" class="btn btn-primary">수정</button>
+                                                <button type="reset" class="btn btn-primary">취소</button>
+                                                <button type="submit" class="btn btn-primary">탈퇴하기</button>
                                             </div>
                                         </div>
                                     </form>
@@ -180,9 +182,9 @@ width:200px;}
     <script src="${contextPath}/resources/mypage/js/gleek.js"></script>
     <script src="${contextPath}/resources/mypage/js/styleSwitcher.js"></script>
     
-    <script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate.min.js"></script>
+<%--     <script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate.min.js"></script>
     <script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate-init.js"></script>
-
+ --%>
 
 </body>
 
