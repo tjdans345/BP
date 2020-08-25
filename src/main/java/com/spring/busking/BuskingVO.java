@@ -8,14 +8,26 @@ import org.springframework.stereotype.Component;
 //@Component
 public class BuskingVO {
 
-	private int num;
-	private String sid, loc1,loc2,loc3,content,stime, etime;
-
+	private int num,stime, etime;
+	private String sid, loc1,loc2,loc3,content,date;
+	
 	public int getNum() {
 		return num;
 	}
 	public void setNum(int num) {
 		this.num = num;
+	}
+	public int getStime() {
+		return stime;
+	}
+	public void setStime(int stime) {
+		this.stime = stime;
+	}
+	public int getEtime() {
+		return etime;
+	}
+	public void setEtime(int etime) {
+		this.etime = etime;
 	}
 	public String getSid() {
 		return sid;
@@ -47,17 +59,11 @@ public class BuskingVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getStime() {
-		return stime;
+	public String getDate() {
+		return date;
 	}
-	public void setStime(String stime) {
-		this.stime = stime;
-	}
-	public String getEtime() {
-		return etime;
-	}
-	public void setEtime(String etime) {
-		this.etime = etime;
+	public void setDate(String date) {
+		this.date = date;
 	}
 	
 	

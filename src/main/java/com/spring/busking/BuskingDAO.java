@@ -24,5 +24,7 @@ public class BuskingDAO {
 		return sqlSession.selectList("mapper.busking.Loc2List", hashMap);
 	}public List Loc3List(HashMap hashMap) {
 		return sqlSession.selectList("mapper.busking.Loc3List", hashMap);
+	}public List resTime(HashMap hashMap) {
+		return sqlSession.selectList("mapper.busking.resTime", hashMap);
 	}
 }

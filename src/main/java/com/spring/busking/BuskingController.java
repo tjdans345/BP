@@ -39,35 +39,13 @@ public class BuskingController {
 	private BuskingService buskingService;
 	private ModelAndView mav = new ModelAndView();
 	
-
-//	
-//	@RequestMapping(value = "/resbusking.b", method = {RequestMethod.GET, RequestMethod.POST})
-//	public ModelAndView resbusking(){
-//		
-//		
-//		List Loc1List = buskingService.Loc1List();
-//		//List Loc2List = buskingService.Loc2List("부산");
-//		mav.addObject("Loc1List", Loc1List);
-//		//mav.addObject("Loc2List", Loc2List);
-//		mav.setViewName("singer/resbusking");
-//		return mav;
-//	}
-	
-
-	
 	@RequestMapping(value = "/resbusking.b", method = {RequestMethod.GET, RequestMethod.POST})
 	@ResponseBody
 	public ModelAndView resbusking(@RequestParam(required = false,defaultValue = "서울") String loc1,
 			HttpServletRequest reqeust,
 			HttpServletResponse response) {
-		
-		System.out.println(loc1);
-
 		List Loc1List = buskingService.Loc1List();
-
 		mav.addObject("Loc1List", Loc1List);
-
-
 		mav.setViewName("singer/resbusking");
 		return mav;
 	}
@@ -78,11 +56,8 @@ public class BuskingController {
 	@ResponseBody
 	public void loc2(@RequestParam(required = false) String loc1,
 			HttpServletRequest reqeust,
-			HttpServletResponse response) throws Exception {
-		
+			HttpServletResponse response) throws Exception {	
 		List Loc2List = buskingService.Loc2List(loc1);
-		
-		
 		JSONArray jSONArray = new JSONArray();
 		for(int i=0; i<Loc2List.size(); i++) {
 			BuskingVO buskingVO = (BuskingVO)Loc2List.get(i);
@@ -100,13 +75,8 @@ public class BuskingController {
 					@RequestParam(required = false) String loc2,
 					HttpServletRequest reqeust,
 					HttpServletResponse response) throws Exception {
-	
-		List Loc3List = buskingService.Loc3List(loc1,loc2);
-		
-		System.out.println("확인용3-1 " + loc1);
-		System.out.println("확인용3-2 " + loc2);
-		System.out.println("확인용3-3 " + Loc3List);
-		
+		List Loc3List = buskingService.Loc3List(loc1,loc2);	
+
 		JSONArray jSONArray = new JSONArray();
 		for(int i=0; i<Loc3List.size(); i++) {
 			BuskingVO buskingVO = (BuskingVO)Loc3List.get(i);
@@ -118,14 +88,38 @@ public class BuskingController {
 		response.getWriter().print(jSONArray);
 	}
 	
-	
+	@RequestMapping(value = "/date.b", method = {RequestMethod.GET, RequestMethod.POST})
+	@ResponseBody
+	public void date(@RequestParam(required = false) String date,
+			HttpServletRequest reqeust,
+			HttpServletResponse response) throws Exception {
+		System.out.println(date);
+		List resTime = buskingService.resTime(date);
+		JSONArray jSONArray = new JSONArray();
+		for(int i=0; i<resTime.size(); i++) {
+			BuskingVO buskingVO = (BuskingVO)resTime.get(i);
+			JSONObject jSONObject = new JSONObject();			
+			int stime = buskingVO.getStime();
+			System.out.println(stime);
+			jSONObject.put("stime", stime);
+			jSONArray.add(jSONObject);
+		}		
+		response.getWriter().print(jSONArray);
+	}
 	
 	@RequestMapping(value = "/insertbusking.b", method = RequestMethod.POST)
 	public ModelAndView addMember(@ModelAttribute BuskingVO buskingVO,
 									HttpServletRequest request,
 									HttpServletResponse response) {
+
 		buskingService.insertBusking(buskingVO); 
-		mav.setViewName("singer/resbusking"); 
+		
+//		int stime =buskingVO.getStime();
+//		int etime =buskingVO.getEtime();
+//		for(int i = stime;i<=etime;i++) {
+//		buskingVO.setStime(i);	
+//		buskingService.insertBusking(buskingVO); 
+//		mav.setViewName("singer/resbusking");} 
 
 		return mav;
 	}

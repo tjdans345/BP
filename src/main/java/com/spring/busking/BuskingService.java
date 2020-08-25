@@ -30,4 +30,10 @@ public class BuskingService {
 		hashMap.put("loc2", loc2);
 		return buskingDAO.Loc3List(hashMap);
 	}
+	
+	public List resTime(String date) {
+		HashMap hashMap = new HashMap();
+		hashMap.put("date", date);
+		return buskingDAO.resTime(hashMap);
+	}
 }

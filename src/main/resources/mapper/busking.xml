@@ -20,8 +20,7 @@
    		<result property="loc1" column="loc1" />
    		<result property="loc2" column="loc2" />
    		<result property="loc3" column="loc3" />
-   		<!-- 
-   		<result property="location" column="location" /> -->
+
    	</resultMap>
 
   
@@ -44,13 +43,19 @@
   		]]>
   	</select>
   	
+  	<select id="resTime" resultMap="locResult" parameterType="java.util.HashMap">
+  		<![CDATA[ 
+  			select stime from busking where date = #{date};
+  		]]>
+  	</select>
+  	
   	
   
   
   	<insert id="insertBusking" parameterType="buskingVO">
   		<![CDATA[
-  		insert into busking (sid,loc1,loc2,loc3,stime,etime)
-    		values(#{sid},#{loc1},#{loc2},#{loc3},#{stime},#{etime}) 
+  		insert into busking (sid,loc1,loc2,loc3,date,stime,etime)
+    		values(#{sid},#{loc1},#{loc2},#{loc3},#{date},#{stime},#{etime}) 
   		]]>
   	</insert>
   	

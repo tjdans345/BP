@@ -39,81 +39,127 @@
 <script type="text/javascript"	src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
+	var Ca = /\+/g; //공백이 + 가 되는것을 다시 변환
 	
-  $("#loc1").change(function(){
-	  var loc1 = $("#loc1").val();
-	  
-	  /* 
-	  if(loc1==0){
-	  $('#loc2').attr('disabled', 'disabled');
-	  }else{
-	  $('#loc2').removeAttr('disabled');
-	  }
-	   */
-	   $('#loc2').removeAttr('disabled');
-		  
-	   
-	   
-	  $.ajax({
-	      url:"loc2.b",
-	      type:'POST',
-	      data: {loc1 : loc1},
-		  dataType : "json",
+	$("#loc1").change(function(){
+		var loc1 = $("#loc1").val();
+		$('#loc2').removeAttr('disabled');
+		$.ajax({
+			url:"loc2.b",
+			type:'POST',
+		    data: {loc1 : loc1},
+			dataType : "json",
 		
-	      success:function(data){
-	    	  $('#loc2').html("");
-	    	  $('#loc2').append("<option value='0'>선택해주세요</option>");
-	    	  for(i=0;i<data.length;i++){
-	    		  var loc2 = decodeURIComponent(data[i].loc2); 
-		          $('#loc2').append("<option value="+loc2+">"+loc2+"</option>");
-		          }
-	      },
-	      error:function(date){
-	    	  alert("실패!");    	  
-	      }
+			success:function(data){
+		    	$('#loc2').html("");
+		    	$('#loc2').append("<option value='0'>선택해주세요</option>");
+		    	for(i=0;i<data.length;i++){
+		    		var loc2 = decodeURIComponent(data[i].loc2.replace(Ca," ")); //디코딩
+			        $('#loc2').append("<option value="+loc2+">"+loc2+"</option>");
+				}
+		    	$('#loc3').append("<option value='0'>선택해주세요</option>");
+		    	$('#loc3').attr('disabled',true);
+		    },
+			error:function(data){
+				alert("실패!");    	  
+		    }
+		});
 	});
-  });
-  
-  $("#loc2").change(function(){
+	
+	$("#loc2").change(function(){
+		var loc1 = $("#loc1").val();
+		var loc2 = $("#loc2").val();
+		$('#loc3').removeAttr('disabled');
+		$.ajax({
+			url:"loc3.b",
+			type:'POST',
+			data: {loc1 : loc1, loc2 : loc2},
+			dataType : "json",
+				
+			success:function(data){ 
+				$('#loc3').html("");
+				//$('#loc3').append("<option value='0'>선택해주세요</option>");
+				for(i=0;i<data.length;i++){
+					var loc3 = decodeURIComponent(data[i].loc3.replace(Ca," ")); //디코딩
+					$('#loc3').append("<option value="+loc3+">"+loc3+"</option>");
+				}
+			},
+			error:function(data){
+				alert("실패!");    	  
+			}
+		});
+	});
+	
+ 	$("#date").change(function() {
+		var date = $("#date").val();
+		$.ajax({
+			url:"date.b",
+			trpe:'POST',
+			data: {date : date},
+			dataType : "json",
+			
+			success:function(data){
+				alert("성공!");  
 
-	  $('#loc3').removeAttr('disabled');
-	  
-	  var loc1 = $("#loc1").val();
-	  console.log(loc1)
-	  var loc2 = $("#loc2").val();
-	  $.ajax({
-	      url:"loc3.b",
-	      type:'POST',
-	      data: {loc1 : loc1, loc2 : loc2},
-		  dataType : "json",
-		
-	      success:function(data){ 
-	    	  $('#loc3').html("");
-	    	  $('#loc3').append("<option value='0'>선택해주세요</option>");
-	    	  for(i=0;i<data.length;i++){
-	    		  var loc3 = decodeURIComponent(data[i].loc3); 
-		          $('#loc3').append("<option value="+loc3+">"+loc3+"</option>");
-		          }
-	      },
-	      error:function(date){
-	    	  alert("실패!");    	  
-	      }
-	});
-  });
-  
-  
-  
+				for(i=10;i<=23;i++){
+				$('#s'+i).removeAttr('disabled');
+				$('#e'+i).removeAttr('disabled');
+				}
+				
+				for(i=0;i<data.length;i++){
+				$('#s'+data[i].stime).attr('disabled',true);
+				$('#e'+data[i].stime).attr('disabled',true);
+				}
+				/* 
+				
+				$('#stime').html("");
+				for(i=0;i<data.length;i++){
+					$('#stime').append("<option value="+data[i].stime+">"+data[i].stime+"</option>");
+				} */
+			},
+			error:function(data){
+				alert("실패!");   
+
+			}
+		});
+	}); 
+ 	
+ 	$("#stime").change(function() {
+ 		var date = $("#date").val();
+ 		var stime = $("#stime").val();
+		$.ajax({
+			url:"date.b",
+			trpe:'POST',
+			data: {date : date},
+			dataType : "json",
+			success:function(data){
+				for(i=10;i<=23;i++){
+				$('#e'+i).removeAttr('disabled');
+				}
+				
+				
+				for(i=0;i<data.length;i++){
+				$('#e'+data[i].stime).attr('disabled',true);
+				}
+				
+				for(i=10;i<stime;i++){
+					$('#e'+i).attr('disabled',true);
+				}
+				
+			},
+			error:function(data){
+				alert("실패!");   
+	
+			}
+	 	});
+
+	}); 
+
+
 });
+
+
 </script>
-
-
-
-
-
-
-
-
-
 
 <body>
 	
@@ -162,10 +208,8 @@ $(document).ready(function() {
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Location</h4>
-                                
-                                <div class="basic-form">
-                                    
+                                <h4 class="card-title">Location</h4>                     
+                                <div class="basic-form">                                   
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <label>도시</label>
@@ -176,8 +220,7 @@ $(document).ready(function() {
                                                 </c:forEach>
                                             </select>
                                         </div>
-                                        
-                                        
+
                                         <div class="col-lg-4">
                                             <label>동</label>
                                             <select class="form-control" name="loc2" id = "loc2" disabled="disabled">
@@ -191,9 +234,7 @@ $(document).ready(function() {
                                                 <option value="0">선택해주세요</option>
                                             </select>
                                         </div>
-                                        </div>
-                                    
-                                
+                                	</div>
                                 </div>
                             </div>
                         </div>
@@ -209,17 +250,49 @@ $(document).ready(function() {
 	                                
 	                                <div class = "row">
 	                            		<div class="col-4">
-			                                <p class="text-muted m-b-20">공연 시작 시간</p>
+			                                <p class="text-muted m-b-20">공연 일자</p>
 		                                    <div class="form-group">
-		                                        <input type="datetime-local" class="form-control" name = "stime">
+		                                        <input type="date" class="form-control" name = "date"id = "date">
 		                                    </div>
 			                            </div>
-			                            
-			                            
+			                            <div class="col-4">
+			                                <p class="text-muted m-b-20">시작시간</p>
+		                                    <select class="form-control" name="stime" id="stime">
+			                            		<option value="10" id="s10">10:00</option>
+			                            		<option value="11" id="s11">11:00</option>
+			                            		<option value="12" id="s12">12:00</option>
+			                            		<option value="13" id="s13">13:00</option>
+			                            		<option value="14" id="s14">14:00</option>
+			                            		<option value="15" id="s15">15:00</option>
+			                            		<option value="16" id="s16">16:00</option>
+			                            		<option value="17" id="s17">17:00</option>
+			                            		<option value="18" id="s18">18:00</option>
+			                            		<option value="19" id="s19">19:00</option>
+			                            		<option value="20" id="s20">20:00</option>
+			                            		<option value="21" id="s21">21:00</option>
+			                            		<option value="22" id="s22">22:00</option>
+			                            	</select>
+			                            </div>
+                                            
 	                            		<div class="col-4">
 			                                <p class="text-muted m-b-20">종료 시간</p>
-		                                    <div class="form-group">
-		                                        <input type="datetime-local" class="form-control" name = "etime" >
+		                                    <div class="form-group">		                                    
+		                                    <select class="form-control" name="etime" id="etime">
+			                            		<option value="10" id="e10">10:59</option>
+			                            		<option value="11" id="e11">11:59</option>
+			                            		<option value="12" id="e12">12:59</option>
+			                            		<option value="13" id="e13">13:59</option>
+			                            		<option value="14" id="e14">14:59</option>
+			                            		<option value="15" id="e15">15:59</option>
+			                            		<option value="16" id="e16">16:59</option>
+			                            		<option value="17" id="e17">17:59</option>
+			                            		<option value="18" id="e18">18:59</option>
+			                            		<option value="19" id="e19">19:59</option>
+			                            		<option value="20" id="e20">20:59</option>
+			                            		<option value="21" id="e21">21:59</option>
+			                            		<option value="22" id="e22">22:59</option>
+			                            		<option value="23" id="e23">22:59</option>
+			                            	</select>
 		                                    </div>
 		                                </div>
 	                                </div>    
