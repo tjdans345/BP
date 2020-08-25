@@ -16,7 +16,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${contextPath}/resources/mypage/images/favicon.png">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/mypage/css/style.css" rel="stylesheet">
-
+<!-- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+   	 $(function(){
+       	 var msg = "<c:out value="${msg}" />";
+       	 if(msg != ""){
+      		      alert(msg)
+      		  }else{}
+   	 }) 
+	</script> -->
 
 </head>
 
@@ -24,7 +32,6 @@
     <!--**********************************
         Main wrapper start
     ***********************************-->
-
     <div id="main-wrapper">
 
 
@@ -95,25 +102,7 @@
     <script src="${contextPath}/resources/mypage/js/settings.js"></script>
     <script src="${contextPath}/resources/mypage/js/gleek.js"></script>
     <script src="${contextPath}/resources/mypage/js/styleSwitcher.js"></script>
-<!-- <script type="text/javascript">
-	$(document).ready(function(){
-		$("#pwd").click(function(){
-			$.ajax({
-				url:"${contextPath}/checkpwd.my",
-				type:"get",
-				data:$("#checkpwd").serialize(),
-				success:function(data){
-					if(data==0){
-						alert("비밀번호가 틀렸습니다.");
-						return;
-					}else{
-						$("#checkpwd").submit
-					}
-				}
-			});
-		});
-	});
-</script> -->
+
 </body>
 
 </html>

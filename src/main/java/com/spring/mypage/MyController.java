@@ -1,5 +1,7 @@
 package com.spring.mypage;
 
+import java.awt.Window;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -58,7 +60,7 @@ public class MyController {
 	}
 	
 	//회원정보 수정/탈퇴(비밀번호 체크 후 페이지)
-	@RequestMapping(value = "/edit2.my", method = {RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value = "/edit2.my", method = RequestMethod.POST)
 	public ModelAndView edit2(String id,
 					   String password,
 					   MemberVO membervo,
@@ -72,26 +74,40 @@ public class MyController {
 			mav.setViewName("mypage/edit");
 			return mav;
 
-		}else {	
+		}else {			
 			mav.setViewName("mypage/editpass");
+			mav.addObject("msg","비밀번호가 틀립니다.");
 			return mav;
 		}
 	}
 	
+	@RequestMapping(value = "/editmem.my", method = RequestMethod.POST)
+	public ModelAndView editmem(String id,
+					   String password,
+					   MemberVO memberVO,
+					   HttpServletRequest request,
+					   HttpServletResponse response) {
+		id = (String)request.getSession().getAttribute("id");
+		mav.addObject("meminfo", mys.meminfo(id));
+		mys.editmem(memberVO);
+		mav.setViewName("mypage/info");
+		return mav;
+	}
 	
-	/*
-	 * //회원탈퇴
-	 * 
-	 * @RequestMapping(value = "/del.my", method = RequestMethod.GET) public
-	 * ModelAndView del(String id, String password, HttpServletRequest request,
-	 * HttpServletResponse response) {
-	 * 
-	 * id = (String)request.getSession().getAttribute("id");
-	 * 
-	 * 
-	 * }
-	 */
-	
+	//회원탈퇴	  
+	@RequestMapping(value = "/del.my", method = RequestMethod.POST)
+    public ModelAndView del(String id,  
+    						HttpServletRequest request,
+    						HttpServletResponse response) {
+	  
+	  id = (String)request.getSession().getAttribute("id");
+	  mys.delmem(id);
+      request.getSession().removeAttribute("id");
+	  mav.setViewName("redirect:index.do");
+	  return mav;
+	  
+	  }
+	 	
 	@RequestMapping(value = "/likesin.my", method = RequestMethod.GET)
 	public ModelAndView likesin() {
 		

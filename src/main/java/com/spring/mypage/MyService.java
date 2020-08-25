@@ -21,4 +21,8 @@ public class MyService {
 	public String checkpwd(String id) {
 		return mydao.checkpwd(id);
 	}
+	
+	public void editmem(MemberVO memberVO) {
+		mydao.editmem(memberVO);
+	}
 }

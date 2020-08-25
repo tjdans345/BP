@@ -25,4 +25,8 @@ public class MyDAO {
 	public String checkpwd(String id) {
 		return sqlSession.selectOne("mapper.my.checkpwd", id);
 	}
+	
+	public int editmem(MemberVO memberVO) {
+		return sqlSession.update("mapper.my.editmem", memberVO);
+	}
 }
