@@ -214,7 +214,7 @@ $(document).ready(function() {
                                         <div class="col-lg-4">
                                             <label>도시</label>
                                             <select class="form-control" name="loc1" id = "loc1">
-                                                <option value="0">선택해주세요</option>
+                                                <option>선택해주세요</option>
                                                 <c:forEach var = "Loc1List" items="${Loc1List }">
                                                 <option value="${Loc1List.loc1}">${Loc1List.loc1}</option>
                                                 </c:forEach>
@@ -224,14 +224,14 @@ $(document).ready(function() {
                                         <div class="col-lg-4">
                                             <label>동</label>
                                             <select class="form-control" name="loc2" id = "loc2" disabled="disabled">
-                                                <option value="0">선택해주세요</option>
+                                                <option>선택해주세요</option>
                                                 
                                             </select>
                                         </div>
                                         <div class="col-lg-4">
                                             <label>버스킹 존</label>
                                             <select class="form-control" name = "loc3" id = "loc3" disabled="disabled">
-                                                <option value="0">선택해주세요</option>
+                                                <option>선택해주세요</option>
                                             </select>
                                         </div>
                                 	</div>
@@ -258,6 +258,7 @@ $(document).ready(function() {
 			                            <div class="col-4">
 			                                <p class="text-muted m-b-20">시작시간</p>
 		                                    <select class="form-control" name="stime" id="stime">
+		                                    	<option>선택해주세요</option>
 			                            		<option value="10" id="s10">10:00</option>
 			                            		<option value="11" id="s11">11:00</option>
 			                            		<option value="12" id="s12">12:00</option>
@@ -278,6 +279,7 @@ $(document).ready(function() {
 			                                <p class="text-muted m-b-20">종료 시간</p>
 		                                    <div class="form-group">		                                    
 		                                    <select class="form-control" name="etime" id="etime">
+		                                    	<option>선택해주세요</option>
 			                            		<option value="10" id="e10">10:59</option>
 			                            		<option value="11" id="e11">11:59</option>
 			                            		<option value="12" id="e12">12:59</option>
@@ -309,8 +311,8 @@ $(document).ready(function() {
                         	
                             <div class="card-body">
                             
-                           		<!-- <input type="text" class="form-control" placeholder="제목" name = "subject"><br>
-                                <textarea id="summernote" class="summernote"> 곡 소개 </textarea><br> -->
+                           		<input type="text" class="form-control" placeholder="제목" name = "subject"><br>
+                                <textarea id="summernote" class="summernote"> 곡 소개 </textarea><br>
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-info">Submit</button>
 <!--                                     <button type="reset" class="btn btn-dark">Reset</button> -->
