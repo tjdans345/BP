@@ -18,8 +18,7 @@ public class MyService {
 		return mydao.delmem(id);
 	}
 	
-	public boolean checkpwd(String id, String password) {
-		return mydao.checkpwd(id, password);
+	public String checkpwd(String id) {
+		return mydao.checkpwd(id);
 	}
-
 }

@@ -17,12 +17,14 @@
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/mypage/css/style.css" rel="stylesheet">
 
+
 </head>
 
 <body>
     <!--**********************************
         Main wrapper start
     ***********************************-->
+
     <div id="main-wrapper">
 
 
@@ -45,11 +47,12 @@
 			                        <div class="card login-form mb-0">
 			                            <div class="card-body pt-5">
 			                                <a class="text-center"><h4>비밀번호를 입력하세요</h4></a>
-			                                <form class="mt-5 mb-3 login-input" action="${contextPath}/edit2.my">
+			                                <form class="mt-5 mb-3 login-input" action="${contextPath}/edit2.my" id="checkpwd" method="post">
 			                                    <div class="form-group">
-			                                        <input type="password" class="form-control" placeholder="Password" required>
+			                                        <input type="password" class="form-control" placeholder="Password" name="password" required>
 			                                    </div>
-			                                    <button type="submit" class="btn login-form__btn submit w-100">입력</button>
+			                                    
+			                                    <button type="submit" class="btn login-form__btn submit w-100" id="pwd">입력</button>
 			                                </form>
 			                                </div>
 			                            </div>
@@ -92,7 +95,25 @@
     <script src="${contextPath}/resources/mypage/js/settings.js"></script>
     <script src="${contextPath}/resources/mypage/js/gleek.js"></script>
     <script src="${contextPath}/resources/mypage/js/styleSwitcher.js"></script>
-
+<!-- <script type="text/javascript">
+	$(document).ready(function(){
+		$("#pwd").click(function(){
+			$.ajax({
+				url:"${contextPath}/checkpwd.my",
+				type:"get",
+				data:$("#checkpwd").serialize(),
+				success:function(data){
+					if(data==0){
+						alert("비밀번호가 틀렸습니다.");
+						return;
+					}else{
+						$("#checkpwd").submit
+					}
+				}
+			});
+		});
+	});
+</script> -->
 </body>
 
 </html>

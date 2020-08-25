@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.spring.member.MemberVO;
+
 @Controller
 public class MyController {
 	@Autowired
 	private MyService mys = new MyService();
 	private ModelAndView mav = new ModelAndView();
-
+	
+	//마이페이지 메인
 	@RequestMapping(value = "/mypage.my", method = RequestMethod.GET)
 	public ModelAndView index(String id,
 							  HttpServletRequest request,
@@ -27,6 +30,7 @@ public class MyController {
 
 	}
 	
+	//회원정보
 	@RequestMapping(value = "/info.my", method = RequestMethod.GET)
 	public ModelAndView info(String id,
 							 HttpServletRequest request,
@@ -38,52 +42,55 @@ public class MyController {
 
 		return mav;
 
-	}
+	}	
 	
+	//회원정보 수정/탈퇴(비밀번호 체크페이지)
 	@RequestMapping(value = "/edit.my", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView edit(String id,
 							 HttpServletRequest request,
-							 HttpServletResponse response) {
+							 HttpServletResponse response,
+							 MemberVO membervo) {
 		
 		id = (String)request.getSession().getAttribute("id");		
-		mav.addObject("meminfo", mys.meminfo(id));
 		mav.setViewName("mypage/editpass");
 		return mav;
 
 	}
 	
+	//회원정보 수정/탈퇴(비밀번호 체크 후 페이지)
 	@RequestMapping(value = "/edit2.my", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView edit2(String id,
-							 HttpServletRequest request,
-							 HttpServletResponse response) {
-		
-		id = (String)request.getSession().getAttribute("id");		
-		mav.addObject("meminfo", mys.meminfo(id));
-		mav.setViewName("mypage/edit");
-		return mav;
-
-	}
-	
-	@RequestMapping(value = "/del.my", method = RequestMethod.GET)
-	public ModelAndView del(String id,
-							String password,
-							HttpServletRequest request,
-							HttpServletResponse response) {
-		
+					   String password,
+					   MemberVO membervo,
+					   HttpServletRequest request,
+					   HttpServletResponse response) {
 		id = (String)request.getSession().getAttribute("id");
-		boolean result = mys.checkpwd(id,password);
-		if(result) {
-			mys.delmem(id);
-			mav.setViewName("mypage/mypageIndex");
+		mav.addObject("checkpwd", mys.checkpwd(id));
+
+		if(mys.checkpwd(id).equals(password)) {
+			mav.addObject("meminfo", mys.meminfo(id));
+			mav.setViewName("mypage/edit");
 			return mav;
-		}else {
-			mav.addObject("msg", "비밀번호가 일치하지 않습니다.");
-			mav.addObject("delmem", mys.delmem(id));
-			mav.setViewName("mypage/delete");
+
+		}else {	
+			mav.setViewName("mypage/editpass");
 			return mav;
 		}
-
 	}
+	
+	
+	/*
+	 * //회원탈퇴
+	 * 
+	 * @RequestMapping(value = "/del.my", method = RequestMethod.GET) public
+	 * ModelAndView del(String id, String password, HttpServletRequest request,
+	 * HttpServletResponse response) {
+	 * 
+	 * id = (String)request.getSession().getAttribute("id");
+	 * 
+	 * 
+	 * }
+	 */
 	
 	@RequestMapping(value = "/likesin.my", method = RequestMethod.GET)
 	public ModelAndView likesin() {

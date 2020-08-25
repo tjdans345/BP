@@ -51,34 +51,20 @@ width:200px;}
             <div class="container-fluid">
             	<div class="row">
             	  <div class="col-2"></div>
-                  <div class="col-4">
+                  <div class="col-3">
                         <div class="card card-widget">
                             <div class="card-body">
                                 <h5 class="text-muted">보유 포인트</h5>
                                 <h2 class="mt-4">$6,932.60</h2>
-                                <div class="mt-4">
-                                    <h4>2,365</h4>
-                                    <h6>누적포인트<span class="pull-right">80%</span></h6>
-                                    <div class="progress mb-3" style="height: 7px">
-                                        <div class="progress-bar gradient-1" style="width: 80%;" role="progressbar"><span class="sr-only">80% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-5">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">포인트 충전하기</h4>
                                 <div class="basic-form">
                                     <form>
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label">비밀번호</label>
-                                            <div class="col-sm-10">
-                                                <input type="password" class="form-control" placeholder="Password">
-                                            </div>
-                                        </div>
                                         <fieldset class="form-group">
                                             <div class="row">
                                                 <label class="col-form-label col-sm-2 pt-0">결제수단</label>
@@ -101,13 +87,14 @@ width:200px;}
                                         <div class="form-group row">
                                             <div class="col-sm-10">
                                                 <button type="submit" class="btn btn-dark">충전하기</button>
+                                                <button type="submit" class="btn btn-dark">충전내역</button>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                    </div>x
+                    </div>
                     <div class="col-2"></div>
                     </div>
                  </div>

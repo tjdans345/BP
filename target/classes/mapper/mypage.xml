@@ -19,10 +19,10 @@
 		]]>
 	</delete>
 	
-	<select id="checkpwd" resultType="int">
+	<select id="checkpwd" resultType="String">
 		<![CDATA[
-			select count(*) from member
-			where id=#{id} and password=#{password}
+			select password from member
+			where id=#{id}
 		]]>
 	</select>
   </mapper>
