@@ -15,7 +15,10 @@ public class MemberService {
 	public String loginMember(MemberVO memberVO) {
 		
 		String msg = "";
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0e060aba9039aa92c689dc283cd8a3b66d3cc3e
 		List list = mdao.idCheck(memberVO.getId()); 
 		if(list.size()==0) {
 			msg="아이디를 확인해주세요";

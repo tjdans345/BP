@@ -16,6 +16,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${contextPath}/resources/mypage/images/favicon.png">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/mypage/css/style.css" rel="stylesheet">
+<!-- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+   	 $(function(){
+       	 var msg = "<c:out value="${msg}" />";
+       	 if(msg != ""){
+      		      alert(msg)
+      		  }else{}
+   	 }) 
+	</script> -->
 
 </head>
 
@@ -37,41 +46,30 @@
         ***********************************-->
         <div class="content-body">
             <div class="container-fluid">
-                <!-- row -->
-                <div class="row">
-                	<div class="col-4"></div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">회원탈퇴하기</h4>
-                                <div class="bootstrap-modal">
-                                    <!-- Large modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">탈퇴하기</button>
-                                    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
-                                        <div class="modal-dialog modal-sm">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">비밀번호를 입력하세요</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
-                                                    </button>
-                                                </div>
-                                                <input type="password" class="modal-body" id="pwd">
-                                                <form action="${contextPath}/del.my">
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-                                                    <button type="submit" class="btn btn-primary">탈퇴하기</button>
-                                                    <div style="color:red;">${msg}</div>
-                                                </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4"></div>
-                </div>
+			    <div class="login-form-bg h-100">
+			        <div class="container h-100">
+			            <div class="row justify-content-center h-100">
+			                <div class="col-xl-6">
+			                    <div class="form-input-content">
+			                        <div class="card login-form mb-0">
+			                            <div class="card-body pt-5">
+			                                <a class="text-center"><h4>비밀번호를 입력하세요</h4></a>
+			                                <form class="mt-5 mb-3 login-input" action="${contextPath}/edit2.my" id="checkpwd" method="post">
+			                                    <div class="form-group">
+			                                        <input type="password" class="form-control" placeholder="Password" name="password" required>
+			                                    </div>
+			                                    
+			                                    <button type="submit" class="btn login-form__btn submit w-100" id="pwd">입력</button>
+			                                </form>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    
             </div>
             <!-- #/ container -->
         </div>

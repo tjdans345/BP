@@ -44,7 +44,6 @@
 			                    Login
 			                    </a>
 			                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-
 			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/login.mem">LOGIN</a></li>
 			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/elements.do">ELEMENTS</a></li>
 			                    </ul>
