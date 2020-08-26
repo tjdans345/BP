@@ -82,6 +82,9 @@
 	                                        <option value="대구">대구</option>
 	                                    </select>
                                     </div>
+                                    <div>
+                                    	<input type="hidden" name="status" value="${status}">
+                                    </div>
                                     <div class="form-group"></div>                                    
                                     <button type="submit" class="btn login-form__btn submit w-100">Sign in</button>
                                 </form>

@@ -19,7 +19,14 @@
     <link rel="stylesheet" href="${contextPath}/resources/singer/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
-
+    
+	<style>
+	.before_join{
+		text-align: center;
+		color: purple;
+	}
+	
+	</style>
 </head>
 
 <body class="h-100">
@@ -50,18 +57,23 @@
     ********************-->
 
     <div class="login-form-bg h-101">
+    	<div>
+    		<h1 class="before_join">회원가입 종류를 선택해 주세요</h1>
+    	</div>
+    	<br>
+    	<br>
         <div class="container h-100">
             <div class="row justify-content-center h-100">
                 <div class="col-xl-6">
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                            	<form action="${contextPath}/join.mem" method="post">
-                                	<a class="btn gradient-4 btn-lg border-0 btn-rounded px-5"><input type="button" id="status" value="1">버스커 가입</a>
-                            	</form>
-                              	<form action="${contextPath}/join.mem">
-                                  	<a class="btn gradient-9 btn-lg border-0 btn-rounded px-5"><input id="status" value="2">일반회원 가입</a>
-         						</form>
+								
+                                  	<a href="${contextPath}/join0.mem" class="btn gradient-9 btn-lg border-0 btn-rounded px-5">일반회원 가입</a>
+                                  	
+                                	<a href="${contextPath}/join1.mem" class="btn gradient-4 btn-lg border-0 btn-rounded px-5" onclick="">버스커 가입</a>
+                                	
+
                             </div>
                         </div>
                     </div>

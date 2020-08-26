@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,22 +27,45 @@ public class MemberController {
 	private ModelAndView mav = new ModelAndView();
 
 	@RequestMapping(value = "/beforejoin.mem", method = RequestMethod.GET)
-	public String beforejoin(Locale locale, Model model) {
+	public ModelAndView beforejoin(HttpServletRequest request,
+								   HttpServletResponse response) {
 		
-		return "member/beforejoin";
+		/*
+		 * HttpSession session = request.getSession(); String status = "0";
+		 * session.setAttribute("status", status);
+		 */
+		mav.setViewName("member/beforejoin");
+		
+		return mav;
 	}
 	
 	@RequestMapping(value = "/login.mem", method = RequestMethod.GET)
-	public String login(Locale locale, Model model) {
+	public String login() {
 		
 		return "member/login";
 	}	
 	
-	@RequestMapping(value = "/join.mem", method = RequestMethod.GET)
-	public String join(Locale locale, Model model) {
+	@RequestMapping(value = "/join1.mem", method = RequestMethod.GET)
+	public String join1(HttpServletRequest request,
+					   HttpServletResponse response) {
 		
+		HttpSession session = request.getSession(); String status = "1";
+		session.setAttribute("status", status);
+		
+		mav.setViewName("member/beforejoin");		
 		return "member/join";
 	}
+	
+	@RequestMapping(value = "/join0.mem", method = RequestMethod.GET)
+	public String join0(HttpServletRequest request,
+					   HttpServletResponse response) {
+		
+		HttpSession session = request.getSession(); String status = "0";
+		session.setAttribute("status", status);
+		
+		mav.setViewName("member/beforejoin");		
+		return "member/join";
+	}	
 	
 	@RequestMapping(value = "/addMember.mem", method = RequestMethod.GET)
 	public ModelAndView addMember(@ModelAttribute MemberVO memberVO,
@@ -52,7 +76,6 @@ public class MemberController {
 
 		return mav;
 	}
-	
    @RequestMapping(value = "/logout.mem", method = RequestMethod.GET)
    public ModelAndView logout(HttpServletRequest request) {
       request.getSession().removeAttribute("id");
@@ -60,7 +83,6 @@ public class MemberController {
   
       return mav;
    }   
-   
    @RequestMapping(value = "/loginCheck", method = RequestMethod.POST)
    public ModelAndView loginCheck(@ModelAttribute MemberVO memberVO,
 		   					HttpServletRequest request,

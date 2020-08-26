@@ -21,8 +21,6 @@ public class MemberDAO {
 	public MemberVO loginMember(String id) {
 		return sqlSession.selectOne("mapper.member.loginMember", id);
 	}
-	public void beforejoin(MemberVO memberVO) {
-		sqlSession.insert("mapper.member.beforejoin", memberVO);
-	}
+
 	
 }

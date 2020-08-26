@@ -29,12 +29,12 @@
    		]]>
    	</select>	   	  	
   	
-  	<insert id="beforejoin" parameterType="memberVO">
-  		<![CDATA[
-  			insert into member(status)
-  			values(#{status})	
-  		]]>
-  	</insert>
+<!--   	<insert id="beforejoin" parameterType="memberVO"> -->
+<!--   		<![CDATA[ -->
+<!--   			insert into member(status) -->
+<!--   			values(#{status})	 -->
+<!--   		]]> -->
+<!--   	</insert> -->
   	
   	<insert id="addMember" parameterType="memberVO">
   		<![CDATA[
