@@ -19,14 +19,22 @@
     <link rel="stylesheet" href="${contextPath}/resources/singer/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
-
+    
+	<style>
+	.before_join{
+		text-align: center;
+		color: purple;
+	}
+	
+	</style>
 </head>
 
 <body class="h-100">
        <!-- 헤더 -->
        <jsp:include page="../inc/top.jsp" />
        <!-- 헤더 -->
-
+    
+    
         <section class="banner_area2">
             <div class="container">
                 <div class="banner_inner_text2">
@@ -34,7 +42,6 @@
                 </div>
             </div>
         </section>
-    
     <!--*******************
         Preloader start
     ********************-->
@@ -49,66 +56,31 @@
         Preloader end
     ********************-->
 
-    
-
-
-
-    <div class="login-form-bg h-100">
+    <div class="login-form-bg h-101">
+    	<div>
+    		<h1 class="before_join">회원가입 종류를 선택해 주세요</h1>
+    	</div>
+    	<br>
+    	<br>
         <div class="container h-100">
             <div class="row justify-content-center h-100">
                 <div class="col-xl-6">
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                
-                                    <a class="text-center" href="index.html"> <h4>SIGN UP</h4></a>
-        
-                                <form class="mt-5 mb-5 login-input">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="id" placeholder="아이디" required>
-							            <button type="submit" class="btn btn-dark m-t-20">중복 확인</button>
-                                    </div>                                
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="이름" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" name="password1" placeholder="비밀번호" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" name="password2" placeholder="비밀번호 확인" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="email" placeholder="이메일" required>
-                                    </div> 
-									
-									<div>
-										
-									</div>
-									
-									<div class="form-row align-items-center">
-                                            <div class="col-auto my-1">
-                                                <label class="mr-sm-2">지역</label>
-                                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected="selected">지역을 선택하세요</option>
-                                                    <option value="서울">서울</option>
-                                                    <option value="부산">부산</option>
-                                                    <option value="대구">대구</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    <div class="form-group"></div>                                    
-                                    <button type="submit" class="btn login-form__btn submit w-100">Sign in</button>
-                                </form>
-                                    <p class="mt-5 login-form__footer">계정이 있으신가요? <a href="${contextPath}/login.mem" class="text-primary">로그인 하기 </a></p>
-                                </div>
+								
+                                  	<a href="${contextPath}/join0.mem" class="btn gradient-9 btn-lg border-0 btn-rounded px-5">일반회원 가입</a>
+                                  	
+                                	<a href="${contextPath}/join1.mem" class="btn gradient-4 btn-lg border-0 btn-rounded px-5" onclick="">버스커 가입</a>
+                                	
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-   
+    </div>
     
 
     
@@ -125,6 +97,5 @@
     <!-- 푸터  -->
     <jsp:include page="../inc/footer.jsp"/>
     <!-- 푸터  -->
-
 </body>
 </html>

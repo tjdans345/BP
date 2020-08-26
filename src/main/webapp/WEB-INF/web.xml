@@ -29,6 +29,37 @@
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
 	
+	<!-- 한글설정 -->
+
+	<filter>
+
+		<filter-name>encodingFilter</filter-name>
+
+		<filter-class>
+
+			org.springframework.web.filter.CharacterEncodingFilter
+
+		</filter-class>
+
+		<init-param>
+
+			<param-name>encoding</param-name>
+
+			<param-value>UTF-8</param-value>
+
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 한글설정 END -->
+
 	<!-- 싱어 페이지 -->
 	<servlet>
 		<servlet-name>singServlet</servlet-name>
@@ -92,8 +123,9 @@
 		<servlet-name>BuskingServlet</servlet-name>
 		<url-pattern>*.b</url-pattern>
 	</servlet-mapping>
+
 	<!-- 버스킹 -->	
-<!-- 한글설정 -->
+
 
     <filter>
 
@@ -122,6 +154,8 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <!-- 한글설정 END -->
+
+	<!-- 버스킹 -->
+
 
 </web-app>

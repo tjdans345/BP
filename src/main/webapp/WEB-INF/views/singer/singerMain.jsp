@@ -146,7 +146,7 @@
                                                     <div class="notification-timestamp">08 Hours ago</div>
                                                     <div class="notification-text">Can you do me a favour?</div>
                                                 </div>
-                                            </a>
+                                            </a> 
                                         </li>
                                         <li>
                                             <a href="${contextPath}/resources/singer/javascript:void()">
@@ -303,7 +303,14 @@
                                 <div class="text-center">
                                     <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/singer/images/users/5.jpg" id="profile">
                                     <h4 class="card-widget__title text-dark mt-3">Deangelo Sena</h4>
-                                    <p class="text-muted">Senior Manager</p>
+                                    <!-- 메인 소개글 --> 
+                                    <form action="${contextPath}/singerWrite.sin" method="post">
+                                        <div class="form-group">
+                                            <textarea class="form-control h-150px" rows="3" id="comment" name="introduce"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn mb-1 btn-flat btn-primary">글 작성</button>
+                                    </form>
+                                    <!-- 메인 소개글 -->
                                     <a class="btn2 gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()" id="fbtn">Folllow</a>
                                 </div>
                             </div>

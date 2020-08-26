@@ -19,7 +19,11 @@
     <link rel="stylesheet" href="${contextPath}/resources/singer/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
-
+<c:if test="${msg != null}">
+	<script type="text/javascript">
+		window.alert('${msg}');
+	</script>
+</c:if>
 </head>
 
 <body class="h-100">
@@ -57,16 +61,16 @@
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
                                 <a class="text-center" href="index.html"> <h4>LOGIN</h4></a>
-                                <form class="mt-5 mb-5 login-input">
+                                <form action="${contextPath}/loginCheck.mem" class="mt-5 mb-5 login-input" method="post" novalidate="novalidate">
                                     <div class="form-group">
-                                        <input type="ID" class="form-control" placeholder="ID" value="${name}">
+                                        <input type="text" class="form-control" placeholder="ID" name="id">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password">
+                                        <input type="password" class="form-control" placeholder="Password" name="password">
                                     </div>
                                     <button class="btn login-form__btn submit w-100">Sign In</button>
                                 </form>
-                                <p class="mt-5 login-form__footer">아직 계정이 없으신가요? <a href="${contextPath}/signup.mem" class="text-primary">회원가입 하기</a></p>
+                                <p class="mt-5 login-form__footer">아직 계정이 없으신가요? <a href="${contextPath}/beforejoin.mem" class="text-primary">회원가입 하기</a></p>
                             </div>
                         </div>
                     </div>

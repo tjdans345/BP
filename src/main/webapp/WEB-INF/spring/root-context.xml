@@ -14,8 +14,7 @@
         <property name="username" value="bp" />
         <property name="password" value="bp" />
     </bean>
-
-
+    
     <bean id="sqlSessionFactory"
         class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
