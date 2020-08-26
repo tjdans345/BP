@@ -19,7 +19,14 @@
     <link rel="stylesheet" href="${contextPath}/resources/singer/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
-
+    
+	<style>
+	.before_join{
+		text-align: center;
+		color: purple;
+	}
+	
+	</style>
 </head>
 
 <body class="h-100">
@@ -50,23 +57,23 @@
     ********************-->
 
     <div class="login-form-bg h-101">
+    	<div>
+    		<h1 class="before_join">회원가입 종류를 선택해 주세요</h1>
+    	</div>
+    	<br>
+    	<br>
         <div class="container h-100">
             <div class="row justify-content-center h-100">
                 <div class="col-xl-6">
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                <a class="text-center" href="index.html"> <h4>LOGIN</h4></a>
-                                <form action="${contextPath}/loginCheck.mem" class="mt-5 mb-5 login-input" method="post" novalidate="novalidate">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="ID" name="id">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" name="password">
-                                    </div>
-                                    <button class="btn login-form__btn submit w-100">Sign In</button>
-                                </form>
-                                <p class="mt-5 login-form__footer">아직 계정이 없으신가요? <a href="${contextPath}/signup.mem" class="text-primary">회원가입 하기</a></p>
+								
+                                  	<a href="${contextPath}/join0.mem" class="btn gradient-9 btn-lg border-0 btn-rounded px-5">일반회원 가입</a>
+                                  	
+                                	<a href="${contextPath}/join1.mem" class="btn gradient-4 btn-lg border-0 btn-rounded px-5" onclick="">버스커 가입</a>
+                                	
+
                             </div>
                         </div>
                     </div>
