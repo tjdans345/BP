@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: Moon
 Build-Jdk: 1.8.0_151
+=======
+Built-By: HA
+Build-Jdk: 14.0.2
+>>>>>>> 89e330daa3d49269eb444b7f13412c39de80d21f
 Created-By: Maven Integration for Eclipse
 

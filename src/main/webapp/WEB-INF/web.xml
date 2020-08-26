@@ -124,8 +124,13 @@
 		<url-pattern>*.b</url-pattern>
 	</servlet-mapping>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<!-- 버스킹 -->
 			
 
+=======
+
+	<!-- 버스킹 -->	
+>>>>>>> 89e330daa3d49269eb444b7f13412c39de80d21f
 
 </web-app>
