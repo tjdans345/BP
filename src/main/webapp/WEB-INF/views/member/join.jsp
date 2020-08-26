@@ -45,7 +45,7 @@
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">                                
                                     <a class="text-center" href="index.html"> <h4>SIGN UP</h4></a>
-                           		<form action="${contextPath}/addMember.mem" class="mt-5 mb-5 login-input">
+                           		<form action="${contextPath}/addMember.mem" method="post" class="mt-5 mb-5 login-input">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="id" placeholder="아이디" required>
 							            <button type="submit" class="btn btn-dark m-t-20">중복 확인</button>
