@@ -123,9 +123,9 @@
 		<servlet-name>BuskingServlet</servlet-name>
 		<url-pattern>*.b</url-pattern>
 	</servlet-mapping>
-	<!-- 버스킹 -->
-			
-<!-- 한글설정 -->
+
+	<!-- 버스킹 -->	
+
 
     <filter>
 
@@ -154,6 +154,8 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <!-- 한글설정 END -->
+
+	<!-- 버스킹 -->
+
 
 </web-app>

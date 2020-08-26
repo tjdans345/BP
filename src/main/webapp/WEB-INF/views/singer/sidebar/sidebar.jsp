@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />   
 
 <style type="text/css">
 
@@ -24,18 +28,18 @@
                 <ul class="metismenu" id="menu">
                     
                     <li>
-                        <a class="has-arrow" href="${contextPath}/BP/singerMain.sin" aria-expanded="false">
+                        <a class="has-arrow" href="${contextPath}/singerMain.sin" aria-expanded="false">
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">메인페이지</span>
                         </a>
                     </li>
                     <li>
-                        <a class="has-arrow" href="" aria-expanded="false">
+                        <a class="has-arrow" href="#" aria-expanded="false">
                             <i class="icon-globe-alt menu-icon"></i><span class="nav-text">공연일정</span>
                         </a>
                     </li>    
                     
                     <li>
-                        <a class="has-arrow" href="${contextPath}/BP/resbusking.b" aria-expanded="false">
+                        <a class="has-arrow" href="${contextPath}/resbusking.b" aria-expanded="false">
                             <i class="icon-envelope menu-icon"></i> <span class="nav-text">버스킹 예약(only Singer)</span>
                         </a>
                     </li>
