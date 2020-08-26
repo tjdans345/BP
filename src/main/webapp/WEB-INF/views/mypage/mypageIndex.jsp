@@ -77,8 +77,8 @@
                                 </div>
                                 <h4>About Me</h4>
                                 <ul class="card-profile__info">
-                                    <li class="mb-1"><strong class="text-dark mr-4">Mobile</strong> <span>${meminfo.phone}</span></li>
-                                    <li><strong class="text-dark mr-4">Email</strong> <span>${meminfo.email}</span></li>
+                                    <li class="mb-1"><strong class="text-dark mr-4">Email</strong> <span>${meminfo.email}</span></li>
+                                    <li><strong class="text-dark mr-4">Location</strong> <span>${meminfo.location}</span></li>
                                 </ul>
                             </div> 
                     </div>

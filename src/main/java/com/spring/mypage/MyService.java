@@ -13,5 +13,16 @@ public class MyService {
 	public MemberVO meminfo(String id) {
 		return mydao.meminfo(id);
 	}
-
+	
+	public int delmem(String id) {
+		return mydao.delmem(id);
+	}
+	
+	public String checkpwd(String id) {
+		return mydao.checkpwd(id);
+	}
+	
+	public void editmem(MemberVO memberVO) {
+		mydao.editmem(memberVO);
+	}
 }

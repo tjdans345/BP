@@ -4,7 +4,7 @@
    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
    
   <mapper namespace="mapper.my">
-
+	<!-- 회원정보 보기 -->
 	<select id="meminfo" resultType="memberVO">
 		<![CDATA[ 
   			select * from member
@@ -12,4 +12,34 @@
   		]]>
 	</select>
 	
+	<!-- 회원정보 수정 -->
+	<update id="editmem" parameterType="memberVO">
+		<![CDATA[
+			update member
+			set name=#{name},
+				password=#{password},
+				email=#{email},
+				phone=#{phone},
+				location=#{location},
+				profile_img=#{profile_img},
+				gender=#{gender}
+			where id=#{id}
+		]]>	
+	</update>
+	
+	<!-- 회원탈퇴 -->
+	<delete id="delmem">
+		<![CDATA[
+			delete from member
+			where id=#{id}
+		]]>
+	</delete>
+	
+	<!-- 비밀번호 체크 -->
+	<select id="checkpwd" resultType="String">
+		<![CDATA[
+			select password from member
+			where id=#{id}
+		]]>
+	</select>
   </mapper>

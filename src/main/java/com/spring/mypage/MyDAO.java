@@ -1,7 +1,5 @@
 package com.spring.mypage;
 
-import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -13,8 +11,22 @@ public class MyDAO {
 	@Autowired
 	private SqlSession sqlSession;
 	
+	//회원정보
 	public MemberVO meminfo(String id) {
 		return sqlSession.selectOne("mapper.my.meminfo", id);
 	}
 	
+	//회원탈퇴
+	public int delmem(String id) {
+		return sqlSession.delete("mapper.my.delmem",id);
+	}
+	
+	//회원정보수정(비밀번호체크)
+	public String checkpwd(String id) {
+		return sqlSession.selectOne("mapper.my.checkpwd", id);
+	}
+	
+	public int editmem(MemberVO memberVO) {
+		return sqlSession.update("mapper.my.editmem", memberVO);
+	}
 }
