@@ -12,13 +12,15 @@ public class MemberDAO {
 	@Autowired
 	private SqlSession sqlSession;
 
-	public int addMember(MemberVO memberVO) {
-		return sqlSession.insert("mapper.member.addMember", memberVO);
+	public void addMember(MemberVO memberVO) {
+		sqlSession.insert("mapper.member.addMember", memberVO);
 	}
 	public List idCheck(String id) {
 		return sqlSession.selectList("mapper.member.idcheck", id);
 	}
 	public MemberVO loginMember(String id) {
 		return sqlSession.selectOne("mapper.member.loginMember", id);
-	}	
+	}
+
+	
 }

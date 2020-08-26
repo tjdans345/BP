@@ -2,33 +2,32 @@ package com.spring.busking;
 
 import java.sql.Timestamp;
 
+
+import org.springframework.stereotype.Component;
+
+//@Component
 public class BuskingVO {
 
-	private int num;
-	private String sid, loc1,loc2,loc3,content;
-	private Timestamp stime, etime;
-	
-	
-	
-	public BuskingVO(int num, String sid, String loc1, String loc2, String loc3, String content, Timestamp stime,
-			Timestamp etime) {
-		super();
-		this.num = num;
-		this.sid = sid;
-		this.loc1 = loc1;
-		this.loc2 = loc2;
-		this.loc3 = loc3;
-		this.content = content;
-		this.stime = stime;
-		this.etime = etime;
-	}
-	
+	private int num,stime, etime;
+	private String sid, loc1,loc2,loc3,content,date;
 	
 	public int getNum() {
 		return num;
 	}
 	public void setNum(int num) {
 		this.num = num;
+	}
+	public int getStime() {
+		return stime;
+	}
+	public void setStime(int stime) {
+		this.stime = stime;
+	}
+	public int getEtime() {
+		return etime;
+	}
+	public void setEtime(int etime) {
+		this.etime = etime;
 	}
 	public String getSid() {
 		return sid;
@@ -60,17 +59,11 @@ public class BuskingVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Timestamp getStime() {
-		return stime;
+	public String getDate() {
+		return date;
 	}
-	public void setStime(Timestamp stime) {
-		this.stime = stime;
-	}
-	public Timestamp getEtime() {
-		return etime;
-	}
-	public void setEtime(Timestamp etime) {
-		this.etime = etime;
+	public void setDate(String date) {
+		this.date = date;
 	}
 	
 	

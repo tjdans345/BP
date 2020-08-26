@@ -30,12 +30,12 @@
 	
 	        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	            <ul class="navbar-nav">
-	                <li class="nav-item active"><a class="nav-link" href="${contextPath}/index.do">Home</a></li>
-	                <li class="nav-item"><a class="nav-link" href="${contextPath}/about.do">About Us</a></li>
-	                <li class="nav-item"><a class="nav-link" href="${contextPath}/singerMain.sin">Singer</a></li>
-	                <li class="nav-item"><a class="nav-link" href="${contextPath}/service.do">Services</a></li>
-	                <li class="nav-item"><a class="nav-link" href="${contextPath}/portfolio.do">Portfolio</a></li>
-	                <li class="nav-item"><a class="nav-link" href="${contextPath}/contact.do">Contact</a></li>
+	                <li class="nav-item active"><a class="nav-link" href="${contextPath}/index.do">HOME</a></li>
+	                <li class="nav-item"><a class="nav-link" href="${contextPath}/about.do">ABOUT US</a></li>
+	                <li class="nav-item"><a class="nav-link" href="${contextPath}/singerMain.sin">SINGER</a></li>
+	                <li class="nav-item"><a class="nav-link" href="${contextPath}/service.do">SERVICES</a></li>
+	                <li class="nav-item"><a class="nav-link" href="${contextPath}/portfolio.do">PORTFOLIO</a></li>
+	                <li class="nav-item"><a class="nav-link" href="${contextPath}/contact.do">CONTACT</a></li>
 	                
 		            <c:choose>
 		            	<c:when test="${id == null}">
@@ -44,8 +44,8 @@
 			                    Login
 			                    </a>
 			                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/login.mem">Login</a></li>
-			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/elements.do">Elements</a></li>
+			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/login.mem">LOGIN</a></li>
+			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/elements.do">ELEMENTS</a></li>
 			                    </ul>
 			                </li>
 		                </c:when>
@@ -55,8 +55,9 @@
 			                    ${id}님
 			                    </a>
 			                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/mypage.my">My page</a></li>
-			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/logout.mem">Log out</a></li>
+
+			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/mypage.my">MY PAGE</a></li>
+			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/logout.mem">LOG OUT</a></li>
 			                    </ul>
 			                </li>
 		                </c:otherwise>

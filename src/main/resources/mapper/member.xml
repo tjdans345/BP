@@ -11,8 +11,8 @@
    		<result property="email" column="email" />
    		<result property="phone" column="phone" />
    		<result property="location" column="location" />
+   		<result property="gender" column="gender" />   		
    		<result property="profile_img" column="profile_img" />
-   		<result property="d_addr3" column="d_addr3" />
    		<result property="status" column="status" />
    		<result property="joindate" column="joindate" /> 
    	</resultMap>
@@ -29,19 +29,19 @@
    		]]>
    	</select>	   	  	
   	
-  	<insert id="beforejoin" parameterType="memberVO">
-  		<![CDATA[
-  			insert into member(status)
-  			values(#{status})	
-  		]]>
-  	</insert>
+<!--   	<insert id="beforejoin" parameterType="memberVO"> -->
+<!--   		<![CDATA[ -->
+<!--   			insert into member(status) -->
+<!--   			values(#{status})	 -->
+<!--   		]]> -->
+<!--   	</insert> -->
   	
   	<insert id="addMember" parameterType="memberVO">
   		<![CDATA[
   			insert into member(name, id, password, email, 
-  				phone, location, profile_img, status, joindate)
+  				phone, location, profile_img, status, gender, joindate)
   			values(#{name}, #{id}, #{password}, #{email}, 
-  				#{phone}, #{location}, #{profile_img}, #{status}, #{joindate})
+  				#{phone}, #{location}, #{profile_img}, #{status}, #{gender}, #{joindate})
   		]]>
   	</insert>
   	

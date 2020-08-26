@@ -19,7 +19,11 @@
     <link rel="stylesheet" href="${contextPath}/resources/singer/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
-
+<c:if test="${msg != null}">
+	<script type="text/javascript">
+		window.alert('${msg}');
+	</script>
+</c:if>
 </head>
 
 <body class="h-100">
@@ -66,7 +70,7 @@
                                     </div>
                                     <button class="btn login-form__btn submit w-100">Sign In</button>
                                 </form>
-                                <p class="mt-5 login-form__footer">아직 계정이 없으신가요? <a href="${contextPath}/join.mem" class="text-primary">회원가입 하기</a></p>
+                                <p class="mt-5 login-form__footer">아직 계정이 없으신가요? <a href="${contextPath}/beforejoin.mem" class="text-primary">회원가입 하기</a></p>
                             </div>
                         </div>
                     </div>
