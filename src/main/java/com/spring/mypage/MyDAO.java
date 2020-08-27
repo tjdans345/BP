@@ -26,7 +26,11 @@ public class MyDAO {
 		return sqlSession.selectOne("mapper.my.checkpwd", id);
 	}
 	
-	public int editmem(MemberVO memberVO) {
-		return sqlSession.update("mapper.my.editmem", memberVO);
+	//회원정보수정
+	public void editmem(MemberVO memberVO) {
+		int rs = sqlSession.update("mapper.my.editmem", memberVO);
+		System.out.println("DAO 성공여부 " + rs);
+		System.out.println(memberVO.getName());
+		System.out.println(memberVO.getLocation());
 	}
 }

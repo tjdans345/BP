@@ -16,15 +16,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${contextPath}/resources/mypage/images/favicon.png">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/mypage/css/style.css" rel="stylesheet">
-<!-- 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script>
-   	 $(function(){
-       	 var msg = "<c:out value="${msg}" />";
-       	 if(msg != ""){
-      		      alert(msg)
-      		  }else{}
-   	 }) 
-	</script> -->
+    
+<c:if test="${msg!=null && msg!=''}">
+	<script type="text/javascript">
+		window.alert('${msg}');
+	</script>
+</c:if>
 
 </head>
 
