@@ -306,7 +306,7 @@
                                     <!-- 메인 소개글 --> 
                                     <form action="${contextPath}/singerWrite.sin" method="post">
                                         <div class="form-group">
-                                            <textarea class="form-control h-150px" rows="3" id="comment" name="introduce"></textarea>
+                                            <textarea class="form-control h-150px" rows="3" id="comment" name="introduce">${mainContent.introduce}</textarea>
                                         </div>
                                         <button type="submit" class="btn mb-1 btn-flat btn-primary">글 작성</button>
                                     </form>

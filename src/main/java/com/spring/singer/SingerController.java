@@ -29,8 +29,13 @@ public class SingerController {
 	private ModelAndView mav = new ModelAndView();
 	
 	//싱어 메인페이지 이동
-	@RequestMapping(value = "/singerMain.sin", method = RequestMethod.GET)
-	public ModelAndView index() {
+	@RequestMapping(value = "/singerMain.sin", method = {RequestMethod.GET, RequestMethod.POST})
+	public ModelAndView index(HttpServletRequest request) {
+		
+		String id = (String)request.getSession().getAttribute("id");
+		
+		//싱어 메인페이지 소개글 조회
+		mav.addObject("mainContent", singerService.mainContent(id));
 		
 		mav.setViewName("singer/singerMain");
 		return mav;
@@ -39,12 +44,12 @@ public class SingerController {
 	//싱어 메인페이지 글 작성
 	@RequestMapping(value = "/singerWrite.sin", method = RequestMethod.POST)
 	public ModelAndView SingerMainWrite(@RequestParam String introduce, HttpServletRequest request) {
-		System.out.println(request.getSession().getAttribute("id"));
-		System.out.println(introduce);
-		String id = (String)request.getSession().getAttribute("id");
-		int num = 3;
 		
-		singerService.ContentWrite(id, introduce, num);
+		String id = (String)request.getSession().getAttribute("id");
+		
+		singerService.ContentWrite(id, introduce);
+		
+		
 		
 		mav.setViewName("singer/singerMain");
 		return mav;

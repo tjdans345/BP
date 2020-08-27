@@ -5,17 +5,22 @@
    
   <mapper namespace="mapper.singer">
   
-  	<resultMap type="singerVO" id="singerResult">
+  	<resultMap type="singercontentVO" id="singerResult">
    		<result property="id" column="id" />
-   		
    	</resultMap>
-   	  
-   	<insert id="ContentWrite" parameterType="singerVO">
    	
+   	
+   	<select id="mainContent" resultType="singercontentVO">
+   	<![CDATA[
+		select introduce from singercontent where id = #{id}
+		]]> 
+   	</select>  
+   	  
+   	<insert id="ContentWrite" parameterType="singercontentVO">
    		<![CDATA[
-		insert into singercontent (num, id, introduce, date) values (#{num}, #{id}, #{introduce}, now())
+		insert into singercontent (id, introduce, date) values (#{id}, #{introduce}, now())
 		]]>
    	</insert>
    	
   	
-  </mapper>
+  </mapper> 

@@ -8,12 +8,19 @@ import org.springframework.stereotype.Repository;
 public class SingerDAO {
 
 	@Autowired
-	SqlSession sqlSession;
+	private SqlSession sqlSession;
+	
+	public SingerContentVO mainContent(String id) {
+		
+		return sqlSession.selectOne("mapper.singer.mainContent", id);
+	}
 	
 	public int ContentWrite(SingerContentVO scv) {
 		
 		return sqlSession.insert("mapper.singer.ContentWrite", scv);
 		
 	}
+
+	
 
 }

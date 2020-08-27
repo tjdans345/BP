@@ -6,7 +6,7 @@
 	<typeAliases>
 		<typeAlias type="com.spring.member.MemberVO" alias="memberVO"/>
 		<typeAlias type="com.spring.busking.BuskingVO" alias="buskingVO"/>	
-		<typeAlias type="com.spring.singer.SingerContentVO" alias="singerVO"/>	
+		<typeAlias type="com.spring.singer.SingerContentVO" alias="singercontentVO"/>	
 			
 	</typeAliases>
 	
