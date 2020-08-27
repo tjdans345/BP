@@ -84,15 +84,15 @@ width:200px;}
                                 <div class="form-validation">
                                     <form class="form-valide" method="post" name="form">
                                        <div class="text-center">
-                                    	<img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}">
+                                    	<img alt="" class="rounded-circle mt-4"  src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}" >
                                		   </div>
-                               		   <input type="hidden" name = "userimage" value="">
-								   	   <input type="file" id="img_file" name="userimage_new" onclick="click" accept=""/><br><br>
+                               		   <input type="hidden" name = "profile_img" value="">
+								   	   <input type="file" id="img_file" name="profile_img" onclick="click" accept=""/><br><br>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-id">아이디<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-id" name="val-id" placeholder="${meminfo.id}" readonly>
+                                                <input type="text" class="form-control" id="val-id" name="id" value="${meminfo.id}" readonly>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -113,21 +113,28 @@ width:200px;}
                                             <label class="col-lg-4 col-form-label" for="val-confirm-password">비밀번호 확인<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호 재확인">
+                                                <input type="password" class="form-control" id="password" name="passwordcheck" placeholder="비밀번호 재확인">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-email">이메일<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                 <input type="text" class="form-control" id="email" name="email" placeholder="${meminfo.email}">
+                                                 <input type="text" class="form-control" id="email" name="email" value="${meminfo.email}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-number">연락처<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="phone" name="phone" placeholder="${meminfo.phone}">
+                                                <input type="text" class="form-control" id="phone" name="phone" value="${meminfo.phone}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="val-number">성별<span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" id="gender" name="gender" value="${meminfo.gender}">
                                             </div>
                                         </div>
                                         <div class="form-group row">

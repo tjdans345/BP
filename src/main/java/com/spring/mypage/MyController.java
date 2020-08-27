@@ -4,11 +4,13 @@ import java.awt.Window;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.member.MemberVO;
@@ -33,7 +35,7 @@ public class MyController {
 	}
 	
 	//회원정보
-	@RequestMapping(value = "/info.my", method = RequestMethod.GET)
+	@RequestMapping(value = "/info.my", method =  {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView info(String id,
 							 HttpServletRequest request,
 							 HttpServletResponse response) {
@@ -53,7 +55,9 @@ public class MyController {
 							 HttpServletResponse response,
 							 MemberVO membervo) {
 		
-		id = (String)request.getSession().getAttribute("id");		
+		id = (String)request.getSession().getAttribute("id");	
+		String msg = "";
+		mav.addObject("msg", msg);
 		mav.setViewName("mypage/editpass");
 		return mav;
 
@@ -67,30 +71,35 @@ public class MyController {
 					   HttpServletRequest request,
 					   HttpServletResponse response) {
 		id = (String)request.getSession().getAttribute("id");
+		String msg = "";
 		mav.addObject("checkpwd", mys.checkpwd(id));
-
+		
 		if(mys.checkpwd(id).equals(password)) {
 			mav.addObject("meminfo", mys.meminfo(id));
 			mav.setViewName("mypage/edit");
 			return mav;
 
-		}else {			
+		}else {		
+			msg="비밀번호가 틀렸습니다.";
+			mav.addObject("msg",msg);
 			mav.setViewName("mypage/editpass");
-			mav.addObject("msg","비밀번호가 틀립니다.");
 			return mav;
 		}
 	}
 	
+	//회원정보수정
 	@RequestMapping(value = "/editmem.my", method = RequestMethod.POST)
-	public ModelAndView editmem(String id,
-					   String password,
+	public ModelAndView editmem(
 					   MemberVO memberVO,
 					   HttpServletRequest request,
-					   HttpServletResponse response) {
-		id = (String)request.getSession().getAttribute("id");
+					   HttpServletResponse response,
+					   HttpSession session ) {
+		
+		
+		String id = (String)session.getAttribute("id");
 		mav.addObject("meminfo", mys.meminfo(id));
 		mys.editmem(memberVO);
-		mav.setViewName("mypage/info");
+		mav.setViewName("forward:info.my");
 		return mav;
 	}
 	
@@ -103,7 +112,7 @@ public class MyController {
 	  id = (String)request.getSession().getAttribute("id");
 	  mys.delmem(id);
       request.getSession().removeAttribute("id");
-	  mav.setViewName("redirect:index.do");
+	  mav.setViewName("index");
 	  return mav;
 	  
 	  }

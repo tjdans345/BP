@@ -70,7 +70,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="media align-items-center mb-4">
-                                    <img class="mr-3" src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}" width="200" height="200" alt="" style="margin-left:90px;">
+                                    <img class="mr-3 rounded-circle" src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}" width="200" height="200" alt="" style="margin-left:90px;">
                                     <div class="media-body">
                                         <h3 class="mb-0">${meminfo.name}</h3>
                                     </div>
