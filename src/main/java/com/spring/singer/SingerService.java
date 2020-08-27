@@ -4,13 +4,16 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.spring.member.MemberVO;
+import com.spring.mypage.MyDAO;
+
 @Service
 public class SingerService {
 	@Autowired
 	private SingerDAO singerDAO;
 	
 	
-	public SingerContentVO mainContent(String id) {
+	public String mainContent(String id) {
 		
 		
 		
@@ -24,5 +27,6 @@ public class SingerService {
 		scv.setIntroduce(introduce);
 		singerDAO.ContentWrite(scv);
 	}
+
 
 }

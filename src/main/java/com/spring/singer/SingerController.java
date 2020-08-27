@@ -17,6 +17,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.spring.member.MemberVO;
+import com.spring.mypage.MyDAO;
+import com.spring.mypage.MyService;
+
 /**
  * Handles requests for the application home page.
  */
@@ -27,17 +31,22 @@ public class SingerController {
 	@Autowired
 	private SingerService singerService;
 	private ModelAndView mav = new ModelAndView();
+	private MyService myService = new MyService();
 	
 	//싱어 메인페이지 이동
 	@RequestMapping(value = "/singerMain.sin", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView index(HttpServletRequest request) {
 		
 		String id = (String)request.getSession().getAttribute("id");
+		System.out.println(id);
 		
-		//싱어 메인페이지 소개글 조회
+
+		//싱어 메인페이지 소개글 조회 
 		mav.addObject("mainContent", singerService.mainContent(id));
-		
-		mav.setViewName("singer/singerMain");
+		//회원상태 조회
+//		MemberVO test = myService.meminfo(id); 
+//		mav.addObject("meminfo", myService.meminfo(id)); 
+		mav.setViewName("singer/singerMain"); 
 		return mav;
 	}
 	

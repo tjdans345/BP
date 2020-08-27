@@ -10,7 +10,7 @@ public class SingerDAO {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	public SingerContentVO mainContent(String id) {
+	public String mainContent(String id) {
 		
 		return sqlSession.selectOne("mapper.singer.mainContent", id);
 	}

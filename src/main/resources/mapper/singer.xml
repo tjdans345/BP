@@ -10,8 +10,8 @@
    	</resultMap>
    	
    	
-   	<select id="mainContent" resultType="singercontentVO">
-   	<![CDATA[
+   	<select id="mainContent" resultType="String">
+   	<![CDATA[ 
 		select introduce from singercontent where id = #{id}
 		]]> 
    	</select>  
