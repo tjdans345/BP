@@ -84,9 +84,9 @@ width:200px;}
                                 <div class="form-validation">
                                     <form class="form-valide" method="post" name="form">
                                        <div class="text-center">
-                                    	<img alt="" class="rounded-circle mt-4" name = "profile_img" src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}" >
+                                    	<img alt="" class="rounded-circle mt-4"  src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}" >
                                		   </div>
-                               		   <input type="hidden" name = "profile_img" value="${contextPath}/resources/mypage/images/userimage/곰.png">
+                               		   <input type="hidden" name = "profile_img" value="">
 								   	   <input type="file" id="img_file" name="profile_img" onclick="click" accept=""/><br><br>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-id">아이디<span class="text-danger">*</span>

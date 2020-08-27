@@ -28,9 +28,6 @@ public class MyDAO {
 	
 	//회원정보수정
 	public void editmem(MemberVO memberVO) {
-		int rs = sqlSession.update("mapper.my.editmem", memberVO);
-		System.out.println("DAO 성공여부 " + rs);
-		System.out.println(memberVO.getName());
-		System.out.println(memberVO.getLocation());
+		sqlSession.update("mapper.my.editmem", memberVO);
 	}
 }

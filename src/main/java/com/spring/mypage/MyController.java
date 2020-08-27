@@ -99,15 +99,6 @@ public class MyController {
 		String id = (String)session.getAttribute("id");
 		mav.addObject("meminfo", mys.meminfo(id));
 		mys.editmem(memberVO);
-		//출력확인부분
-		System.out.println(memberVO.getName());
-		System.out.println(memberVO.getPassword());
-		System.out.println(memberVO.getEmail());
-		System.out.println(memberVO.getLocation());
-		System.out.println(memberVO.getProfile_img());
-		System.out.println(memberVO.getId());
-		System.out.println(memberVO.getPhone());
-		System.out.println(memberVO.getGender());
 		mav.setViewName("forward:info.my");
 		return mav;
 	}
