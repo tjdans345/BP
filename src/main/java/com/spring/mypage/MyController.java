@@ -116,6 +116,14 @@ public class MyController {
 	  return mav;
 	  
 	  }
+	
+	@RequestMapping(value = "/passedit.my", method = RequestMethod.GET)
+	public ModelAndView passedit(HttpSession session) {
+		String id = (String)session.getAttribute("id");
+		mav.addObject("meminfo", mys.meminfo(id));
+		mav.setViewName("mypage/passedit");
+		return mav;
+	}
 	 	
 	@RequestMapping(value = "/likesin.my", method = RequestMethod.GET)
 	public ModelAndView likesin() {

@@ -29,7 +29,6 @@
 		<![CDATA[
 			update member
 			set name=#{name},
-				password=#{password},
 				email=#{email},
 				phone=#{phone},
 				location=#{location},

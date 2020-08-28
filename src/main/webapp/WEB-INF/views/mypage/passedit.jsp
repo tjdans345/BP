@@ -27,15 +27,7 @@
 width:200px;}
 </style>
 <script type="text/javascript">
-	$(document).ready(function(){
-		$("#delbtn").click(function(){
-			if(confirm("탈퇴하시겠습니까?")){
-				document.form.action="${contextPath}/del.my";
-				document.form.submit();
-			}
-		});
-	});
-	
+
 	$(document).ready(function(){
 		$("#editbtn").click(function(){
 			if(confirm("수정하시겠습니까?")){
@@ -82,78 +74,31 @@ width:200px;}
                             <div class="card-body">
                                 <div class="form-validation">
                                     <form class="form-valide" method="post" name="form">
-                                       <div class="text-center">
-                                    	<img alt="" class="rounded-circle mt-4"  src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}" >
-                               		   </div>
-                               		   <input type="hidden" name = "profile_img" value="${meminfo.profile_img}">
-								   	   <input type="file" id="img_file" name="profile_img_new" onclick="click" accept="images/*"/><br><br>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-id">아이디<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-password">현재 비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-id" name="id" value="${meminfo.id}" readonly>
+                                                <input type="password" class="form-control" id="password" name="password" value="${meminfo.password}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-username">이름<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-password">변경할 비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="name" name="name" value="${meminfo.name}">
+                                                <input type="password" class="form-control" id="password" name="password" value="${meminfo.password}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-email">이메일<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">변경할 비밀번호 확인<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                 <input type="text" class="form-control" id="email" name="email" value="${meminfo.email}">
+                                                <input type="password" class="form-control" id="password" name="passwordcheck" placeholder="비밀번호 재확인">
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-number">연락처<span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="phone" name="phone" value="${meminfo.phone}">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-number">성별<span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="gender" name="gender" value="${meminfo.gender}">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-skill">지역<span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-6"> 
-                                            	<c:if test="${meminfo.location == '서울'}">                                         	
-                                                <select class="form-control" id="location" name="location">
-                                                    <option value="서울" selected="selected">서울</option>
-                                                    <option value="부산">부산</option>
-                                                    <option value="대구">대구</option>
-                                                </select>
-                                                </c:if>
-                                                <c:if test="${meminfo.location == '부산'}">                                          	
-                                                <select class="form-control" id="location" name="location">
-                                                    <option value="서울">서울</option>
-                                                    <option value="부산" selected="selected">부산</option>
-                                                    <option value="대구">대구</option>
-                                                </select>
-                                                </c:if>
-                                                <c:if test="${meminfo.location == '대구'}">                                          	
-                                                <select class="form-control" id="location" name="location">
-                                                    <option value="서울">서울</option>
-                                                    <option value="부산">부산</option>
-                                                    <option value="대구" selected="selected"> 대구</option>
-                                                </select>
-                                                </c:if>
-                                            </div>
-                                        </div>
+                                        </div>      
                                         <div class="form-group row">
                                             <div class="col-lg-8 ml-auto">
                                                 <button type="button" class="btn btn-primary" id="editbtn">수정</button>
                                                 <button type="reset" class="btn btn-primary">취소</button>
-                                                <button type="button" class="btn btn-primary" id="delbtn">탈퇴하기</button>
                                             </div>
                                         </div>
                                     </form>
