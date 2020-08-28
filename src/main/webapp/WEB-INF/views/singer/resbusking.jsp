@@ -99,19 +99,15 @@ $(document).ready(function() {
 			dataType : "json",
 			
 			success:function(data){
-				alert("성공!");  
-
 				for(i=10;i<=23;i++){
 				$('#s'+i).removeAttr('disabled');
 				$('#e'+i).removeAttr('disabled');
 				}
-				
 				for(i=0;i<data.length;i++){
 				$('#s'+data[i].stime).attr('disabled',true);
 				$('#e'+data[i].stime).attr('disabled',true);
 				}
 				/* 
-				
 				$('#stime').html("");
 				for(i=0;i<data.length;i++){
 					$('#stime').append("<option value="+data[i].stime+">"+data[i].stime+"</option>");

@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />    
 <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +24,8 @@
         <section class="banner_area">
             <div class="container">
                 <div class="banner_inner_text">
-                    <h2>Blog</h2>
-                    <p>Read the news</p>
+                    <h2>Busking</h2>
+                    <p>버스킹 일정</p>
                 </div>
             </div>
         </section>
@@ -32,26 +35,51 @@
         <section class="blog_main_area p_100">
             <div class="container">
                 <div class="row">
+                
+                
+                <div class="col-lg-12">
+                
+                <a href="">전체 공연 보기(지난공연보기 )</a>
+                
+                
+                </div>
+                
+                
+                
                     <div class="col-lg-9">
                         <div class="blog_main_inner">
+
+
+<%-- 
+							
+                            <c:if test="${resBisking == null }">
+                             <h3>공연 예정이 없습니다.</h3>
+                            </c:if>
+
+ --%>                            
+                            <c:forEach var="resBusking" items="${resBusking }">
                             <div class="blog_main_item">
                                 <div class="blog_img">
                                     <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-1.jpg" alt="">
                                     <div class="blog_date">
-                                        <h4>29</h4>
-                                        <h5>October, 2017</h5>
+                                        <h4><fmt:formatDate value="${resBusking.date}" pattern="dd "/></h4>
+                                        <h5><fmt:formatDate value="${resBusking.date}" pattern="MM.yyyy E"/>요일</h5>
                                     </div>
                                 </div>
                                 <div class="blog_text">
-                                    <a href="#"><h4>Let us introduce you the best apps</h4></a>
+                                    <a href="#"><h4>${resBusking.sid } 공연자  | ${resBusking.loc1} ${resBusking.loc2} ${resBusking.loc3}</h4></a>
                                     <div class="blog_author">
-                                        <a href="#">By Lore Papp-Dinea</a>
-                                        <a href="#">Design</a>
+                                        ${resBusking.stime}:00~${resBusking.etime}:59
                                     </div>
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
+                                    <p>공연 소개 ? </p>
                                     <a class="more_btn" href="#">Read More</a>
                                 </div>
                             </div>
+                            
+                            </c:forEach >
+       
+                            
+                            <%-- 
                             <div class="blog_main_item">
                                 <div class="blog_img">
                                     <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-2.jpg" alt="">
@@ -70,24 +98,9 @@
                                     <a class="more_btn" href="#">Read More</a>
                                 </div>
                             </div>
-                            <div class="blog_main_item">
-                                <div class="blog_img">
-                                    <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-3.jpg" alt="">
-                                    <div class="blog_date">
-                                        <h4>29</h4>
-                                        <h5>October, 2017</h5>
-                                    </div>
-                                </div>
-                                <div class="blog_text">
-                                    <a href="#"><h4>Let us introduce you the best apps</h4></a>
-                                    <div class="blog_author">
-                                        <a href="#">By Lore Papp-Dinea</a>
-                                        <a href="#">Design</a>
-                                    </div>
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                                    <a class="more_btn" href="#">Read More</a>
-                                </div>
-                            </div>
+                             --%>
+                            
+                            
                         </div>
                     </div>
                     <div class="col-lg-3">

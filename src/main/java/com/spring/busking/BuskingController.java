@@ -38,20 +38,17 @@ public class BuskingController {
 	@Autowired
 	private BuskingService buskingService;
 	private ModelAndView mav = new ModelAndView();
-	
+	//버스킹 예약 페이지
 	@RequestMapping(value = "/resbusking.b", method = {RequestMethod.GET, RequestMethod.POST})
-	@ResponseBody
-	public ModelAndView resbusking(@RequestParam(required = false,defaultValue = "서울") String loc1,
-			HttpServletRequest reqeust,
-			HttpServletResponse response) {
+	public ModelAndView resbusking(HttpServletRequest reqeust,
+									HttpServletResponse response) {
 		List Loc1List = buskingService.Loc1List();
 		mav.addObject("Loc1List", Loc1List);
 		mav.setViewName("singer/resbusking");
 		return mav;
 	}
 	
-	
-
+	//버스킹 예약 페이지 - ajax 동 가져오기
 	@RequestMapping(value = "/loc2.b", method = {RequestMethod.GET, RequestMethod.POST})
 	@ResponseBody
 	public void loc2(@RequestParam(required = false) String loc1,
@@ -68,7 +65,7 @@ public class BuskingController {
 		}		
 		response.getWriter().print(jSONArray);
 	}
-	
+	//버스킹 예 약페이지 - ajax 장소 가져오기
 	@RequestMapping(value = "/loc3.b", method = {RequestMethod.GET, RequestMethod.POST})
 	@ResponseBody
 	public void loc3(@RequestParam(required = false) String loc1,
@@ -87,7 +84,7 @@ public class BuskingController {
 		}		
 		response.getWriter().print(jSONArray);
 	}
-	
+	//버스킹 예약 페이지 -ajax 시간 가져오기
 	@RequestMapping(value = "/date.b", method = {RequestMethod.GET, RequestMethod.POST})
 	@ResponseBody
 	public void date(@RequestParam(required = false) String date,
@@ -106,7 +103,7 @@ public class BuskingController {
 		}		
 		response.getWriter().print(jSONArray);
 	}
-	
+	//버스킹 예약페이지 - 예약하기
 	@RequestMapping(value = "/insertbusking.b", method = RequestMethod.POST)
 	public ModelAndView addMember(@ModelAttribute BuskingVO buskingVO,
 									HttpServletRequest request,
@@ -118,16 +115,21 @@ public class BuskingController {
 //		int etime =buskingVO.getEtime();
 //		for(int i = stime;i<=etime;i++) {
 //		buskingVO.setStime(i);	
-//		buskingService.insertBusking(buskingVO); 
-//		mav.setViewName("singer/resbusking");} 
+//		buskingService.insertBusking(buskingVO);}  
+		mav.setViewName("singer/resbusking");
 
 		return mav;
 	}
 	
-	
+	//예약 버스킹 목록 페이지
 	@RequestMapping(value = "/busking.b", method = RequestMethod.GET)
-	public String login(Locale locale, Model model) {
-		return "busking/busking";
+	public ModelAndView busking(Locale locale, Model model) {
+		List resBusking = buskingService.resBusking();
+		mav.addObject("resBusking", resBusking);
+		mav.setViewName("busking/busking");
+
+		
+		return mav;
 	}
 	
 
