@@ -44,7 +44,6 @@ width:200px;}
 			}
 		});
 	});
-
 </script>
 
 
@@ -106,7 +105,7 @@ width:200px;}
                                             <label class="col-lg-4 col-form-label" for="val-password">비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="password" name="password" placeholder="변경하실비밀번호입력">
+                                                <input type="password" class="form-control" id="password" name="password" value="${meminfo.password}">
                                             </div>
                                         </div>
                                         <div class="form-group row">
