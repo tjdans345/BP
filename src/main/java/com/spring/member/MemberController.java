@@ -16,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -64,7 +65,7 @@ public class MemberController {
 	   request.getSession().removeAttribute("id");
 	   mav.setViewName("redirect:/index.do");
 	   return mav;
-   }   
+   } 
    @RequestMapping(value = "/loginCheck", method = RequestMethod.POST)
    public ModelAndView loginCheck(@ModelAttribute MemberVO memberVO,
 		   					HttpServletRequest request,
@@ -78,6 +79,21 @@ public class MemberController {
 		   mav.setViewName("member/login");
 	   }
 	   return mav;
-   }   
+   }
+   @RequestMapping(value = "/test.mem", method = RequestMethod.GET)
+   public ModelAndView test(HttpServletRequest request) {
+	   mav.setViewName("member/test");
+	   return mav;
+   } 
+   @RequestMapping(value = "/doplus.mem", method = RequestMethod.GET)
+   @ResponseBody
+   String plus(int num1, int num2) {
+	   
+	   String msg = "더하기에 성공하였습니다.";
+	   
+	   int rs = num1 + num2;
+	   
+	   return rs + "/" + msg;
+   } 
    
 }

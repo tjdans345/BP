@@ -9,11 +9,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-       
-       <!-- 헤더 -->
-       <jsp:include page="./inc/top.jsp" />
-       <!-- 헤더 -->
-       
+     	<!-- 헤더 -->
+        <jsp:include page="./inc/top.jsp" />
+        <!-- 헤더 -->  
     </head>
     <body>
         
@@ -142,7 +140,6 @@
             </div>
         </section>
         <!--================End Circle Chart Area =================-->
-        
         <!--================Service Solution Area =================-->
         <section class="service_solution_area p_100">
             <div class="container">
@@ -166,7 +163,6 @@
                                             </a>
                                         </h5>
                                     </div>
-
                                     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                                         <div class="card-body">
                                             <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. </p>

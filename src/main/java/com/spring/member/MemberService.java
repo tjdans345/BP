@@ -1,6 +1,9 @@
 package com.spring.member;
 
+import java.io.PrintWriter;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,10 +29,15 @@ public class MemberService {
 				msg = "비밀번호를 확인해주세요";
 			}
 		}
-		
 		return msg;
 	}
 	
+//	public void emailcheck(String email, HttpServletResponse response) throws 
+//		Exception{
+//		PrintWriter out = response.getWriter();
+//		out.println(manager.emailcheck(email));
+//		out.close();
+//	}
 	
 		
 }

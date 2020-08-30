@@ -68,12 +68,8 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-								
-                                  	<a href="${contextPath}/join0.mem" class="btn gradient-9 btn-lg border-0 btn-rounded px-5">일반회원 가입</a>
-                                  	
-                                	<a href="${contextPath}/join1.mem" class="btn gradient-4 btn-lg border-0 btn-rounded px-5" onclick="">버스커 가입</a>
-                                	
-
+                                <a href="${contextPath}/join0.mem" class="btn gradient-9 btn-lg border-0 btn-rounded px-5">일반회원 가입</a>                                  	
+                              	<a href="${contextPath}/join1.mem" class="btn gradient-4 btn-lg border-0 btn-rounded px-5" onclick="">버스커 가입</a>
                             </div>
                         </div>
                     </div>

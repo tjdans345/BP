@@ -14,8 +14,6 @@
    	</resultMap>
    	 -->
 
-
-
      <resultMap type="buskingVO" id="locResult">
    		<result property="loc1" column="loc1" />
    		<result property="loc2" column="loc2" />
@@ -30,7 +28,7 @@
   		]]>
   	</select>
   	
-  	
+
   	<select id="Loc2List" resultMap="locResult" parameterType="java.util.HashMap">
   		<![CDATA[ 
   			select distinct loc2 from loc where loc1 = #{loc1};

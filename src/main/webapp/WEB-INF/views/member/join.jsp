@@ -48,7 +48,7 @@
                            		<form action="${contextPath}/addMember.mem" method="post" class="mt-5 mb-5 login-input">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="id" placeholder="아이디" required>
-							            <button type="submit" class="btn btn-dark m-t-20">중복 확인</button>
+							            <input type="button" class="btn btn-dark m-t-20" value="중복 확인" onclick="">
                                     </div>                                
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="name" placeholder="이름" required>
