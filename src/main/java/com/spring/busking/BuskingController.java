@@ -58,8 +58,8 @@ public class BuskingController {
 		JSONArray jSONArray = new JSONArray();
 		for(int i=0; i<Loc2List.size(); i++) {
 			BuskingVO buskingVO = (BuskingVO)Loc2List.get(i);
-			JSONObject jSONObject = new JSONObject();			
-			String loc2 = URLEncoder.encode(buskingVO.getLoc2(), "UTF-8");			//엔코딩
+			JSONObject jSONObject = new JSONObject();	
+			String loc2 = URLEncoder.encode(buskingVO.getLoc2(), "UTF-8");	
 			jSONObject.put("loc2", loc2);
 			jSONArray.add(jSONObject);
 		}		

@@ -40,7 +40,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	var Ca = /\+/g; //공백이 + 가 되는것을 다시 변환
-	
+		
 	$("#loc1").change(function(){
 		var loc1 = $("#loc1").val();
 		$('#loc2').removeAttr('disabled');
@@ -51,12 +51,13 @@ $(document).ready(function() {
 			dataType : "json",
 		
 			success:function(data){
-		    	$('#loc2').html("");
+				$('#loc2').html("");
 		    	$('#loc2').append("<option value='0'>선택해주세요</option>");
 		    	for(i=0;i<data.length;i++){
 		    		var loc2 = decodeURIComponent(data[i].loc2.replace(Ca," ")); //디코딩
 			        $('#loc2').append("<option value="+loc2+">"+loc2+"</option>");
-				}
+				
+		    	}
 		    	$('#loc3').append("<option value='0'>선택해주세요</option>");
 		    	$('#loc3').attr('disabled',true);
 		    },
