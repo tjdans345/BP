@@ -25,4 +25,8 @@ public class MyService {
 	public void editmem(MemberVO memberVO) {
 		mydao.editmem(memberVO);
 	}
+	
+	public void passedit(MemberVO memberVO) {
+		mydao.passedit(memberVO);
+	}
 }

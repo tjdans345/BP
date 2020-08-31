@@ -30,4 +30,9 @@ public class MyDAO {
 	public void editmem(MemberVO memberVO) {
 		sqlSession.update("mapper.my.editmem", memberVO);
 	}
+	
+	//회원정보수정
+	public void passedit(MemberVO memberVO) {
+		sqlSession.update("mapper.my.passedit", memberVO);
+	}
 }

@@ -116,12 +116,18 @@ width:200px;}
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-number">성별<span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="gender" name="gender" value="${meminfo.gender}">
-                                            </div>
-                                        </div>
+											 <label class="col-lg-4 col-form-label" for="val-number">성별<span class="text-danger">*</span></label>
+											<div class="col-lg-6">
+												<c:if test="${meminfo.gender == '남성' }">
+												<label class="radio-inline mr-3"><input type="radio" name="gender" value="남성" checked="checked">남성</label>
+												<label class="radio-inline mr-3"><input type="radio" name="gender" value="여성">여성</label>															
+												</c:if>
+												<c:if test="${meminfo.gender == '여성' }">
+												<label class="radio-inline mr-3"><input type="radio" name="gender" value="남성">남성</label>
+												<label class="radio-inline mr-3"><input type="radio" name="gender" value="여성" checked="checked">여성</label>															
+												</c:if>
+											</div>
+										</div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-skill">지역<span class="text-danger">*</span>
                                             </label>

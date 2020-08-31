@@ -53,4 +53,13 @@
 			where id=#{id}
 		]]>
 	</select>
+	
+	<!-- 비밀번호 수정 -->
+	<update id="passedit" parameterType="memberVO">
+		<![CDATA[
+			update member
+			set password=#{password}
+			where id=#{id}
+		]]>	
+	</update>
   </mapper>

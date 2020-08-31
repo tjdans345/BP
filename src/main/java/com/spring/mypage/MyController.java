@@ -117,6 +117,7 @@ public class MyController {
 	  
 	  }
 	
+	//비밀번호 수정
 	@RequestMapping(value = "/passedit.my", method = RequestMethod.GET)
 	public ModelAndView passedit(HttpSession session) {
 		String id = (String)session.getAttribute("id");
