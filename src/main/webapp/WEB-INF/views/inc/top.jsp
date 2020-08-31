@@ -46,6 +46,7 @@
 			                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/login.mem">LOGIN</a></li>
 			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/elements.do">ELEMENTS</a></li>
+			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/test.sin">singerPageTest</a></li>
 			                    </ul>
 			                </li>
 		                </c:when>
@@ -58,6 +59,7 @@
 
 			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/mypage.my">MY PAGE</a></li>
 			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/logout.mem">LOG OUT</a></li>
+			                        <li class="nav-item"><a class="nav-link" href="${contextPath}/test.sin">singerPageTest</a></li>
 			                    </ul>
 			                </li>
 		                </c:otherwise>

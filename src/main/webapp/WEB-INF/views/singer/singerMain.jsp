@@ -293,7 +293,7 @@
                         </div>
                     </div>
                 </div>
-
+			<c:set var="id" value="${id}"/>
             <!-- 메인 프로필 -->    
                 <div class="row" >
                 <div class="col-2"></div>
@@ -302,23 +302,24 @@
                             <div class="card-body">
                                 <div class="text-center">
                                     <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/singer/images/users/5.jpg" id="profile">
-                                    <h4 class="card-widget__title text-dark mt-3">Deangelo Sena</h4>
-                                    <!-- 메인 소개글 1:싱어 / 0: 리스너 --> 
-<%--                                     <c:if test="${meminfo.status == 1 }"> --%> 
+                                    <h4 class="card-widget__title text-dark mt-3">${mainContent.id}</h4>
+                                    <!-- 메인 소개글  --> 
+                                    <c:if test="${mainContent.id == id}"> <!-- 싱어 화면 -->
                                     <form action="${contextPath}/singerWrite.sin" method="post">
                                         <div class="form-group">
-                                            <textarea class="form-control h-150px" rows="3" id="comment" name="introduce">${mainContent}</textarea>
+                                            <textarea class="form-control h-150px" rows="3" id="comment" name="introduce">${mainContent.introduce}</textarea>
                                         </div>
                                         <button type="submit" class="btn mb-1 btn-flat btn-primary">글 작성</button>
                                     </form>
-<%--                                     </c:if> --%>
-<%--                                     <c:if test="${meminfo.status == 0 }"> --%>
-<%--                                      <form action="${contextPath}/singerWrite.sin" method="post"> --%>
-<!--                                         <div class="form-group"> -->
-<%--                                             <textarea class="form-control h-150px" rows="3" id="comment" name="introduce" readonly="readonly">${mainContent}</textarea> --%>
-<!--                                         </div> -->
-<!--                                     </form> -->
-<%--                                      </c:if> --%>
+                                    </c:if>
+                                    <!-- 리스너, 해당작성자가 아닐 때 화면 -->
+                                    <c:if test="${mainContent.id != id}">
+                                     <form action="${contextPath}/singerWrite.sin" method="post">
+                                        <div class="form-group">
+                                            <textarea class="form-control h-150px" rows="3" id="comment" name="introduce" readonly="readonly">${mainContent.introduce}</textarea>
+                                        </div>
+                                    </form>
+                                     </c:if>
                                      <!-- 메인 소개글 -->
                                     <a class="btn2 gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()" id="fbtn">Folllow</a>
                                 </div>

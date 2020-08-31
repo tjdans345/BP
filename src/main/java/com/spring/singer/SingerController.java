@@ -31,21 +31,20 @@ public class SingerController {
 	@Autowired
 	private SingerService singerService;
 	private ModelAndView mav = new ModelAndView();
-	private MyService myService = new MyService();
 	
-	//싱어 메인페이지 이동
+	
+	//싱어페이지 이동 (싱어가 접속)
 	@RequestMapping(value = "/singerMain.sin", method = {RequestMethod.GET, RequestMethod.POST})
-	public ModelAndView index(HttpServletRequest request) {
+	public ModelAndView SingerPage(HttpServletRequest request) {
 		
 		String id = (String)request.getSession().getAttribute("id");
 		System.out.println(id);
 		
-
 		//싱어 메인페이지 소개글 조회 
 		mav.addObject("mainContent", singerService.mainContent(id));
+		
 		//회원상태 조회
-//		MemberVO test = myService.meminfo(id); 
-//		mav.addObject("meminfo", myService.meminfo(id)); 
+		mav.addObject("meminfo", singerService.meminfo(id)); 
 		mav.setViewName("singer/singerMain"); 
 		return mav;
 	}
@@ -63,5 +62,28 @@ public class SingerController {
 		mav.setViewName("singer/singerMain");
 		return mav;
 	}
+	
+	//싱어페이지 이동 테스트 
+	@RequestMapping(value = "/test.sin", method = RequestMethod.GET)
+	public ModelAndView test(HttpServletRequest request) {
+		
+		mav.addObject("singerList", singerService.singerList());
+		mav.setViewName("singer/test");
+		return mav;
+		
+	}
+	
+	//싱어 메인페이지 이동 (유저가 접속)
+		@RequestMapping(value = "/user.sin", method = {RequestMethod.GET, RequestMethod.POST})
+		public ModelAndView SingerPageUser(@RequestParam String id, HttpServletRequest request) {
+			
+	
+			//싱어 메인페이지 소개글 조회 
+			mav.addObject("mainContent", singerService.mainContent(id));
+			//회원상태 조회
+			mav.addObject("meminfo", singerService.meminfo(id)); 
+			mav.setViewName("singer/singerMain"); 
+			return mav;
+		}
 	
 }

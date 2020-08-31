@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.member.MemberVO;
 
-@Service
+@Service("mys")
 public class MyService {
 	@Autowired
 	private MyDAO mydao;
