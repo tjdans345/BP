@@ -33,6 +33,7 @@
 	                <li class="nav-item active"><a class="nav-link" href="${contextPath}/index.do">HOME</a></li>
 	                <li class="nav-item"><a class="nav-link" href="${contextPath}/about.do">ABOUT US</a></li>
 	                <li class="nav-item"><a class="nav-link" href="${contextPath}/singerMain.sin">SINGER</a></li>
+	                <li class="nav-item"><a class="nav-link" href="${contextPath}/busking.b">BUSKING</a></li>
 	                <li class="nav-item"><a class="nav-link" href="${contextPath}/service.do">SERVICES</a></li>
 	                <li class="nav-item"><a class="nav-link" href="${contextPath}/portfolio.do">PORTFOLIO</a></li>
 	                <li class="nav-item"><a class="nav-link" href="${contextPath}/contact.do">CONTACT</a></li>

@@ -18,7 +18,6 @@ public class BuskingService {
 		HashMap hashMap = new HashMap();
 		return buskingDAO.Loc1List(hashMap);
 	}
-	
 	public List Loc2List(String loc1) {
 		HashMap hashMap = new HashMap();
 		hashMap.put("loc1", loc1);
@@ -30,10 +29,16 @@ public class BuskingService {
 		hashMap.put("loc2", loc2);
 		return buskingDAO.Loc3List(hashMap);
 	}
-	
 	public List resTime(String date) {
 		HashMap hashMap = new HashMap();
 		hashMap.put("date", date);
 		return buskingDAO.resTime(hashMap);
+	}
+	public List resBusking() {
+		HashMap hashMap = new HashMap();
+		return buskingDAO.resBusking(hashMap);
+	}public List allBusking() {
+		HashMap hashMap = new HashMap();
+		return buskingDAO.allBusking(hashMap);
 	}
 }
