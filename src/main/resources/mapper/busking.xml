@@ -25,7 +25,7 @@
    	</resultMap>
 
   
-    <select id="Loc1List" resultMap="locResult" parameterType="java.util.HashMap">
+    <select id="Loc1List" resultMap="locResult" parameterType="java.util.HashMap" >
   		<![CDATA[ 
   			select distinct loc1 from loc;
   		]]>

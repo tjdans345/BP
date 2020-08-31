@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-@Service
+@Service("buskingService")
 public class BuskingService {
 	@Autowired
 	private BuskingDAO buskingDAO;

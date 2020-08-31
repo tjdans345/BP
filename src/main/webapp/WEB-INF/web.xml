@@ -123,7 +123,8 @@
 		<servlet-name>BuskingServlet</servlet-name>
 		<url-pattern>*.b</url-pattern>
 	</servlet-mapping>
+	<!-- 버스킹 -->
+			
 
-	<!-- 버스킹 -->	
 
 </web-app>

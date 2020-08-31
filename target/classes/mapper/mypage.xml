@@ -16,6 +16,7 @@
    		<result property="status" column="status" />
    		<result property="joindate" column="joindate" /> 
    	</resultMap>
+   	
 	<!-- 회원정보 보기 -->
 	<select id="meminfo" resultType="memberVO">
 		<![CDATA[ 

@@ -1,24 +1,41 @@
 package com.spring.singer;
 
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+import com.spring.member.MemberVO;
+import com.spring.mypage.MyDAO;
+
+@Service("singerService")
 public class SingerService {
-	
 	@Autowired
 	private SingerDAO singerDAO;
 	
-	public void ContentWrite(String id, String introduce, int num) {
+	public SingerVO mainContent(String id) {
 		
-		SingerContentVO scv = new SingerContentVO();
-		scv.setId(id);
-		scv.setIntroduce(introduce);
-		scv.setNum(num);
-		singerDAO.ContentWrite(scv);
+		return singerDAO.mainContent(id);
 	}
 
+	public void ContentWrite(String id, String introduce) {
 
+		SingerVO scv = new SingerVO();
+		scv.setId(id);
+		scv.setIntroduce(introduce);
+		singerDAO.ContentWrite(scv);
+	}
 	
+	public MemberVO meminfo(String id) {
+		return singerDAO.meminfo(id);
+	}
+
+	public List<SingerVO> singerList() {
+		
+		return singerDAO.singerList();
+	}
 	
+
+
 }
