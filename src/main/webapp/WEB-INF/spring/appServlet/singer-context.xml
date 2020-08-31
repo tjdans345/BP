@@ -21,6 +21,9 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<beans:bean id="singerDAO" class="com.spring.singer.SingerDAO" />
+	<beans:bean id="singerService" class="com.spring.singer.SingerService" />
+	
 	<context:component-scan base-package="com.spring.singer" />
 	
 	

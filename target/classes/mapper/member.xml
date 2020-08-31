@@ -23,6 +23,7 @@
 		]]>
    	</select>
    	
+   	<!-- reultMap은 리스트 /  -->
    	<select id="loginMember" parameterType="String" resultMap="memresult">
    		<![CDATA[
    		select * from member where id = #{id}
@@ -42,6 +43,13 @@
   				phone, location, profile_img, status, gender, joindate)
   			values(#{name}, #{id}, #{password}, #{email}, 
   				#{phone}, #{location}, #{profile_img}, #{status}, #{gender}, #{joindate})
+  		]]>
+  	</insert>
+  	
+  	<!-- 회원가입 성공시 싱어페이지 추가 구문 -->
+  	<insert id="addSinger" parameterType="String">
+  		<![CDATA[ 
+  			insert into singer(id, joindate) values (#{id}, now())
   		]]>
   	</insert>
   	

@@ -2,13 +2,27 @@ package com.spring.singer;
 
 import java.sql.Timestamp;
 
-public class SingerContentVO {
+public class SingerVO {
 	private int num;
 	private String id;
 	private String introduce;
-	private Timestamp date;
+	private Timestamp writedate;
+	private Timestamp joindate;
 	
 	//getter setter 메소드 
+	public Timestamp getWritedate() {
+		return writedate;
+	}
+	public void setWritedate(Timestamp writedate) {
+		this.writedate = writedate;
+	}
+	public Timestamp getJoindate() {
+		return joindate;
+	}
+	public void setJoindate(Timestamp joindate) {
+		this.joindate = joindate;
+	}
+	
 	public int getNum() {
 		return num;
 	}
@@ -27,13 +41,6 @@ public class SingerContentVO {
 	public void setIntroduce(String introduce) {
 		this.introduce = introduce;
 	}
-	public Timestamp getDate() {
-		return date;
-	}
-	public void setDate(Timestamp date) {
-		this.date = date;
-	}
-	
 	
 
 }

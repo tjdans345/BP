@@ -18,7 +18,7 @@ import com.spring.member.MemberVO;
 @Controller
 public class MyController {
 	@Autowired
-	private MyService mys = new MyService();
+	private MyService mys;
 	private ModelAndView mav = new ModelAndView();
 	
 	//마이페이지 메인

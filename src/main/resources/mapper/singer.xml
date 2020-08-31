@@ -2,20 +2,45 @@
 <!DOCTYPE mapper
       PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-   
-  <mapper namespace="mapper.singer">
-  
-  	<resultMap type="singerVO" id="singerResult">
-   		<result property="id" column="id" />
-   		
-   	</resultMap>
-   	  
-   	<insert id="ContentWrite" parameterType="singerVO">
-   	
-   		<![CDATA[
-		insert into singercontent (num, id, introduce, date) values (#{num}, #{id}, #{introduce}, now())
+
+<mapper namespace="mapper.singer">
+
+	<resultMap type="singerVO" id="singerResult">
+		<result property="num" column="num" />
+		<result property="introduce" column="introduce" /> 
+		<result property="writedate" column="writedate" />
+		<result property="joindate" column="joindate" />
+		<result property="id" column="id" />
+	</resultMap>
+
+	<!-- 회원정보 보기 -->
+	<select id="meminfo" resultType="memberVO">
+		<![CDATA[ 
+  			select * from member
+  			where id=#{id}
+  		]]>
+	</select>
+	
+	<!-- 싱어페이지 인사 글 조회 -->
+	<select id="mainContent" resultType="singerVO">
+   		<![CDATA[ 
+		select * from singer where id = #{id}
 		]]>
-   	</insert>
-   	
-  	
-  </mapper>
+	</select>
+	
+	<!-- 싱어페이지 인사 글 등록 -->
+	<insert id="ContentWrite" parameterType="singerVO">
+   		<![CDATA[
+		insert into singer (id, introduce, date) values (#{id}, #{introduce}, now())
+		]]>
+	</insert>
+	
+	<select id="singerList" resultMap="singerResult">
+		<![CDATA[
+		select * from singer
+		]]>
+	
+	</select>
+
+
+</mapper> 

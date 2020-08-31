@@ -50,7 +50,7 @@ public class MemberController {
 		session.setAttribute("status", status);
 		mav.setViewName("member/join");		
 		return mav;
-	}	
+	}
 	@RequestMapping(value = "/addMember.mem", method = RequestMethod.POST)
 	public ModelAndView addMember(@ModelAttribute MemberVO memberVO,
 									HttpServletRequest request,
@@ -59,6 +59,7 @@ public class MemberController {
 		mav.setViewName("redirect:/index.do");
 		return mav;
 	}
+	
    @RequestMapping(value = "/logout.mem", method = RequestMethod.GET)
    public ModelAndView logout(HttpServletRequest request) {
 	   request.getSession().removeAttribute("id");
