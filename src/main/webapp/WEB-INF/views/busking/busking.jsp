@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />    
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +14,13 @@
         
        <!-- 헤더 -->
        <jsp:include page="../inc/top.jsp" />
-       <!-- 헤더 -->        
+       <!-- 헤더 -->    
+       
+       
+    
+       
+       
+           
        
     </head>
     <body>
@@ -21,8 +30,8 @@
         <section class="banner_area">
             <div class="container">
                 <div class="banner_inner_text">
-                    <h2>Blog</h2>
-                    <p>Read the news</p>
+                    <h2>Busking</h2>
+                    <p>버스킹 일정</p>
                 </div>
             </div>
         </section>
@@ -32,26 +41,51 @@
         <section class="blog_main_area p_100">
             <div class="container">
                 <div class="row">
+                
+                <div id="map" style="width:100%;height:350px;"></div>
+                <div class="col-lg-12">
+                
+                <a href="">전체 공연 보기(지난공연보기 )</a>
+                
+                
+                </div>
+                
+                
+                
                     <div class="col-lg-9">
                         <div class="blog_main_inner">
+
+
+<%-- 
+							
+                            <c:if test="${resBisking == null }">
+                             <h3>공연 예정이 없습니다.</h3>
+                            </c:if>
+
+ --%>                            
+                            <c:forEach var="resBusking" items="${resBusking }">
                             <div class="blog_main_item">
                                 <div class="blog_img">
                                     <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-1.jpg" alt="">
                                     <div class="blog_date">
-                                        <h4>29</h4>
-                                        <h5>October, 2017</h5>
+                                        <h4><fmt:formatDate value="${resBusking.date}" pattern="dd "/></h4>
+                                        <h5><fmt:formatDate value="${resBusking.date}" pattern="MM.yyyy E"/>요일</h5>
                                     </div>
                                 </div>
                                 <div class="blog_text">
-                                    <a href="#"><h4>Let us introduce you the best apps</h4></a>
+                                    <a href="#"><h4>${resBusking.sid } 공연자  | ${resBusking.loc1} ${resBusking.loc2} ${resBusking.loc3}</h4></a>
                                     <div class="blog_author">
-                                        <a href="#">By Lore Papp-Dinea</a>
-                                        <a href="#">Design</a>
+                                        ${resBusking.stime}:00~${resBusking.etime}:59
                                     </div>
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
+                                    <p>공연 소개 ? </p>
                                     <a class="more_btn" href="#">Read More</a>
                                 </div>
                             </div>
+                            
+                            </c:forEach >
+       
+                            
+                            <%-- 
                             <div class="blog_main_item">
                                 <div class="blog_img">
                                     <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-2.jpg" alt="">
@@ -70,24 +104,9 @@
                                     <a class="more_btn" href="#">Read More</a>
                                 </div>
                             </div>
-                            <div class="blog_main_item">
-                                <div class="blog_img">
-                                    <img class="img-fluid" src="${contextPath}/resources/main/img/blog/blog-3.jpg" alt="">
-                                    <div class="blog_date">
-                                        <h4>29</h4>
-                                        <h5>October, 2017</h5>
-                                    </div>
-                                </div>
-                                <div class="blog_text">
-                                    <a href="#"><h4>Let us introduce you the best apps</h4></a>
-                                    <div class="blog_author">
-                                        <a href="#">By Lore Papp-Dinea</a>
-                                        <a href="#">Design</a>
-                                    </div>
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                                    <a class="more_btn" href="#">Read More</a>
-                                </div>
-                            </div>
+                             --%>
+                            
+                            
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -182,7 +201,49 @@
         
         <!--푸터-->
 		<jsp:include page="../inc/footer.jsp" />
-		<!--푸터-->
+		<!--푸터-->   
+       
+       
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7d70450b31867bf622687771a20f2ad3&libraries=services"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };  
+
+// 지도를 생성합니다    
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+// 주소-좌표 변환 객체를 생성합니다
+var geocoder = new kakao.maps.services.Geocoder();
+
+// 주소로 좌표를 검색합니다
+geocoder.addressSearch('부산광역시 수영구 광안2동 281-12', function(result, status) {
+
+    // 정상적으로 검색이 완료됐으면 
+     if (status === kakao.maps.services.Status.OK) {
+
+        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+        // 결과값으로 받은 위치를 마커로 표시합니다
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: coords
+        });
+
+        // 인포윈도우로 장소에 대한 설명을 표시합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">버스킹존</div>'
+        });
+        infowindow.open(map, marker);
+
+        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+        map.setCenter(coords);
+    } 
+});    
+</script>
+       
 		
     </body>
 </html>
