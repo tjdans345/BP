@@ -1,5 +1,6 @@
 package com.spring.busking;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 
@@ -9,7 +10,9 @@ import org.springframework.stereotype.Component;
 public class BuskingVO {
 
 	private int num,stime, etime;
-	private String sid, loc1,loc2,loc3,content,date;
+	private String sid, loc1,loc2,loc3,content;
+	private Date date;
+
 	
 	public int getNum() {
 		return num;
@@ -59,10 +62,10 @@ public class BuskingVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 	
