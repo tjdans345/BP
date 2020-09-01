@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="${contextPath}/resources/singer/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
-
+	<script type="text/javascript"	src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
 	<style type="text/css">
 	
 	.bd{
@@ -46,6 +47,43 @@
 	
 
 	</style>
+
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+		
+		$("#Smodify").click(function() {
+			var introduce = $("#introduce").val();
+			$.ajax({
+				type: "post", //POST 타입
+				url: "introducemodify.sin", //URL 선언
+				data: {"introduce" : introduce,
+					   "id" : "${id}"	
+				},
+				dataType: "json",
+				success : function(data) { //성공시 매개변수로 DATA를 받음
+					//12번 눌러서 콘솔로 이동하면 json형태의 데이터 확인
+					console.log(data)				
+					alert("통신 성공" + data);
+					$("#test").empty();
+					$("#test").append("<textarea class=\"form-control h-150px\" rows=\"3\" id=\"introduce\" name=\"introduce\" readonly=\"readonly\">"+data.introduce+"</textarea>")
+				},
+				error: function() {
+					alert("통신 실패");
+				}
+				
+			});
+			
+			alert("안녕하세요 ?");
+		});
+		
+		
+		
+		
+	});
+	
+	</script>
+
 
 </head>
 
@@ -305,23 +343,32 @@
                                     <h4 class="card-widget__title text-dark mt-3">${mainContent.id}</h4>
                                     <!-- 메인 소개글  --> 
                                     <c:if test="${mainContent.id == id}"> <!-- 싱어 화면 -->
-                                    <form action="${contextPath}/singerWrite.sin" method="post">
-                                        <div class="form-group">
-                                            <textarea class="form-control h-150px" rows="3" id="comment" name="introduce">${mainContent.introduce}</textarea>
+                                    <form action="" method="post">
+                                        <c:if test="${mainContent.introduce == '인사말이 아직없어요! 자기를 소개해주세요!'}">
+                                        <div class="form-group" id="test">
+                                            <textarea class="form-control h-150px" rows="3" id="introduce" name="introduce" placeholder="${mainContent.introduce}"></textarea>
                                         </div>
                                         <button type="submit" class="btn mb-1 btn-flat btn-primary">글 작성</button>
+                                        </c:if>
+                                        <c:if test="${mainContent.introduce != '인사말이 아직없어요! 자기를 소개해주세요!'}">
+                                        <div class="form-group" id="test" >
+                                            <textarea class="form-control h-150px" rows="3" id="introduce" name="introduce" >${mainContent.introduce}</textarea>
+                                        </div>
+                                        <button type="button" class="btn mb-1 btn-flat btn-primary" id="Smodify" >글 수정</button>
+                                        </c:if>
                                     </form>
                                     </c:if>
                                     <!-- 리스너, 해당작성자가 아닐 때 화면 -->
                                     <c:if test="${mainContent.id != id}">
                                      <form action="${contextPath}/singerWrite.sin" method="post">
                                         <div class="form-group">
-                                            <textarea class="form-control h-150px" rows="3" id="comment" name="introduce" readonly="readonly">${mainContent.introduce}</textarea>
+                                            <textarea class="form-control h-150px" rows="3" id="comment" name="introduce" readonly="readonly">${mainContent.introduce} ${id}</textarea>
                                         </div>
                                     </form>
+                                    <a class="btn2 gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()" id="fbtn">Folllow</a>
                                      </c:if>
                                      <!-- 메인 소개글 -->
-                                    <a class="btn2 gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()" id="fbtn">Folllow</a>
+                                    
                                 </div>
                             </div>
                             <div class="card-footer border-0 bg-transparent" id="fnbox">

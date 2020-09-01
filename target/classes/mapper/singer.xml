@@ -35,12 +35,24 @@
 		]]>
 	</insert>
 	
+	<!-- 싱어페이지 조회 -->
 	<select id="singerList" resultMap="singerResult">
 		<![CDATA[
 		select * from singer
 		]]>
 	
 	</select>
+	
+	<update id="introduce_modify" parameterType="singerVO">
+		<![CDATA[
+			update singer set introduce = #{introduce}, writedate = now() where id = #{id}
+		]]>
+		
+	
+	</update>
+	
+	
+	
 
 
 </mapper> 

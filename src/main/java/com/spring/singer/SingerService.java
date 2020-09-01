@@ -3,6 +3,7 @@ package com.spring.singer;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,20 @@ public class SingerService {
 	public List<SingerVO> singerList() {
 		
 		return singerDAO.singerList();
+	}
+
+	@SuppressWarnings("unchecked")
+	public Object introduce_modify(SingerVO singerVO) {
+
+		
+		JSONObject jSONObject = new JSONObject();
+		//수정 한 글을 result에 담음
+		SingerVO result = singerDAO.introduce_modify(singerVO);
+		String introduce = result.getIntroduce();
+		System.out.println(" introduce "+ introduce);
+		jSONObject.put("introduce", introduce);
+		return jSONObject;
+		
 	}
 	
 
