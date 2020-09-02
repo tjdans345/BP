@@ -44,15 +44,26 @@
 		background-color: green;
 	}
 	
-	
+	.cm {
+		margin-top: -10px;
+	}
 
+	.cm2 {
+		margin-top: -10px;
+	}
 	</style>
-
 	<script type="text/javascript">
 	
 	$(document).ready(function() {
 		
-		$("#Smodify").click(function() {
+		$("#Smodify").click(function() { 
+			$("#Smodify").hide();
+			$("#modify").show();
+			
+			$("#introduce").attr("readonly", false);
+		});
+		
+		$("#modify").click(function() {
 			var introduce = $("#introduce").val();
 			$.ajax({
 				type: "post", //POST 타입
@@ -62,21 +73,23 @@
 				},
 				dataType: "json",
 				success : function(data) { //성공시 매개변수로 DATA를 받음
-					//12번 눌러서 콘솔로 이동하면 json형태의 데이터 확인
-					console.log(data)				
-					alert("통신 성공" + data);
-					$("#test").empty();
-					$("#test").append("<textarea class=\"form-control h-150px\" rows=\"3\" id=\"introduce\" name=\"introduce\" readonly=\"readonly\">"+data.introduce+"</textarea>")
+					
+					alert("글 수정 완료!");
+					$("#Smodify").show();
+					$("#modify").hide();
+					$("#introduce").attr("readonly", true);
+					$("#introduce").text(data.introduce);
+					$("#te").text(data.introduce);
+					$("#Smodify").show();
+					$("#modify").hide();
 				},
 				error: function() {
-					alert("통신 실패");
+					alert("글 수정 실패!");
 				}
 				
 			});
 			
-			alert("안녕하세요 ?");
 		});
-		
 		
 		
 		
@@ -341,24 +354,27 @@
                                 <div class="text-center">
                                     <img alt="" class="rounded-circle mt-4" src="${contextPath}/resources/singer/images/users/5.jpg" id="profile">
                                     <h4 class="card-widget__title text-dark mt-3">${mainContent.id}</h4>
-                                    <!-- 메인 소개글  --> 
-                                    <c:if test="${mainContent.id == id}"> <!-- 싱어 화면 -->
+                                    <!-- 메인 소개글 본인일 때 --> 
+                                    <c:if test="${mainContent.id == id}">
                                     <form action="" method="post">
                                         <c:if test="${mainContent.introduce == '인사말이 아직없어요! 자기를 소개해주세요!'}">
                                         <div class="form-group" id="test">
-                                            <textarea class="form-control h-150px" rows="3" id="introduce" name="introduce" placeholder="${mainContent.introduce}"></textarea>
+                                            <textarea class="form-control h-150px" rows="3" id="introduce" name="introduce" placeholder="${mainContent.introduce}" readonly="readonly"></textarea>
                                         </div>
                                         <button type="submit" class="btn mb-1 btn-flat btn-primary">글 작성</button>
                                         </c:if>
                                         <c:if test="${mainContent.introduce != '인사말이 아직없어요! 자기를 소개해주세요!'}">
                                         <div class="form-group" id="test" >
-                                            <textarea class="form-control h-150px" rows="3" id="introduce" name="introduce" >${mainContent.introduce}</textarea>
+                                            <textarea class="form-control h-150px" rows="3" id="introduce" name="introduce" readonly="readonly">${mainContent.introduce}</textarea> <br/> 
+                                        	<button type="button" class="btn mb-1 btn-flat btn-primary cm" id="Smodify" >글 수정</button>
+                                       	    <button type="button" class="btn mb-1 btn-flat btn-primary cm2" id="modify" style="display: none;">글 수정</button>
                                         </div>
-                                        <button type="button" class="btn mb-1 btn-flat btn-primary" id="Smodify" >글 수정</button>
+                                       	  
                                         </c:if>
                                     </form>
                                     </c:if>
-                                    <!-- 리스너, 해당작성자가 아닐 때 화면 -->
+                                    <!-- 메인 소개글 본인일 때 -->
+                                    <!-- 해당작성자가 아닐 때 화면 -->
                                     <c:if test="${mainContent.id != id}">
                                      <form action="${contextPath}/singerWrite.sin" method="post">
                                         <div class="form-group">
@@ -367,7 +383,7 @@
                                     </form>
                                     <a class="btn2 gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()" id="fbtn">Folllow</a>
                                      </c:if>
-                                     <!-- 메인 소개글 -->
+                                    <!-- 해당작성자가 아닐 때 화면 -->
                                     
                                 </div>
                             </div>
@@ -400,7 +416,7 @@
                             <div class="card card-widget">
                                 <div class="card-body">
                                     <h5 class="text-muted">Order Overview </h5>
-                                    <h2 class="mt-4">5680</h2>
+                                    <h2 class="mt-4" id="te">${mainContent.introduce}</h2>
                                     <span>Total Revenue</span>
                                     <div class="mt-4">
                                         <h4>30</h4>

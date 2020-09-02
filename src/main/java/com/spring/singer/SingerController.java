@@ -92,9 +92,8 @@ public class SingerController {
 	@ResponseBody
 	@RequestMapping(value = "/introducemodify.sin", method = RequestMethod.POST)
 	public void introduce_modify(SingerVO singerVO, HttpServletRequest request, HttpServletResponse response) throws IOException {
-		JSONObject jSONObject = new JSONObject();
 		
-//		jSONObject.put("introduce", singerService.introduce_modify(singerVO)); 
+		
 		
 		response.getWriter().print(singerService.introduce_modify(singerVO));
 		
