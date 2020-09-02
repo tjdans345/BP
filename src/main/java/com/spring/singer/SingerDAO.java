@@ -31,10 +31,23 @@ public class SingerDAO {
 	public MemberVO meminfo(String id) {
 		return sqlSession.selectOne("mapper.singer.meminfo", id);
 	}
-
+	
+	//싱어리스트 조회
 	public List<SingerVO> singerList() {
 		
 		return sqlSession.selectList("mapper.singer.singerList");
+	}
+	
+	//인사말 수정
+	public SingerVO introduce_modify(SingerVO singerVO) {
+		SingerVO result = null;
+		int update = sqlSession.update("mapper.singer.introduce_modify", singerVO);
+		
+		//인사말 업데이트 성공 후 인사말 출력
+		if(update == 1) {
+			result = sqlSession.selectOne("mapper.singer.mainContent", singerVO);
+		}
+		return result;
 	}
 
 	
