@@ -1,5 +1,7 @@
 package com.spring.mypage;
 
+import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +28,11 @@ public class MyService {
 		mydao.editmem(memberVO);
 	}
 
-	public void passedit(MemberVO memberVO) {
-		mydao.passedit(memberVO);
+	public int passedit(String password2, String id) {
+		HashMap map = new HashMap();
+		map.put("password2", password2);
+		map.put("id", id);
+		return mydao.passedit(map);
 	}
 
 }
