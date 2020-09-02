@@ -94,14 +94,14 @@ width:200px;}
                                             <label class="col-lg-4 col-form-label" for="val-password">변경할 비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="newpassword" name="password" placeholder="변경할 비밀번호 입력" value="">
+                                                <input type="password" class="form-control" id="newpassword" name="password2" placeholder="변경할 비밀번호 입력" value="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-confirm-password">변경할 비밀번호 확인<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="newpasswordck" name="password" placeholder="변경할 비밀번호 재확인">
+                                                <input type="password" class="form-control" id="newpasswordck" name="password3" placeholder="변경할 비밀번호 재확인">
                                             </div>
                                         </div>      
                                         <div class="form-group row">

@@ -1,5 +1,8 @@
 package com.spring.mypage;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -32,7 +35,8 @@ public class MyDAO {
 	}
 	
 	//회원정보수정
-	public void passedit(MemberVO memberVO) {
-		sqlSession.update("mapper.my.passedit", memberVO);
+	public int passedit(HashMap map) {
+		int rs = sqlSession.update("mapper.my.passedit", map);
+		return rs;
 	}
 }

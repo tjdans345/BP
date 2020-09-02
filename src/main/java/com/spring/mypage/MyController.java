@@ -60,7 +60,6 @@ public class MyController {
 		mav.addObject("msg", msg);
 		mav.setViewName("mypage/editpass");
 		return mav;
-
 	}
 	
 	//회원정보 수정/탈퇴(비밀번호 체크 후 페이지)
@@ -113,8 +112,7 @@ public class MyController {
 	  mys.delmem(id);
       request.getSession().removeAttribute("id");
 	  mav.setViewName("index");
-	  return mav;
-	  
+	  return mav;  
 	  }
 	
 	//비밀번호 수정페이지로 이동
@@ -130,20 +128,30 @@ public class MyController {
 	
 	//비밀번호 수정 처리
 	@RequestMapping(value = "/passedit2.my", method = RequestMethod.POST)
-	public ModelAndView passedit2(HttpSession session, String password) {
+	public ModelAndView passedit2(HttpSession session, @RequestParam("password") String password,
+								  @RequestParam("password2") String password2) {		
 		String id = (String)session.getAttribute("id");
 		String msg = "";
+		
 		if(mys.checkpwd(id).equals(password)) {
-			mav.addObject("meminfo", mys.meminfo(id));
-			mav.setViewName("mypage/edit");
+			int rs = mys.passedit(password2, id);
+			if(rs==1) {
+			session.removeAttribute("id");
+			msg="비밀번호 수정이 완료되었습니다.";
+			mav.addObject("msg", msg);
+			mav.setViewName("member/login");
 			return mav;
-
-		}else {		
+			}else {
+				msg="비밀번호 수정에 실패하였습니다.";
+				mav.addObject("msg",msg);
+				mav.setViewName("mypage/passedit");
+				return mav;
+			}
+		}
 			msg="현재 비밀번호가 틀렸습니다. 다시 입력해주세요.";
 			mav.addObject("msg",msg);
 			mav.setViewName("mypage/passedit");
 			return mav;
-		}
 	}
 	 	
 	@RequestMapping(value = "/likesin.my", method = RequestMethod.GET)
