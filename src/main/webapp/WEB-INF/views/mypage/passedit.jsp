@@ -31,13 +31,18 @@ width:200px;}
 	$(document).ready(function(){
 		$("#editbtn").click(function(){
 			if(confirm("수정하시겠습니까?")){
-				document.form.action="${contextPath}/editmem.my";
+				document.form.action="${contextPath}/passedit2.my";
 				document.form.submit();
 			}
 		});
 	});
-</script>
 
+</script>
+<c:if test="${msg!=null && msg!=''}">
+	<script type="text/javascript">
+		window.alert('${msg}');
+	</script>
+</c:if>
 
 
 </head>
@@ -74,25 +79,29 @@ width:200px;}
                             <div class="card-body">
                                 <div class="form-validation">
                                     <form class="form-valide" method="post" name="form">
+                                   	    <div class="text-center">
+                                  			 <img src="${contextPath}/resources/mypage/images/userimage/${meminfo.profile_img}" class="rounded-circle" alt="">
+                                   			 <h5>${meminfo.id}</h5><br>
+                                		</div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-password">현재 비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="password" name="password" value="${meminfo.password}">
+                                                <input type="password" class="form-control" id="password" name="password"  placeholder="현재 비밀번호 입력 " value="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-password">변경할 비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="password" name="password" value="${meminfo.password}">
+                                                <input type="password" class="form-control" id="newpassword" name="password" placeholder="변경할 비밀번호 입력" value="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-confirm-password">변경할 비밀번호 확인<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="password" name="passwordcheck" placeholder="비밀번호 재확인">
+                                                <input type="password" class="form-control" id="newpasswordck" name="password" placeholder="변경할 비밀번호 재확인">
                                             </div>
                                         </div>      
                                         <div class="form-group row">

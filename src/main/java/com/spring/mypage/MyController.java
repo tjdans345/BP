@@ -117,13 +117,33 @@ public class MyController {
 	  
 	  }
 	
-	//비밀번호 수정
-	@RequestMapping(value = "/passedit.my", method = RequestMethod.GET)
+	//비밀번호 수정페이지로 이동
+	@RequestMapping(value = "/passedit.my", method = {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView passedit(HttpSession session) {
 		String id = (String)session.getAttribute("id");
+		String msg = "";
+		mav.addObject("msg", msg);
 		mav.addObject("meminfo", mys.meminfo(id));
 		mav.setViewName("mypage/passedit");
 		return mav;
+	}
+	
+	//비밀번호 수정 처리
+	@RequestMapping(value = "/passedit2.my", method = RequestMethod.POST)
+	public ModelAndView passedit2(HttpSession session, String password) {
+		String id = (String)session.getAttribute("id");
+		String msg = "";
+		if(mys.checkpwd(id).equals(password)) {
+			mav.addObject("meminfo", mys.meminfo(id));
+			mav.setViewName("mypage/edit");
+			return mav;
+
+		}else {		
+			msg="현재 비밀번호가 틀렸습니다. 다시 입력해주세요.";
+			mav.addObject("msg",msg);
+			mav.setViewName("mypage/passedit");
+			return mav;
+		}
 	}
 	 	
 	@RequestMapping(value = "/likesin.my", method = RequestMethod.GET)
