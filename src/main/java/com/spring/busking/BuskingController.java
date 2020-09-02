@@ -97,7 +97,7 @@ public class BuskingController {
 			BuskingVO buskingVO = (BuskingVO)resTime.get(i);
 			JSONObject jSONObject = new JSONObject();			
 			int stime = buskingVO.getStime();
-			System.out.println(stime);
+			//System.out.println(stime);
 			jSONObject.put("stime", stime);
 			jSONArray.add(jSONObject);
 		}		
