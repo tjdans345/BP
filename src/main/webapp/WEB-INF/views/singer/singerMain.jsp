@@ -361,7 +361,7 @@
                                         <div class="form-group" id="test">
                                             <textarea class="form-control h-150px" rows="3" id="introduce" name="introduce" placeholder="${mainContent.introduce}" readonly="readonly"></textarea>
                                         </div>
-                                        <button type="submit" class="btn mb-1 btn-flat btn-primary">글 작성</button>
+                                        <button type="submit" class="btn mb-1 btn-flat btn-primary" >글 작성</button>
                                         </c:if>
                                         <c:if test="${mainContent.introduce != '인사말이 아직없어요! 자기를 소개해주세요!'}">
                                         <div class="form-group" id="test" >
@@ -450,129 +450,41 @@
                 
                 <!-- 메인 프로필 -->
                 
-
+				<!-- 싱어 페이지 댓글 -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
                                 <div class="active-member">
                                     <div class="table-responsive">
+                                    	<form action="conwrite.sin">
+                                    	<textarea rows="3" cols="170" placeholder="댓글을 입력해 주세요ㅋㅋ"></textarea>
+                                    	<div align="right">
+                                    	<button type="submit">댓글 작성z</button>
+                                    	</div>
+                                    	</form>
                                         <table class="table table-xs mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th>Customers</th>
-                                                    <th>Product</th>
-                                                    <th>Country</th>
-                                                    <th>Status</th>
-                                                    <th>Payment Method</th>
-                                                    <th>Activity</th>
+                                                    <th width="50">id</th>
+                                                    <th>content</th>
+                                                    <th>writedate</th>
+                                                    <th>like</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            	<c:forEach var="conlist" items="${content}">
                                                 <tr>
-                                                    <td><img src="${contextPath}/resources/singer/images/avatar/1.jpg" class=" rounded-circle mr-3" alt="">Sarah Smith</td>
-                                                    <td>iPhone X</td>
+                                                    <td><img src="${contextPath}/resources/singer/images/avatar/1.jpg" class=" rounded-circle mr-3" alt="">${conlist.userid}</td>
+                                                    <td>${conlist.content}</td>
                                                     <td>
-                                                        <span>United States</span>
+                                                        <span>${conlist.writedate}</span>
                                                     </td>
                                                     <td>
-                                                        <div>
-                                                            <div class="progress" style="height: 6px">
-                                                                <div class="progress-bar bg-success" style="width: 50%"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Paid</td>
-                                                    <td>
-                                                        <span>Last Login</span>
-                                                        <span class="m-0 pl-3">10 sec ago</span>
+                                                        ${conlist.slike}
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td><img src="${contextPath}/resources/singer/images/avatar/2.jpg" class=" rounded-circle mr-3" alt="">Walter R.</td>
-                                                    <td>Pixel 2</td>
-                                                    <td><span>Canada</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <div class="progress" style="height: 6px">
-                                                                <div class="progress-bar bg-success" style="width: 50%"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Paid</td>
-                                                    <td>
-                                                        <span>Last Login</span>
-                                                        <span class="m-0 pl-3">50 sec ago</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="${contextPath}/resources/singer/images/avatar/3.jpg" class=" rounded-circle mr-3" alt="">Andrew D.</td>
-                                                    <td>OnePlus</td>
-                                                    <td><span>Germany</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <div class="progress" style="height: 6px">
-                                                                <div class="progress-bar bg-warning" style="width: 50%"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td><i class="fa fa-circle-o text-warning  mr-2"></i> Pending</td>
-                                                    <td>
-                                                        <span>Last Login</span>
-                                                        <span class="m-0 pl-3">10 sec ago</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="${contextPath}/resources/singer/images/avatar/6.jpg" class=" rounded-circle mr-3" alt=""> Megan S.</td>
-                                                    <td>Galaxy</td>
-                                                    <td><span>Japan</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <div class="progress" style="height: 6px">
-                                                                <div class="progress-bar bg-success" style="width: 50%"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Paid</td>
-                                                    <td>
-                                                        <span>Last Login</span>
-                                                        <span class="m-0 pl-3">10 sec ago</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="${contextPath}/resources/singer/images/avatar/4.jpg" class=" rounded-circle mr-3" alt=""> Doris R.</td>
-                                                    <td>Moto Z2</td>
-                                                    <td><span>England</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <div class="progress" style="height: 6px">
-                                                                <div class="progress-bar bg-success" style="width: 50%"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Paid</td>
-                                                    <td>
-                                                        <span>Last Login</span>
-                                                        <span class="m-0 pl-3">10 sec ago</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><img src="${contextPath}/resources/singer/images/avatar/5.jpg" class=" rounded-circle mr-3" alt="">Elizabeth W.</td>
-                                                    <td>Notebook Asus</td>
-                                                    <td><span>China</span></td>
-                                                    <td>
-                                                        <div>
-                                                            <div class="progress" style="height: 6px">
-                                                                <div class="progress-bar bg-warning" style="width: 50%"></div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td><i class="fa fa-circle-o text-warning  mr-2"></i> Pending</td>
-                                                    <td>
-                                                        <span>Last Login</span>
-                                                        <span class="m-0 pl-3">10 sec ago</span>
-                                                    </td>
-                                                </tr>
+                                                </c:forEach>
                                             </tbody>
                                         </table>
                                     </div>
@@ -581,7 +493,7 @@
                         </div>                        
                     </div>
                 </div>
-
+				<!-- 싱어 페이지 댓글 -->
                 
 
                 <div class="row">

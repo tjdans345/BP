@@ -1,5 +1,6 @@
 package com.spring.singer;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -34,7 +35,6 @@ public class SingerDAO {
 	
 	//싱어리스트 조회
 	public List<SingerVO> singerList() {
-		
 		return sqlSession.selectList("mapper.singer.singerList");
 	}
 	
@@ -48,6 +48,15 @@ public class SingerDAO {
 			result = sqlSession.selectOne("mapper.singer.mainContent", singerVO);
 		}
 		return result;
+	}
+
+	//싱어페이지 댓글 조회
+	public Object content(String id) {
+		System.out.println("DAO 컨텐트" + id);
+		HashMap map = new HashMap();
+		map.put("id", id);
+		System.out.println(sqlSession.selectList("mapper.singer.content", map).toString());
+		return sqlSession.selectList("mapper.singer.content", map);
 	}
 
 	

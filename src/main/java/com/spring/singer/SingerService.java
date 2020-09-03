@@ -15,11 +15,13 @@ public class SingerService {
 	@Autowired
 	private SingerDAO singerDAO;
 	
+	//싱어 페이지 메인 정보 조회
 	public SingerVO mainContent(String id) {
 		
 		return singerDAO.mainContent(id);
 	}
 
+	//싱어페이지 인사말 등록
 	public void ContentWrite(String id, String introduce) {
 
 		SingerVO scv = new SingerVO();
@@ -28,6 +30,7 @@ public class SingerService {
 		singerDAO.ContentWrite(scv);
 	}
 	
+	//회원정보 조회
 	public MemberVO meminfo(String id) {
 		return singerDAO.meminfo(id);
 	}
@@ -36,7 +39,8 @@ public class SingerService {
 		
 		return singerDAO.singerList();
 	}
-
+	
+	//싱어회원 리스트 조회
 	@SuppressWarnings("unchecked")
 	public Object introduce_modify(SingerVO singerVO) {
 
@@ -49,6 +53,12 @@ public class SingerService {
 		jSONObject.put("introduce", introduce);
 		return jSONObject;
 		
+	}
+
+	//싱어페이지 댓글 조회
+	public Object content(String id) {
+
+		return singerDAO.content(id);
 	}
 	
 
