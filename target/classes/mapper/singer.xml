@@ -12,6 +12,15 @@
 		<result property="joindate" column="joindate" />
 		<result property="id" column="id" />
 	</resultMap>
+	
+	<resultMap type="singercontentVO" id="singercontentResult">
+		<result property="num" column="num" />
+		<result property="content" column="content" /> 
+		<result property="writedate" column="writedate" />
+		<result property="userid" column="userid" />
+		<result property="singerid" column="singerid" />
+		<result property="slike" column="slike" />
+	</resultMap>
 
 	<!-- 회원정보 보기 -->
 	<select id="meminfo" resultType="memberVO">
@@ -43,14 +52,19 @@
 	
 	</select>
 	
+	<!-- 싱어 페이지 인사말 수정 -->
 	<update id="introduce_modify" parameterType="singerVO">
 		<![CDATA[
 			update singer set introduce = #{introduce}, writedate = now() where id = #{id}
 		]]>
-		
-	
 	</update>
 	
+	<!-- 싱어 페이지 댓글 조회 -->
+	<select id="mapper.singer.content" parameterType="java.util.HashMap" resultMap="singercontentResult">
+		<![CDATA[
+			select * from singercon where singerid = #{id}
+		]]>
+	</select>
 	
 	
 

@@ -49,6 +49,8 @@ public class SingerController {
 		mav.addObject("meminfo", singerService.meminfo(id));
 		// 싱어 메인페이지 소개글 조회
 		mav.addObject("mainContent", singerService.mainContent(id));
+		// 싱어 댓글 조회
+		mav.addObject("content", singerService.content(id));
 		System.out.println();
 		mav.setViewName("singer/singerMain");
 		return mav;
@@ -62,6 +64,8 @@ public class SingerController {
 		mav.addObject("mainContent", singerService.mainContent(id));
 		// 회원상태 조회
 		mav.addObject("meminfo", singerService.meminfo(id));
+		// 싱어 댓글 조회
+		mav.addObject("content", singerService.content(id));
 		mav.setViewName("singer/singerMain");
 		return mav;
 	}
@@ -92,7 +96,6 @@ public class SingerController {
 	@ResponseBody
 	@RequestMapping(value = "/introducemodify.sin", method = RequestMethod.POST)
 	public void introduce_modify(SingerVO singerVO, HttpServletRequest request, HttpServletResponse response) throws IOException {
-		
 		
 		
 		response.getWriter().print(singerService.introduce_modify(singerVO));
