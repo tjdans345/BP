@@ -36,6 +36,58 @@ width:200px;}
 			}
 		});
 	});
+	
+	function checkForm(){
+		
+		if($("password").val()==""){
+			alert("비밀번호 입력하지 않으셨습니다.");
+			$("#password").focus();
+			return false;
+		}else if($("#password2").val()==""){
+			alert("변경하실 비밀번호를 입력하지 않으셨습니다.");
+			$("#password2").focus();
+			return false;
+		}else if($("#password3").val()==""){
+			alert("변경할 비밀번호 확인란을 입력하지 않으셨습니다.");
+			$("#password3").focus();
+			return false;
+		}else return;
+	}
+	
+
+	$(function(){
+		var c_pwd = RegExp(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/);
+		$('#password2').keyup(function(){
+			if(!c_pwd.test($("#password2").val())){
+				$('span[name=c_pwd]').text('');
+				$('span[name=c_pwd]').html("<span style='color:red;'><i class='fa fa-remove'>최소 8자리 숫자, 문자, 특수문자 각각 1개 이상 포함</i></span>");
+		 	}else{
+				$('span[name=c_pwd]').text('');
+		  		$('span[name=c_pwd]').html("<span style='color:blue;'><i class='fa fa-check'></i></span>");
+		  	}
+			$('span[name=c_pwd2]').text('');
+	  	});
+		$("#password2").blur(function() { 
+			if(!c_pwd.test($("#password2").val())){
+				 $("#password2").val("");
+			}
+		});
+
+		$('#password3').keyup(function(){
+			if($('#password2').val()!=$('#pwassword3').val()){
+		    	$('span[name=c_pwd2]').text('');
+		    	$('span[name=c_pwd2]').html("<span style='color:red;'><i class='fa fa-remove'></i></span>");
+			}else{
+		    	$('span[name=c_pwd2]').text('');
+		    	$('span[name=c_pwd2]').html("<span style='color:blue;'><i class='fa fa-check'></i></span>");
+		  	}
+		}); 
+		$("#password3").blur(function() {
+			if($('#password2').val()!=$('#password3').val()){
+				$("#password3").val("");
+			}
+		});
+	});	
 
 </script>
 <c:if test="${msg!=null && msg!=''}">
