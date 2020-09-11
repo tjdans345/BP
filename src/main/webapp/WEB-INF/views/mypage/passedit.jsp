@@ -40,7 +40,7 @@ width:200px;}
 	function checkForm(){
 		
 		if($("password").val()==""){
-			alert("비밀번호 입력하지 않으셨습니다.");
+			alert("비밀번호를 입력하지 않으셨습니다.");
 			$("#password").focus();
 			return false;
 		}else if($("#password2").val()==""){
