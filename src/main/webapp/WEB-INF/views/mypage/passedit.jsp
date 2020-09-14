@@ -30,31 +30,35 @@ width:200px;}
 
 	$(document).ready(function(){
 		$("#editbtn").click(function(){
-			if(confirm("수정하시겠습니까?")){
-				document.form.action="${contextPath}/passedit2.my";
-				document.form.submit();
-			}
+			var pass = $("#password").val();
+			var pass2 = $("#newpassword").val();
+			var pass3 = $("#newpasswordck").val();
+			
+			if(pass!="" && pass2!="" && pass3!=""){
+				if(confirm("수정하시겠습니까?")){
+					document.form.action="${contextPath}/passedit2.my";
+					document.form.submit();
+				}
+			}else{
+				if(pass==""){
+					alert("현재 비밀번호를 입력하세요.");
+					document.form.password.focus();
+					return;
+				}
+				if(pass2==""){
+					alert("변경하실 비밀번호를 입력하세요.");
+					document.form.password2.focus();
+					return;
+				}
+				if(pass3==""){
+					alert("변경하실 비밀번호 확인을 입력하세요.");
+					document.form.password3.focus();
+					return;
+				}
+			}	
 		});
 	});
 	
-	function checkForm(){
-		
-		if($("password").val()==""){
-			alert("비밀번호를 입력하지 않으셨습니다.");
-			$("#password").focus();
-			return false;
-		}else if($("#password2").val()==""){
-			alert("변경하실 비밀번호를 입력하지 않으셨습니다.");
-			$("#password2").focus();
-			return false;
-		}else if($("#password3").val()==""){
-			alert("변경할 비밀번호 확인란을 입력하지 않으셨습니다.");
-			$("#password3").focus();
-			return false;
-		}else return;
-	}
-	
-
 	$(function(){
 		var c_pwd = RegExp(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/);
 		$('#password2').keyup(function(){
@@ -88,6 +92,7 @@ width:200px;}
 			}
 		});
 	});	
+
 
 </script>
 <c:if test="${msg!=null && msg!=''}">
