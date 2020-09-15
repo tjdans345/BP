@@ -57,12 +57,14 @@ width:200px;}
 				}
 			}	
 		});
+		
+		
 	});
 	
-	$(function(){
+	/* $(function(){
 		var c_pwd = RegExp(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/);
-		$('#password2').keyup(function(){
-			if(!c_pwd.test($("#password2").val())){
+		$('#newpassword').keyup(function(){
+			if(!c_pwd.test($("#newpassword").val())){
 				$('span[name=c_pwd]').text('');
 				$('span[name=c_pwd]').html("<span style='color:red;'><i class='fa fa-remove'>최소 8자리 숫자, 문자, 특수문자 각각 1개 이상 포함</i></span>");
 		 	}else{
@@ -71,14 +73,14 @@ width:200px;}
 		  	}
 			$('span[name=c_pwd2]').text('');
 	  	});
-		$("#password2").blur(function() { 
-			if(!c_pwd.test($("#password2").val())){
-				 $("#password2").val("");
+		$("#newpassword").blur(function() { 
+			if(!c_pwd.test($("#newpassword").val())){
+				 $("#newpassword").val("");
 			}
 		});
 
-		$('#password3').keyup(function(){
-			if($('#password2').val()!=$('#pwassword3').val()){
+		$('#newpasswordck').keyup(function(){
+			if($('#newpassword').val()!=$('#newpasswordck').val()){
 		    	$('span[name=c_pwd2]').text('');
 		    	$('span[name=c_pwd2]').html("<span style='color:red;'><i class='fa fa-remove'></i></span>");
 			}else{
@@ -86,12 +88,12 @@ width:200px;}
 		    	$('span[name=c_pwd2]').html("<span style='color:blue;'><i class='fa fa-check'></i></span>");
 		  	}
 		}); 
-		$("#password3").blur(function() {
-			if($('#password2').val()!=$('#password3').val()){
-				$("#password3").val("");
+		$("#newpasswordck").blur(function() {
+			if($('#newpassword').val()!=$('#newpasswordck').val()){
+				$("#newpasswordck").val("");
 			}
 		});
-	});	
+	});	 */
 
 
 </script>
