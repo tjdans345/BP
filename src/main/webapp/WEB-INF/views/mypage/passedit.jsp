@@ -26,77 +26,7 @@
 .rounded-circle{
 width:200px;}
 </style>
-<script type="text/javascript">
 
-	$(document).ready(function(){
-		$("#editbtn").click(function(){
-			var pass = $("#password").val();
-			var pass2 = $("#newpassword").val();
-			var pass3 = $("#newpasswordck").val();
-			
-			if(pass!="" && pass2!="" && pass3!=""){
-				if(confirm("수정하시겠습니까?")){
-					document.form.action="${contextPath}/passedit2.my";
-					document.form.submit();
-				}
-			}else{
-				if(pass==""){
-					alert("현재 비밀번호를 입력하세요.");
-					document.form.password.focus();
-					return;
-				}
-				if(pass2==""){
-					alert("변경하실 비밀번호를 입력하세요.");
-					document.form.password2.focus();
-					return;
-				}
-				if(pass3==""){
-					alert("변경하실 비밀번호 확인을 입력하세요.");
-					document.form.password3.focus();
-					return;
-				}
-			}	
-		});
-		
-		
-	});
-	
-	/* $(function(){
-		var c_pwd = RegExp(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/);
-		$('#newpassword').keyup(function(){
-			if(!c_pwd.test($("#newpassword").val())){
-				$('span[name=c_pwd]').text('');
-				$('span[name=c_pwd]').html("<span style='color:red;'><i class='fa fa-remove'>최소 8자리 숫자, 문자, 특수문자 각각 1개 이상 포함</i></span>");
-		 	}else{
-				$('span[name=c_pwd]').text('');
-		  		$('span[name=c_pwd]').html("<span style='color:blue;'><i class='fa fa-check'></i></span>");
-		  	}
-			$('span[name=c_pwd2]').text('');
-	  	});
-		$("#newpassword").blur(function() { 
-			if(!c_pwd.test($("#newpassword").val())){
-				 $("#newpassword").val("");
-			}
-		});
-
-		$('#newpasswordck').keyup(function(){
-			if($('#newpassword').val()!=$('#newpasswordck').val()){
-		    	$('span[name=c_pwd2]').text('');
-		    	$('span[name=c_pwd2]').html("<span style='color:red;'><i class='fa fa-remove'></i></span>");
-			}else{
-		    	$('span[name=c_pwd2]').text('');
-		    	$('span[name=c_pwd2]').html("<span style='color:blue;'><i class='fa fa-check'></i></span>");
-		  	}
-		}); 
-		$("#newpasswordck").blur(function() {
-			if($('#newpassword').val()!=$('#newpasswordck').val()){
-				$("#newpasswordck").val("");
-			}
-		});
-	});	 */
-
-
-</script>
 <c:if test="${msg!=null && msg!=''}">
 	<script type="text/javascript">
 		window.alert('${msg}');
@@ -143,29 +73,29 @@ width:200px;}
                                    			 <h5>${meminfo.id}</h5><br>
                                 		</div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-password">현재 비밀번호<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="password">현재 비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
                                                 <input type="password" class="form-control" id="password" name="password"  placeholder="현재 비밀번호 입력 " value="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-password">변경할 비밀번호<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="password2">변경할 비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="newpassword" name="password2" placeholder="변경할 비밀번호 입력" value="">
+                                                <input type="password" class="form-control" id="password2" name="password2" placeholder="변경할 비밀번호 입력" value="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">변경할 비밀번호 확인<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="password3">변경할 비밀번호 확인<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="newpasswordck" name="password3" placeholder="변경할 비밀번호 재확인">
+                                                <input type="password" class="form-control" id="password3" name="password3" placeholder="변경할 비밀번호 재확인">
                                             </div>
                                         </div>      
                                         <div class="form-group row">
                                             <div class="col-lg-8 ml-auto">
-                                                <button type="button" class="btn btn-primary" id="editbtn">수정</button>
+                                                <button type="submit" class="btn btn-primary" id="editbtn">수정</button>
                                                 <button type="reset" class="btn btn-primary">취소</button>
                                             </div>
                                         </div>
@@ -209,9 +139,9 @@ width:200px;}
     <script src="${contextPath}/resources/mypage/js/gleek.js"></script>
     <script src="${contextPath}/resources/mypage/js/styleSwitcher.js"></script>
     
-<%--     <script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate.min.js"></script>
+	<script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate.min.js"></script>
     <script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate-init.js"></script>
- --%>
+
 
 </body>
 
