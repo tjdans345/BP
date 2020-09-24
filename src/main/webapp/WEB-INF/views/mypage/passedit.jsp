@@ -26,18 +26,7 @@
 .rounded-circle{
 width:200px;}
 </style>
-<script type="text/javascript">
 
-	$(document).ready(function(){
-		$("#editbtn").click(function(){
-			if(confirm("수정하시겠습니까?")){
-				document.form.action="${contextPath}/passedit2.my";
-				document.form.submit();
-			}
-		});
-	});
-
-</script>
 <c:if test="${msg!=null && msg!=''}">
 	<script type="text/javascript">
 		window.alert('${msg}');
@@ -84,29 +73,29 @@ width:200px;}
                                    			 <h5>${meminfo.id}</h5><br>
                                 		</div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-password">현재 비밀번호<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="password">현재 비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
                                                 <input type="password" class="form-control" id="password" name="password"  placeholder="현재 비밀번호 입력 " value="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-password">변경할 비밀번호<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="password2">변경할 비밀번호<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="newpassword" name="password2" placeholder="변경할 비밀번호 입력" value="">
+                                                <input type="password" class="form-control" id="password2" name="password2" placeholder="변경할 비밀번호 입력" value="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="val-confirm-password">변경할 비밀번호 확인<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="password3">변경할 비밀번호 확인<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="newpasswordck" name="password3" placeholder="변경할 비밀번호 재확인">
+                                                <input type="password" class="form-control" id="password3" name="password3" placeholder="변경할 비밀번호 재확인">
                                             </div>
                                         </div>      
                                         <div class="form-group row">
                                             <div class="col-lg-8 ml-auto">
-                                                <button type="button" class="btn btn-primary" id="editbtn">수정</button>
+                                                <button type="submit" class="btn btn-primary" id="editbtn">수정</button>
                                                 <button type="reset" class="btn btn-primary">취소</button>
                                             </div>
                                         </div>
@@ -150,9 +139,9 @@ width:200px;}
     <script src="${contextPath}/resources/mypage/js/gleek.js"></script>
     <script src="${contextPath}/resources/mypage/js/styleSwitcher.js"></script>
     
-<%--     <script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate.min.js"></script>
+	<script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate.min.js"></script>
     <script src="${contextPath}/resources/mypage/plugins/validation/jquery.validate-init.js"></script>
- --%>
+
 
 </body>
 
