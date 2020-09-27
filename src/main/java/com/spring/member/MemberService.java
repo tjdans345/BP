@@ -31,6 +31,18 @@ public class MemberService {
 		}
 		return msg;
 	}
+
+	public String idcheck(String id) {
+		String check = "";
+		List list = mdao.idCheck(id);
+		if(list.size()==0) {
+			check = "사용가능";
+		}else {
+			check="사용불가능";
+		}
+		return check;
+	}
+
 	
 //	public void emailcheck(String email, HttpServletResponse response) throws 
 //		Exception{

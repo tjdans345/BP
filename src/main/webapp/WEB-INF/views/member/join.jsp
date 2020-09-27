@@ -4,7 +4,6 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html class="h-100" lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +18,25 @@
     <link rel="stylesheet" href="${contextPath}/resources/singer/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
+<script type="text/javascript"	src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#id").keyup(function(){
+		var id = $("#id").val();
+		$.ajax({
+			url:"idcheck.mem",
+			type:"post",
+			data: {id : id},
+			dataType:"json",
+			
+			success:function(data) {
+				$("#idinfo").html(data.idcheck);
+			}		
+		});
+	});
+});
+
+</script>    
 </head>
 <body class="h-100">
        <!-- 헤더 -->
@@ -47,8 +65,10 @@
                                     <a class="text-center" href="index.html"> <h4>SIGN UP</h4></a>
                            		<form action="${contextPath}/addMember.mem" method="post" class="mt-5 mb-5 login-input">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="id" placeholder="아이디" required>
+                                        <input type="text" class="form-control" id="id" name="id" placeholder="아이디" required>
 							            <input type="button" class="btn btn-dark m-t-20" value="중복 확인" onclick="">
+                                    	<p id = "idinfo">아이디를 입력하세요</p>
+                                    	
                                     </div>                                
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="name" placeholder="이름" required>

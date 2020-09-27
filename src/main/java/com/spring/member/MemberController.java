@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -94,6 +96,17 @@ public class MemberController {
 	   int rs = num1 + num2;
 	   
 	   return rs + "/" + msg;
-   } 
+   }
    
+   @RequestMapping(value = "/idcheck.mem",method = {RequestMethod.GET, RequestMethod.POST})
+   @ResponseBody
+   public void idcheck(@RequestParam String id,
+		   		  HttpServletRequest request,
+				  HttpServletResponse response)throws Exception{
+	   String idcheck = ms.idcheck(id);
+	   JSONObject jSONObject = new JSONObject();		
+	   jSONObject.put("idcheck", idcheck);
+	   
+	   response.getWriter().print(jSONObject);
+   }
 }
