@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -104,9 +105,23 @@ public class MemberController {
 		   		  HttpServletRequest request,
 				  HttpServletResponse response)throws Exception{
 	   String idcheck = ms.idcheck(id);
-	   JSONObject jSONObject = new JSONObject();		
+	   JSONObject jSONObject = new JSONObject();
+	   
 	   jSONObject.put("idcheck", idcheck);
 	   
+	   response.getWriter().print(jSONObject);
+   }
+   
+   @RequestMapping(value = "/emailcheck.mem", method = {RequestMethod.GET, RequestMethod.POST})
+   @ResponseBody
+   public void emailcheck(@RequestParam String email,
+		   				HttpServletRequest request,
+		   				HttpServletResponse response)throws Exception{
+	   String emailcheck = ms.emailcheck(email);
+	   JSONObject jSONObject = new JSONObject();
+	   jSONObject.put("emailcheck", emailcheck);
+	   
+	   System.out.println(jSONObject);
 	   response.getWriter().print(jSONObject);
    }
 }

@@ -19,19 +19,49 @@
     <link rel="stylesheet" href="${contextPath}/resources/singer/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
-<c:if test="${msg != null}">
-	<script type="text/javascript">
-		window.alert('${msg}');
-	</script>
-</c:if>
+    
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript">
+    	function checkLoginStatus() {
+    		var loginBtn = document.querySelector('#loginBtn');
+	  			if(gauth.isSignedIn.get()) {
+	  				console.log('logined');
+	  				loginBtn.value = 'Logout';
+	  			}else {
+	  				console.log('logout');
+	  				loginBtn.value = 'Login';
+	  			}
+    	}
+    
+    	function init() {
+    		console.log('init');
+   		  	gapi.load('auth2', function() {
+   		  		console.log('auth2');
+   		  	window.gauth = gapi.auth2.init({
+   		  			client_id:'875035663519-dhh0g53lh861alv5gedj3kceqokn44aa.apps.googleusercontent.com'
+   		  	})
+   		  	gauth.then(function() {
+   		  			console.log('googleAuth success');
+   		  			checkLoginStatus();
+   		  		}, function(){
+   		  			console.log('googleAuth fail');
+   		  		});
+   			});    		
+    	}
+    </script>
+    
+
+	<c:if test="${msg != null}">
+		<script type="text/javascript">
+			window.alert('${msg}');
+		</script>
+	</c:if>
 </head>
 
 <body class="h-100">
        <!-- 헤더 -->
        <jsp:include page="../inc/top.jsp" />
-       <!-- 헤더 -->
-    
-    
+       <!-- 헤더 -->  	
         <section class="banner_area2">
             <div class="container">
                 <div class="banner_inner_text2">
@@ -52,7 +82,19 @@
     <!--*******************
         Preloader end
     ********************-->
-
+		<input type="button" id="loginBtn" value="checking..." onclick="
+			if(this.value == 'Login') {
+				gauth.signIn().then(function(){
+					console.log('gauth.signIn()');
+					checkLoginStatus();
+				});
+			} else{
+				gauth.signOut().then(function(){
+					console.log('gauth.signOut()');
+					checkLoginStatus();
+				});
+			}
+		"> 
     <div class="login-form-bg h-101">
         <div class="container h-100">
             <div class="row justify-content-center h-100">
@@ -94,5 +136,7 @@
     <!-- 푸터  -->
     <jsp:include page="../inc/footer.jsp"/>
     <!-- 푸터  -->
+   
+	<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>    
 </body>
 </html>

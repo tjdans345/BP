@@ -19,6 +19,7 @@
     <!-- Custom Stylesheet -->
     <link href="${contextPath}/resources/singer/css/style.css" rel="stylesheet">
 <script type="text/javascript"	src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#id").keyup(function(){
@@ -30,13 +31,50 @@ $(document).ready(function() {
 			dataType:"json",
 			
 			success:function(data) {
+				console.log(data);
+				console.log(data.idcheck);
 				$("#idinfo").html(data.idcheck);
 			}		
 		});
 	});
-});
 
-</script>    
+	$("#email").keyup(function(){
+		var email = $("#email").val();
+		$.ajax({
+			url:"emailcheck.mem",
+			type:"post",
+			data: {email : email},
+			dataType:"json",
+			success:function(data) {
+
+				$("#emailinfo").html(data.emailcheck);
+			},
+			error : function(data) {
+				alert("실패!");
+			}
+		});
+	});
+});
+</script>
+<%--<script type="text/javascript">
+$("email").keyup(function() {
+	$.ajax({
+		url : "./emailcheck.mem",
+		type : "POST",
+		data : {
+			email : $("email").val()
+		},
+		success : function(result) {
+			if(result==1) {
+				$("#emailinfo").html("중복된 이메일이 있습니다.");
+			}else {
+				$("#emailinfo").html("");
+			}
+		},
+	});
+})
+
+</script> --%>    
 </head>
 <body class="h-100">
        <!-- 헤더 -->
@@ -66,7 +104,7 @@ $(document).ready(function() {
                            		<form action="${contextPath}/addMember.mem" method="post" class="mt-5 mb-5 login-input">
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="id" name="id" placeholder="아이디" required>
-							            <input type="button" class="btn btn-dark m-t-20" value="중복 확인" onclick="">
+							            <!-- <input type="button" class="btn btn-dark m-t-20" value="중복 확인" onclick=""> -->
                                     	<p id = "idinfo">아이디를 입력하세요</p>
                                     	
                                     </div>                                
@@ -83,7 +121,8 @@ $(document).ready(function() {
                                         <input type="text" class="form-control" name="phone" placeholder="전화번호" required>
                                     </div>                                     
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="email" placeholder="이메일" required>
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="이메일" required>
+                                        <p id="emailinfo">이메일을 입력하세요</p>
                                     </div> 
 
 									<div class="form-group">

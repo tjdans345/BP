@@ -44,6 +44,9 @@
                             </aside>
                         </div>
                     </div>
+                    
+					<input type="button" value="night" onclick="">
+					<input type="button" value="day" onclick="">
                 </div>
             </div>
             <div class="footer_copyright">

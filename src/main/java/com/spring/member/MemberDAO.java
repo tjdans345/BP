@@ -18,12 +18,13 @@ public class MemberDAO {
 	public List idCheck(String id) {
 		return sqlSession.selectList("mapper.member.idcheck", id);
 	}
-	public int emailcheck(String email) {
-		return sqlSession.selectOne("mapper.member.emailcheck", email);
+	public List emailcheck(String email) {
+		return sqlSession.selectList("mapper.member.emailcheck", email);
 	}
 	public MemberVO loginMember(String id) {
 		return sqlSession.selectOne("mapper.member.loginMember", id);
 	}
+
 
 	
 }

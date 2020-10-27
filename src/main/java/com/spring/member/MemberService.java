@@ -31,23 +31,36 @@ public class MemberService {
 		}
 		return msg;
 	}
-
+	
 	public String idcheck(String id) {
 		String check = "";
 		List list = mdao.idCheck(id);
+		//System.out.println(list);
 		if(list.size()==0) {
-			check = "사용가능";
+			check="사용가능";
 		}else {
 			check="사용불가능";
 		}
 		return check;
 	}
-
 	
+	public String emailcheck(String email) {
+		String check = "";
+		List list = mdao.emailcheck(email);
+		//System.out.println(list);
+		if(list.size()==0) {
+			check="사용가능";
+		}else {
+			check="중복된 이메일 입니다";
+		}
+		return check;
+	}
+
+
 //	public void emailcheck(String email, HttpServletResponse response) throws 
 //		Exception{
 //		PrintWriter out = response.getWriter();
-//		out.println(manager.emailcheck(email));
+//		out.println(mdao.emailcheck(email));
 //		out.close();
 //	}
 	
